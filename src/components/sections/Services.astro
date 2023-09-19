@@ -3,62 +3,152 @@ import Service from "../cards/Service.astro";
 import Container from "../shared/Container.astro";
 import Paragraph from "../shared/Paragraph.astro";
 import Title from "../shared/Title.astro";
-
 ---
 
 <section id="services">
-    <Container className="space-y-10 md:sapce-y-12">
-        <div class="text-center max-w-3xl mx-auto space-y-4">
-            <Title>
-                What we offer
-            </Title>
-            <Paragraph>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </Paragraph>
-        </div>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            <Service title="Social media marketing" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti qui soluta cupiditate">
-                <span slot="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
-                    </svg> 
-                </span>
-            </Service>
-            <Service title="Amazon affiliate marketing" description="Sunt, ipsam, necessitatibus sint fugit officia laboriosam minima ab ullam at magni et. Quaerat, sint!">
-                <span slot="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
-                    </svg> 
-                </span>
-            </Service>
-            <Service title="Email marketing" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti qui soluta cupiditate">
-                <span slot="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
-                    </svg> 
-                </span>
-            </Service>
-            <Service title="Social media marketing" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti qui soluta cupiditate">
-                <span slot="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
-                    </svg> 
-                </span>
-            </Service>
-            <Service title="Amazon affiliate marketing" description="Sunt, ipsam, necessitatibus sint fugit officia laboriosam minima ab ullam at magni et. Quaerat, sint!">
-                <span slot="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
-                    </svg> 
-                </span>
-            </Service>
-            <Service title="Email marketing" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti qui soluta cupiditate">
-                <span slot="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
-                    </svg> 
-                </span>
-            </Service>
-        </div>
-    </Container>
+  <Container className="space-y-10 md:sapce-y-12">
+    <div class="text-center max-w-3xl mx-auto space-y-4">
+      <Title>Servicios</Title>
+      <!-- <Paragraph>
+        Cuando se decide crear un sitio web, es común que el cliente no tenga
+        una visión clara de lo que necesita y por dónde empezar. Por lo tanto,
+        es esencial organizar reuniones entre el cliente y los desarrolladores
+        para comprender la idea correctamente. Esto ahorra tiempo, recursos y
+        dinero.
+      </Paragraph> -->
+      <Paragraph>
+        Nuestro enfoque incluye el diseño responsivo para garantizar que
+        el sitio sea accesible en cualquier dispositivo. Creamos sitios modernos
+        y creativos, trabajando en estrecha colaboración con el cliente, serás parte de las decisiones fundamentales de tu proyecto. Además, alojamos los sitios en servidores confiables con disponibilidad continua. Gestionamos todos los aspectos necesarios para poner el sitio en línea lo más rápido posible, optimizando la velocidad de carga, el rendimiento general y el posicionamiento en los motores de búsqueda.
+      </Paragraph>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      <Service
+        title="Landing Page"
+        description="Página web diseñada para persuadir a los visitantes de realizar una acción específica como comprar un producto, suscribirse a un servicio o descargar un recurso. Sirve para convertir visitantes en clientes potenciales mediante una oferta clara y específica."
+      >
+        <span slot="icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
+            ></path>
+          </svg>
+        </span>
+      </Service>
+      <Service
+        title="Páginas Corporativas"
+        description="Hoy el mundo pasa por internet, es la mejor vidriera. Esta web tiene como finalidad dar a conocer a los visitantes toda la información relacionada con una empresa. El objetivo es tener presencia en Internet en una plataforma propia que sirva como una buena carta de presentación y refleje la esencia de la empresa."
+      >
+        <span slot="icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
+            ></path>
+          </svg>
+        </span>
+      </Service>
+      <Service
+        title="E-Commerce"
+        description="Las páginas de e-commerce son sitios web diseñados para vender productos o servicios en línea. Permiten a las empresas mostrar sus productos, procesar pagos y facilitar compras por Internet. Pasarás a tener millones de clientes potenciales."
+      >
+        <span slot="icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
+            ></path>
+          </svg>
+        </span>
+      </Service>
+      <Service
+        title="CRM"
+        description="Es una herramienta informática que se utiliza para la organización y administración de los contactos de una empresa. Tiene como función principal ayudar a las empresas a centralizar toda la información de sus clientes. También a organizar las actividades que deben cumplir con los mismos y recopilar información estadística sobre su desempeño."
+      >
+        <span slot="icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
+            ></path>
+          </svg>
+        </span>
+      </Service>
+      <Service
+        title="Aplicaciones Móviles"
+        description="Son programas diseñados para smartphones y tablets donde puedes ofrecer diversas funciones y servicios. Se pueden descargar para que el usuario acceda directamente desde sus dispositivos móviles."
+      >
+        <span slot="icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
+            ></path>
+          </svg>
+        </span>
+      </Service>
+      <Service
+        title="Proyectos Personalizados"
+        description="Si la idea que tienes en mente no cuadra con las opciones anteriores, te invitamos a que nos contactes para asesorarte de manera personalizada y juntos podamos transformar tu idea en una realidad digital."
+      >
+        <span slot="icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
+            ></path>
+          </svg>
+        </span>
+      </Service>
+    </div>
+  </Container>
 </section>
