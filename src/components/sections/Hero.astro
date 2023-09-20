@@ -4,6 +4,8 @@ import Container from "../shared/Container.astro";
 import Paragraph from "../shared/Paragraph.astro";
 import ByNumber from "./ByNumber.astro";
 
+const mainImg = "https://res.cloudinary.com/dqefppqdd/image/upload/v1695231822/20945431_s75nmr.jpg"
+
 ---
 
 <section class="relative pt-32 lg:pt-28">
@@ -21,9 +23,9 @@ import ByNumber from "./ByNumber.astro";
              Innovación digital que  <span class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600">Impulsa</span> tu negocio y da vida a tus<span class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600"> Ideas</span>
             </h1>
             <Paragraph className="mt-8">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores repellat perspiciatis aspernatur quis voluptatum porro incidunt, 
-                libero sequi quos eos velit
+                Nos dedicamos a construir la sede digital de tu marca, transformamos ideas en sitios web excepcionales. 
             </Paragraph>
+           
             <div class="mt-10  w-full flex max-w-md mx-auto lg:mx-0">
                 <div class="flex sm:flex-row flex-col gap-5 w-full">
                     <form action="#"  class="py-1 pl-6 w-full pr-1 flex gap-3 items-center text-heading-3 shadow-lg shadow-box-shadow
@@ -49,8 +51,9 @@ import ByNumber from "./ByNumber.astro";
             </div>
         </div>
 
-        <div class="flex flex-1 lg:w-1/2 lg:h-auto relative lg:max-w-none lg:mx-0 mx-auto max-w-3xl">
-            <img src="/images/image1.webp" alt="Hero image" width="2350" height="2359" class="lg:absolute lg:w-full lg:h-full rounded-3xl object-cover lg:max-h-none max-h-96">
+        <div class="flex flex-1 lg:w-1/2 lg:h-[450px] relative lg:max-w-none lg:mx-0 mx-auto max-w-3xl">
+            <img src={mainImg} alt="Hero image" width="400" class="lg:absolute lg:w-full lg:h-full rounded-3xl object-contains lg:max-h-none max-h-96">
+            <!-- <img src="/images/image1.webp" alt="Hero image" width="2350" height="2359" class="lg:absolute lg:w-full lg:h-full rounded-3xl object-cover lg:max-h-none max-h-96"> -->
         </div>
     </Container>
 
