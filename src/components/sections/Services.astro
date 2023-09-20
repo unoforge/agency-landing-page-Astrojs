@@ -3,7 +3,15 @@ import Service from "../cards/Service.astro";
 import Container from "../shared/Container.astro";
 import Paragraph from "../shared/Paragraph.astro";
 import Title from "../shared/Title.astro";
+
+const mobilePic = "https://res.cloudinary.com/dqefppqdd/image/upload/v1695218413/undraw_mobile_posts_re_bpuw_emyzcx.svg"
+const crmPic = "https://res.cloudinary.com/dqefppqdd/image/upload/v1695218414/undraw_team_re_0bfe_nzauvm.svg"
+const corpPic = "https://res.cloudinary.com/dqefppqdd/image/upload/v1695218413/undraw_blogging_re_kl0d_o2ovls.svg"
+const landingPic = "https://res.cloudinary.com/dqefppqdd/image/upload/v1695218797/undraw_online_information_re_erks_emrnsa.svg"
+const ecommercePic = "https://res.cloudinary.com/dqefppqdd/image/upload/v1695218797/undraw_web_shopping_re_owap_ypdeai.svg"
+const ideaPic = "https://res.cloudinary.com/dqefppqdd/image/upload/v1695219030/undraw_lightbulb_moment_re_ulyo_kc4soq.svg"
 ---
+
 
 <section id="services">
   <Container className="space-y-10 md:sapce-y-12">
@@ -28,14 +36,8 @@ import Title from "../shared/Title.astro";
         description="Página web diseñada para persuadir a los visitantes de realizar una acción específica como comprar un producto, suscribirse a un servicio o descargar un recurso. Sirve para convertir visitantes en clientes potenciales mediante una oferta clara y específica."
       >
         <span slot="icon">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
-          >
+          <img src={landingPic} width={80} height={80} alt="Landing icon" />
+
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -49,14 +51,7 @@ import Title from "../shared/Title.astro";
         description="Hoy el mundo pasa por internet, es la mejor vidriera. Esta web tiene como finalidad dar a conocer a los visitantes toda la información relacionada con una empresa. El objetivo es tener presencia en Internet en una plataforma propia que sirva como una buena carta de presentación y refleje la esencia de la empresa."
       >
         <span slot="icon">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
-          >
+          <img src={corpPic} width={120} height={120} alt="Corp icon" />
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -70,14 +65,8 @@ import Title from "../shared/Title.astro";
         description="Las páginas de e-commerce son sitios web diseñados para vender productos o servicios en línea. Permiten a las empresas mostrar sus productos, procesar pagos y facilitar compras por Internet. Pasarás a tener millones de clientes potenciales."
       >
         <span slot="icon">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
-          >
+          <img src={ecommercePic} width={100} height={100} alt="Ecommerce icon" />
+          
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -91,14 +80,7 @@ import Title from "../shared/Title.astro";
         description="Es una herramienta informática que se utiliza para la organización y administración de los contactos de una empresa. Tiene como función principal ayudar a las empresas a centralizar toda la información de sus clientes. También a organizar las actividades que deben cumplir con los mismos y recopilar información estadística sobre su desempeño."
       >
         <span slot="icon">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
-          >
+          <img src={crmPic} width={70} height={70} alt="CRM icon" />
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -112,14 +94,7 @@ import Title from "../shared/Title.astro";
         description="Son programas diseñados para smartphones y tablets donde puedes ofrecer diversas funciones y servicios. Se pueden descargar para que el usuario acceda directamente desde sus dispositivos móviles."
       >
         <span slot="icon">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
-          >
+          <img src={mobilePic} width={80} height={80} alt="mobile icon" />
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -133,14 +108,8 @@ import Title from "../shared/Title.astro";
         description="Si la idea que tienes en mente no cuadra con las opciones anteriores, te invitamos a que nos contactes para asesorarte de manera personalizada y juntos podamos transformar tu idea en una realidad digital."
       >
         <span slot="icon">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
-          >
+          <img src={ideaPic} width={60} height={60} alt="Idea icon" />
+          
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
