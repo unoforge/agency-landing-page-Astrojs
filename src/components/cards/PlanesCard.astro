@@ -1,0 +1,19 @@
+---
+import Paragraph from '../shared/Paragraph.astro';
+
+export interface Props{
+    title:string,
+    description:string
+}
+const { title, description } = Astro.props
+---
+<div class="p-5 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden">
+    <div class=" p-3 text-heading-1 grid grid-cols-2 gap-36">
+        <h2 class="md:text-xl font-extrabold text-heading-2 mb-4"> {title} </h2>
+        <slot name="icon"/>
+    </div>
+    
+    <Paragraph>
+    {description}
+    </Paragraph>
+</div>
