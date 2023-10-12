@@ -1,0 +1,62 @@
+---
+import Container from "../shared/Container.astro";
+import Title from "../shared/Title.astro";
+---
+
+<section id="portfolio">
+  <Container className="space-y-10 md:sapce-y-12">
+    <div class="text-center max-w-3xl mx-auto">
+      <Title>Portfolio</Title>
+    </div>
+
+    <div class="w-screen overflow-hidden">
+        <div
+          class="flex transition-transform duration-1000 ease-in-out"
+          id="carousel"
+        >
+          <img
+            class="w-screen h-600 object-cover"
+            src="https://res.cloudinary.com/dxsosgojl/image/upload/v1696785116/PortfolioWebWizard/Resto_g5xzcg.png"
+            alt=""
+          />
+          <img
+            class="w-screen h-600 object-cover"
+            src="https://res.cloudinary.com/dxsosgojl/image/upload/v1696739326/PortfolioWebWizard/FlayWay_arop2e.png"
+            alt=""
+          />
+          <img
+            class="w-screen h-600 object-cover"
+            src="https://res.cloudinary.com/dxsosgojl/image/upload/v1696743395/PortfolioWebWizard/Glass_jztqca.png"
+            alt=""
+          />
+          <img
+            class="w-screen h-600 object-cover"
+            src="https://res.cloudinary.com/dxsosgojl/image/upload/v1696739326/PortfolioWebWizard/Sport_yq1qpr.png"
+            alt=""
+          />
+          <img
+            class="w-screen h-600 object-cover"
+            src="https://res.cloudinary.com/dxsosgojl/image/upload/v1696739326/PortfolioWebWizard/Nails_bhvpsq.png"
+            alt=""
+          />
+        </div>
+      </div>
+      
+      
+  </Container>
+</section>
+
+<style>
+  #carousel {
+    animation: slide 50s linear infinite;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    90% {
+      transform: translateX(-90%);
+    }
+  }
+</style>
