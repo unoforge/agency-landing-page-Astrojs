@@ -1,7 +1,7 @@
 ---
 import Container from "../shared/Container.astro";
 import Title from "../shared/Title.astro";
-
+import BtnLink from "../shared/BtnLink.astro";
 ---
 
 <section>
@@ -42,11 +42,16 @@ import Title from "../shared/Title.astro";
                     <img src="https://i.postimg.cc/RVCgqpCb/stop1.png" alt="Imagen 5">
                 </a>
             </div>
-            <div class="flex justify-center items-center ">
-                <Title>
+            <div class="flex flex-col justify-center items-center ">
+                <Title >
                     Queres ser uno de <span class="font-bold">ellos</span>?
                 </Title>
-              </div>
+                <div class="lg:min-w-max flex items-center sm:w-max w-full pb-6 lg:pb-0 border-b border-box-bg lg:border-0 px-6 lg:px-0">
+                    <BtnLink text="Comienza Gratis" href="#cta" className="flex justify-center w-full sm:w-max" variant="primary"/>
+                </div>
+            </div>
+            
+            
               
             
             
