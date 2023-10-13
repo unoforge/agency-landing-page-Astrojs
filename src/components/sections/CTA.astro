@@ -48,7 +48,7 @@ import Paragraph from "../shared/Paragraph.astro";
                          
         </Paragraph>
         <div class="mx-auto max-w-md sm:max-w-xl pt-6">
-          <form id="contactForm" class="text-center">
+          <form action="https://formsubmit.co/wwizard.lab@gmail.com" method="POST" id="contactForm" class="text-center">
             <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required class="w-full px-3 py-2 text-gray-700 border rounded shadow-sm">
         
@@ -58,7 +58,7 @@ import Paragraph from "../shared/Paragraph.astro";
             <label for="mensaje" class="block text-gray-700 text-sm font-bold mb-2">Mensaje:</label>
             <textarea id="mensaje" name="mensaje" rows="4" required class="w-full px-3 py-2 text-gray-700 border rounded shadow-sm"></textarea>
         
-            <button type="button" id="enviar" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+            <button type="submit" id="enviar" class="bg-blue-800 hover:bg-blue-950 text-white font-bold py-4 px-6 rounded-full focus:outline-none focus:shadow-outline">
               Enviar Mensaje
             </button>
           </form>
