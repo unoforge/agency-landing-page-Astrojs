@@ -13,30 +13,30 @@ import BtnLink from "../shared/BtnLink.astro";
         </div>
         <div class="grid grid-cols-5 gap-4">
             <div class="flex justify-center items-center w-full h-auto p-4 border border-gray-300 rounded-lg shadow-md dark:bg-gray-600">
-                <a href="https://wanderlust-phi.vercel.app">
+                <a href="https://wanderlust-phi.vercel.app" class="hover-image">
                     <img src="https://i.postimg.cc/d0kJj9Hy/wanderlust-name-removebg-preview.png" alt="Imagen 1">
                 </a>
             </div>
             <div class="bg-green-600 flex justify-center items-center w-full h-full p-4 border border-gray-300 rounded-lg shadow-md dark:bg-gray-600">
                 
-                <a href="https://agroseedservicios.com">
+                <a href="https://agroseedservicios.com" class="hover-image">
                     <img src="https://i.postimg.cc/qvZkKFLr/agrosed-name-removebg-preview.png" alt="Imagen 2">
                 </a>
             </div>
             <div class="flex justify-center items-center w-full h-full p-4 border border-gray-300 rounded-lg shadow-md dark:bg-gray-600">
                 
-                <a href="https://crossing-borders.netlify.app/">
+                <a href="https://crossing-borders.netlify.app/" class="hover-image">
                     <img src="https://i.postimg.cc/Lsc2CZw0/Crossing-borders-removebg-preview.png" alt="Imagen 3">
                 </a>
             </div>
             <div class="flex justify-center items-center w-full h-full p-4 border border-gray-300 rounded-lg shadow-md dark:bg-gray-600">
-                <a href="https://www.hieloyelito.com/">
+                <a href="https://www.hieloyelito.com/" class="hover-image">
                     
                     <img src="https://i.postimg.cc/K8YGRbtQ/Yelito-name-removebg-preview.png" alt="Imagen 4">
                 </a>
             </div>
             <div class="bg-red-600 flex justify-center items-center w-full h-full p-4 border border-gray-300 rounded-lg shadow-md dark:bg-gray-600">
-                <a href="https://www.stop.com.ar/">
+                <a href="https://www.stop.com.ar/" class="hover-image">
                     
                     <img src="https://i.postimg.cc/gJ3df2Pc/stop-name-removebg-preview.png" alt="Imagen 5">
                 </a>
@@ -63,4 +63,14 @@ import BtnLink from "../shared/BtnLink.astro";
 </section>
 
 
+<style>
+    .hover-image {
+  transition: transform 0.3s ease;
+}
 
+.hover-image:hover img {
+  transform: scale(1.1) rotateY(20deg);
+}
+
+
+</style>
