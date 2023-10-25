@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.0.0",
+    "@material-tailwind/html": "^2.0.0",
+    "@material-tailwind/react": "^2.1.4",
     "animate.css": "^4.1.1",
     "astro": "^3.0.7",
     "tailwindcss": "^3.3.3"
