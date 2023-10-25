@@ -8,13 +8,9 @@ import BtnLink from "../shared/BtnLink.astro";
   <Container className="space-y-8">
     <div class="max-w-full ml-4 mx-auto mb-[30px] text-center">
       <Title><b>Clientes</b> que nos eligen</Title>
-      <!-- <span
-        class="m-0 text-center text-heading-1 font-semibold text-2xl sm:text-3xl md:text-4xl"
-      >
-        <b>Clientes</b> que nos eligen
-      </span> -->
+
     </div>
-    <div class="grid grid-cols-5 gap-4">
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-4 ">
       <div
         class="flex justify-center items-center w-full h-auto p-4 border border-gray-300 rounded-lg shadow-md dark:bg-gray-200"
       >
@@ -28,7 +24,7 @@ import BtnLink from "../shared/BtnLink.astro";
       <div
         class="dark:bg-green-600 bg-green-600 flex justify-center items-center w-full h-full p-4 border border-gray-300 rounded-lg shadow-md"
       >
-        <a href="https://agroseedservicios.com" class="hover-image">
+        <a href="https://agroseedservicios.com" class=" items-center flex h-[120px] ">
           <img
             src="https://i.postimg.cc/qvZkKFLr/agrosed-name-removebg-preview.png"
             alt="Imagen 2"
@@ -58,7 +54,7 @@ import BtnLink from "../shared/BtnLink.astro";
       <div
         class="bg-red-600 flex justify-center items-center w-full h-full p-4 border border-gray-300 rounded-lg shadow-md dark:bg-red-600"
       >
-        <a href="https://www.stop.com.ar/" class="hover-image">
+        <a href="https://www.stop.com.ar/" class="items-center flex h-[120px]">
           <img
             src="https://i.postimg.cc/gJ3df2Pc/stop-name-removebg-preview.png"
             alt="Imagen 5"
@@ -66,21 +62,6 @@ import BtnLink from "../shared/BtnLink.astro";
         </a>
       </div>
     </div>
-    <!-- <div class="flex flex-col justify-center items-center">
-      <span class="m-0 text-heading-1 font-semibold" style="font-size: 150%;">
-        Quiéres ser uno de <span class="font-bold">ellos</span>?
-      </span>
-      <div
-        class="lg:min-w-max p-4 flex items-center sm:w-max w-full pb-6 lg:pb-0 border-b border-box-bg lg:border-0 px-6 lg:px-0"
-      >
-        <BtnLink
-          text="Comienza Gratis"
-          href="#cta"
-          className="flex justify-center w-full sm:w-max"
-          variant="primary"
-        />
-      </div>
-    </div> -->
   </Container>
 </section>
 
