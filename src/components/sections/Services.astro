@@ -15,8 +15,8 @@ const ideaPic = "https://res.cloudinary.com/dxsosgojl/image/upload/v1696683209/u
 
 <section id="services">
   <Container className="space-y-10 md:sapce-y-12">
-    <div class=" max-w-3xl  space-y-4 ml-4">
-      <Title><b>Servicios</b> y <b>Soluciones</b> para tu Negocio </Title>
+    <div class=" max-w-3xl  space-y-4 ml-4 lg:text-left text-center">
+      <p class="text-heading-1 font-semibold text-2xl sm:text-3xl md:text-4xl"><b>Servicios</b> y <b>Soluciones</b> para tu Negocio </p>
       <!-- <Paragraph>
         Cuando se decide crear un sitio web, es común que el cliente no tenga
         una visión clara de lo que necesita y por dónde empezar. Por lo tanto,
@@ -33,7 +33,7 @@ const ideaPic = "https://res.cloudinary.com/dxsosgojl/image/upload/v1696683209/u
         description="Convierte visitantes en clientes potenciales de tu producto o servicio mediante una oferta clara y específica."
       >
         <span slot="icon">
-          <img src={landingPic} width={80} height={80} alt="Landing icon" />
+          <img src={landingPic} width={80} height={80} alt="Landing Page" />
 
             <path
               stroke-linecap="round"
@@ -48,7 +48,7 @@ const ideaPic = "https://res.cloudinary.com/dxsosgojl/image/upload/v1696683209/u
         description="Destaca tu empresa en Internet y brinda información relevante a los visitantes mediante una plataforma propia que refleje su esencia."
       >
         <span slot="icon">
-          <img src={corpPic} width={80} height={80} alt="Corp icon" />
+          <img src={corpPic} width={80} height={80} alt="Web corporativa" />
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -62,7 +62,7 @@ const ideaPic = "https://res.cloudinary.com/dxsosgojl/image/upload/v1696683209/u
         description="Aumenta las ventas de tu negocio ofreciendo tus productos/servicios a millones de potenciales compradores."
       >
         <span slot="icon">
-          <img src={ecommercePic} width={80} height={80} alt="Ecommerce icon" />
+          <img src={ecommercePic} width={80} height={80} alt="Comercio electronico" />
           
             <path
               stroke-linecap="round"
@@ -77,7 +77,7 @@ const ideaPic = "https://res.cloudinary.com/dxsosgojl/image/upload/v1696683209/u
         description="Centraliza, organiza, administra y visualiza toda la información y actividades de tus clientes en un solo lugar."
       >
         <span slot="icon">
-          <img src={crmPic} width={70} height={70} alt="CRM icon" />
+          <img src={crmPic} width={70} height={70} alt="CRM" />
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -91,7 +91,7 @@ const ideaPic = "https://res.cloudinary.com/dxsosgojl/image/upload/v1696683209/u
         description="Implementa diversas funciones o servicios para gestiones propias y/o para usuarios-clientes, tanto en Android como en iOS."
       >
         <span slot="icon">
-          <img src={mobilePic} width={80} height={80} alt="mobile icon" />
+          <img src={mobilePic} width={80} height={80} alt="Aplicacion movil" />
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -105,7 +105,7 @@ const ideaPic = "https://res.cloudinary.com/dxsosgojl/image/upload/v1696683209/u
         description="Tu idea no cuadra con las opciones anteriores? No te preocupes! Contáctanos para asesorarte de manera personalizada."
       >
         <span slot="icon">
-          <img src={ideaPic} width={70} height={70} alt="Idea icon" />
+          <img src={ideaPic} width={70} height={70} alt="Proyecto personalizado" />
           
             <path
               stroke-linecap="round"
@@ -117,28 +117,28 @@ const ideaPic = "https://res.cloudinary.com/dxsosgojl/image/upload/v1696683209/u
       </Service>
     </div>
     
-    <article class="bg-gray-200 rounded-2xl p-4 dark:bg-gray-900">
-    <p class="lg:ml-10 ml-4 font-semibold text-heading-1 text-lg">Todos nuestros proyectos tienen:</p>
-    <ul class="grid grid-cols-3 mx-auto w-full lg:w-[95%] gap-2 mt-8 dark:text-white">
+    <article class="bg-gray-200 rounded-2xl lg:px-4 lg:py-10 px-2 py-4 dark:bg-gray-900">
+    <p class="lg:ml-10 text-center font-semibold text-heading-1 text-xl">Trabajando con nosotros obtienes:</p>
+    <ul class="lg:grid lg:grid-cols-3 mx-auto w-full lg:w-[95%] gap-2 mt-8 text-heading-3 dark:text-white">
       <li>
           <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">&checkmark;</span>Las mejores prácticas de SEO
       </li>
-      <li>
+      <li class="mt-2">
         <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">&checkmark;</span>Alojamiento en servidores confiables
     </li>
       
-      <li>
+      <li class="mt-2">
           <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">&checkmark;</span>Accesibilidad en cualquier dispositivo 
       </li>
-      <li>
+      <li class="mt-2">
         <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">&checkmark;</span>Optimización de contenido
     </li>
-    <li>
+    <li class="mt-2">
       <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">&checkmark;</span>Excelente experiencia al usuario
   </li>
       
-    <li>
-      <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">&checkmark;</span>Asesoramiento en politicas en privacidad
+    <li class="mt-2">
+      <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">&checkmark;</span>Asesoramiento en politicas de privacidad
   </li>
     
     

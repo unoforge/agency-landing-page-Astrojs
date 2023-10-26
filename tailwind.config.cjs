@@ -17,7 +17,12 @@ module.exports = {
 			},
 			screens:{
 				midmd:"880px"
-			}
+			},
+			letterSpacing: {
+				tight: '-0.05em',
+				normal: '0',
+				wide: '0.1em',
+			  },
 		},
 	},
 	plugins: [],

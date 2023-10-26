@@ -1,17 +1,16 @@
 ---
 import Container from "../shared/Container.astro";
-import Title from "../shared/Title.astro";
 ---
 
-<section id="#faq" class=" dark:text-white dark:to-gray-800 p-6 pb-10 lg:w-[92%] mx-auto rounded-2xl bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-950 ">
-  <Container>
+<Container>
+    <section id="#faq" class=" dark:text-white dark:to-gray-800 p-6 py-16 mx-auto rounded-2xl bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-950 ">
     
-    <div class="flex justify-center">
+    <header class="flex justify-center">
       
-      <Title>FAQ's</Title>
-    </div>
+      <p class="text-heading-1 font-semibold text-2xl sm:text-3xl md:text-4xl">FAQ's</p>
+    </header>
 
-
+<div class="text-left lg:w-[50%] mx-auto text-heading-3">
 
     <details class="mt-8 border-b border-b-slate-400 pb-4">
       <summary class="font font-semibold cursor-pointer">
@@ -82,5 +81,5 @@ Apostamos a la diversidad para alcanzar soluciones innovadoras y creativas para 
       </p>
     </details>
   </div>
-  </Container>
 </section>
+</Container>
