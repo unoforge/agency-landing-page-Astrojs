@@ -33,11 +33,18 @@ const { title } = Astro.props;
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" type="text/css" href="estilos.css">
   </head>
   <body class="overflow-hidden overflow-y-auto bg-body">
     <Navbar />
     <slot />
     <Footer />
+    <div class="whatsapp-button">
+      <a href="https://wa.me/34602637525" target="_blank">
+        <img src="https://res.cloudinary.com/dxsosgojl/image/upload/v1698522086/PortfolioWebWizard/whatsapp_g4bvjr.png" >
+    
+      </a>
+    </div>
   </body>
   <script>
     const switchTheme = document.querySelector(
@@ -169,4 +176,22 @@ const { title } = Astro.props;
     visibility: visible;
     display: flex;
   }
+  .whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Ajusta la distancia desde el borde inferior de la pantalla */
+  right: 20px; /* Ajusta la distancia desde el borde derecho de la pantalla */
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px; /* Reducir el espacio interno (padding) */
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px; /* Ajustar el tamaño de la fuente */
+  z-index: 999; /* Asegura que esté por encima de otros elementos */
+}
+.whatsapp-button img {
+  max-width: 70px; /* Establece el ancho máximo de la imagen */
+  height: auto; /* Mantiene la relación de aspecto original */
+}
+
+
 </style>
