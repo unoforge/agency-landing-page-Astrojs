@@ -1,9 +1,9 @@
-<h1>AgenceX Landing page</h1>
+<h1>Hinterland Web</h1>
 
-A simple landing page for a digital agency
+The landing page of our boutique web agency helping solo traders and small business kickstart their online presence
 
-![AgenceX light Theme](./screens/demoLight.webp)
-![AgenceX Dark Theme](./screens/demoDark.webp)
+![Hinterland Web Hero](./images/cooroora-pic.webp)
+
 
 
 ## Tools
@@ -11,43 +11,11 @@ A simple landing page for a digital agency
 - AstroJs v3
 
 
-## 🚀 Project Structure
+## Structure
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```
-/
-├── public/
-│   ├── images/
-│   ├── logos/*
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   ├── blocks/*
-│   │   ├── cards/*
-│   │   ├── elements/*
-│   │   ├── sections/*
-│   │   ├── shared/*
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-├── package.json
-└── tailwind.config.cjs
-```
-
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `npm install`          | Installs dependencies                            |
-| `npm run dev`          | Starts local dev server at `localhost:4321`      |
-| `npm run build`        | Build your production site to `./dist/`          |
-| `npm run preview`      | Preview your build locally, before deploying     |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro --help` | Get help using the Astro CLI                     |
-
+- This is a single page website, that should be fast and reliable, presenting all relevant information in a straightforward and simple way:
+    - Clear CTAs;
+    - Short descriptions
+    - Strong visuals
+    - Reader friendly dark theme
 
