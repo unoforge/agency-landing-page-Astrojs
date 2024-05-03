@@ -2,9 +2,9 @@
 
 The landing page of our boutique web agency helping solo traders and small business kickstart their online presence
 
-![Hinterland Web Hero](./images/cooroora-pic.webp)
+![Hinterland Web Hero](./public/images/cooroora-pic.webp)
 
-
+/Users/andre/Desktop/code-practice/hinterland-web/public/images/cooroora-pic.webp
 
 ## Tools
 - TailwindCSS v3.3
