@@ -1,6 +1,6 @@
 <h1>Hinterland Web</h1>
 
-The landing page of our boutique web agency helping solo traders and small business kickstart their online presence
+The landing page of our boutique web agency helping solo traders and small business kickstart their online presence.
 
 ![Hinterland Web Hero](./public/images/cooroora-pic.webp)
 
