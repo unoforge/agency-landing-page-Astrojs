@@ -13,7 +13,7 @@ const projects = [
         "Recruitment agency based in Melbourne",
       image: `/images/screenshot-wayfaring.png`,
       position: "left",
-      url: "https://tinyurl.com/5n8v9rvw",
+      url: "darkorange-frog-670893.builder-preview.com",s
 
     },
     {

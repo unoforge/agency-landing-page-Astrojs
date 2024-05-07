@@ -10,6 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.1.4",
     "@astrojs/tailwind": "^5.0.0",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
