@@ -4,6 +4,7 @@ import Container from "../shared/Container.astro";
 import Paragraph from "../shared/Paragraph.astro";
 
 const phoneNumber= import.meta.env.PUBLIC_PHONE_NR
+console.log(phoneNumber)
 
 ---
 
@@ -50,7 +51,7 @@ const phoneNumber= import.meta.env.PUBLIC_PHONE_NR
           If you are unsure where to start, no worries, we are here to help.<br/><strong class="text-xl"> Just gives a call</strong> !
         </Paragraph> -->
         <div class="mx-auto max-w-md sm:max-w-xl pt-10">
-          <a href=`tel:${phoneNumber}`>
+          <a href=`https://tidycal.com/silvandre/15-minute-meeting` target="_blank">
           <Button variant={"primary"}>
             <span class="text-white text-2xl relative z-[5]">Give Us a Call</span>
           </Button>
