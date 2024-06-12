@@ -18,7 +18,7 @@ const services = [
   {
     title: "Domain Management",
     description:
-      "Once we have you custom domain and email address up and running, we can help you manage it and keep it secure.",
+      "Once we have your custom domain and email address up and running, we can help you manage it and keep it secure.",
     icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-6 h-6">
     <path fill="black" d="M3 19V5h18v14zm1-1h16V8H4zm6.95-2.18l-2.858-2.858l.72-.72l2.138 2.139l4.239-4.239l.719.72zM4 18V6z" />
   </svg>`,
@@ -43,7 +43,7 @@ const services = [
   {
     title: "Automation",
     description:
-      "You can automatise most of your business processes, saving time and money in the long run. Let us help you with that.",
+      "You can automatise most of your business processes, saving time and money in the long run. Let us show you how!",
     icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-6 h-6">
     <path fill="black" d="M5.5 12.05q0 .477.07.96q.068.484.232.956q.067.213-.015.408t-.266.274q-.188.085-.383.009t-.263-.29q-.2-.555-.288-1.146T4.5 12.05q0-3.139 2.19-5.344T12 4.5h1.387L11.64 2.754q-.14-.14-.15-.344t.15-.364t.354-.16t.354.16l2.388 2.389q.243.242.243.565t-.242.566l-2.389 2.388q-.14.14-.344.15t-.364-.15t-.16-.354t.16-.354L13.387 5.5H12q-2.711 0-4.606 1.907T5.5 12.05m13-.1q0-.477-.07-.96q-.068-.484-.232-.955q-.067-.214.016-.409t.265-.274q.188-.085.374-.009q.185.076.253.29q.2.556.297 1.146t.097 1.171q0 3.139-2.19 5.344T12 19.5h-1.386l1.745 1.746q.141.14.15.345q.01.203-.15.363q-.159.16-.353.16t-.354-.16l-2.388-2.389Q9.02 19.324 9.02 19t.242-.565l2.389-2.389q.14-.14.344-.15t.364.15t.16.354t-.16.354L10.614 18.5H12q2.712 0 4.606-1.907T18.5 11.95" />
   </svg>`,
