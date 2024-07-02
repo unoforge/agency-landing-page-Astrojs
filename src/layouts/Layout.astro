@@ -10,6 +10,7 @@ export interface Props {
 
 const { title } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString()
+console.log(canonicalURL)
 const resolvedImageWithDomain = new URL("/images/cooroora-pic.webp", Astro.site).toString()
 
 ---
@@ -47,7 +48,7 @@ const resolvedImageWithDomain = new URL("/images/cooroora-pic.webp", Astro.site)
       rel="stylesheet"
     />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    <link rel="canonical" href="https://hinterlandweb.com/" />
+    
   </head>
   <body class="overflow-hidden overflow-y-auto bg-body">
     <Navbar />
