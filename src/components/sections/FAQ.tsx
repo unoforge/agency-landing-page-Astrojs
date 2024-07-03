@@ -49,7 +49,7 @@ import {
                   icon={
                     <RxPlus className="size-7 shrink-0 p-1 text-text-primary transition-transform duration-300 md:size-8" />
                   }
-                  className="md:py-5 md:text-md [&[data-state=open]>svg]:rotate-45"
+                  className="md:py-5 md:text-md text-left [&[data-state=open]>svg]:rotate-45"
                 >
                   {question.title}
                 </AccordionTrigger>
@@ -75,33 +75,35 @@ import {
   export const Faq4Defaults: Faq4Props = {
     heading: "FAQs",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+      "Here you can find answers to some of our most frequently asked questions. Hopefully it will help you better understand how our business works!",
     questions: [
       {
-        title: "Question text goes here",
-        answer:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.",
-      },
+        title: "What services does Hinterland Web offer?",
+        answer:"We offer a comprehensive range of web services including website design, web app development, hosting, SEO optimization, business automation, and chatbot integration. Our goal is to be the local expert that provide a one-stop solution for all your digital needs."},
       {
-        title: "Question text goes here",
+        title: "I'm a small business owner/solo trader. Can you help with my website?",
         answer:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.",
-      },
+          "Absolutely! We specialize in creating websites for small businesses and solo traders like hairdressers, tradespeople, and coffee shop owners. We understand the unique needs of local businesses and tailor our services to help you establish a strong online presence."},
       {
-        title: "Question text goes here",
+        title: "How can a website help my small business compete with larger companies?",
         answer:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.",
-      },
+          "A well-designed website levels the playing field, allowing you to showcase your products or services professionally. With our SEO services, you can improve your visibility in local searches. Plus, features like automation and chatbots can help you provide 24/7 customer service, matching the capabilities of larger businesses."},
       {
-        title: "Question text goes here",
+        title: "Do you serve businesses outside of the Sunshine Coast?",
         answer:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.",
-      },
+          "While we primarily serve the Sunshine Coast area, we're open to discussing projects from other locations. Our local focus allows us to provide personalized service and understand the specific needs of businesses in our community."},
       {
-        title: "Question text goes here",
+        title: "What's your process for creating a website?",
         answer:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.",
-      },
+          "Our process is straightforward and client-focused. It begins with a Discovery Call to understand your needs, followed by sending you a detailed proposal. Once payment is arranged, we create a project draft. We then schedule a feedback call for any necessary changes before launching your site."},
+      {
+        title: "How long does it take to get my website up and running?",
+        answer:
+          "It will always depend on the size of your project, if you have any design files already, your cooperation  and your timeline, if it is just a simple landing page with relevant call-to-action it can be done withing a week."},
+      {
+        title: "Do you offer ongoing support after my website is launched?",
+        answer:
+          "Yes, we offer ongoing support and maintenance services starting at $100 per year. This includes website hosting, content update, and regular checks to ensure your site continues to perform optimally."},
     ],
     footerHeading: "Still have questions?",
     footerDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",

@@ -37,8 +37,8 @@ publishedBlogEntries.sort(function (a, b) {
                     src={blogPostEntry.data.image.src}
                     alt={blogPostEntry.data.image.alt}
                     sizes="(max-width: 800px) 100vw, 800px"
-                    width={800}
-                    height={600}
+                    width={430}
+                    height={240}
                     loading={index <= 2 ? "eager" : "lazy"}
                     decoding={index <= 2 ? "sync" : "async"}
                     class="w-full rounded-md object-cover object-center bg-white"
@@ -64,7 +64,10 @@ publishedBlogEntries.sort(function (a, b) {
                         {blogPostEntry.data.publishDate.toDateString()}
                       </time>
                     </div>
+                    <Paragraph>{blogPostEntry.data.snippet}</Paragraph>
                   </div>
+                
+                
                 </div>
               </a>
             </li>

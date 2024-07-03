@@ -9,7 +9,8 @@ import { services } from "../../utils/data";
 type ServicesProps = {
     title: string;
     description: string;
-    icon: string
+    icon: string;
+    url?:string;
 };
 
 
@@ -29,7 +30,7 @@ type ServicesProps = {
             {
                     services.map((service: ServicesProps) => {
                     return (
-                            <Service title={service.title} description={service.description} icon={service.icon}>
+                            <Service title={service.title} description={service.description} icon={service.icon} url={service.url}>
                             </Service>
                             );
                     })
