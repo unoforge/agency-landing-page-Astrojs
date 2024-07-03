@@ -10,16 +10,23 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/react": "^3.6.0",
     "@astrojs/sitemap": "^3.1.4",
     "@astrojs/tailwind": "^5.0.0",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@mui/icons-material": "^5.15.16",
     "@mui/material": "^5.15.16",
+    "@relume_io/relume-tailwind": "^0.3.0",
+    "@relume_io/relume-ui": "^0.3.0",
     "@tailwindcss/typography": "^0.5.13",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
     "astro": "^3.0.7",
     "astro-icon": "^1.1.0",
     "astro-seo": "^0.8.4",
+    "react": "^19.0.0-beta",
+    "react-dom": "^19.0.0-beta",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
     "tailwindcss": "^3.3.3"
