@@ -25,8 +25,8 @@
     "astro": "^3.0.7",
     "astro-icon": "^1.1.0",
     "astro-seo": "^0.8.4",
-    "react": "^19.0.0-beta",
-    "react-dom": "^19.0.0-beta",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
     "tailwindcss": "^3.3.3"

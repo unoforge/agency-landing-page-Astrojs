@@ -1,15 +1,17 @@
 ---
-draft: true
-title: "Navigating a Career Change into Tech at 40"
-snippet: "Shifting careers is hard as hell"
-image: {
-    src: "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?&fit=crop&w=430&h=240",
-    alt: "full stack web development"
+{
+  "draft": false,
+  "title": "Navigating a Career Change into Tech at 40",
+  "snippet": "Shifting careers is hard as hell",
+  "image": {
+    "src": "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?&fit=crop&w=430&h=240",
+    "alt": "full stack web development"
+  },
+  "publishDate": "2022-11-08 11:39",
+  "category": "Tutorials",
+  "author": "André Silva",
+  "tags": ["webdev", "tailwindcss", "frontend"]
 }
-publishDate: "2022-11-08 11:39"
-category: "Tutorials"
-author: "André Silva"
-tags: [webdev, tailwindcss, frontend]
 ---
 
 

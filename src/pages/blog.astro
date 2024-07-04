@@ -3,9 +3,9 @@ import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Container from "../components/sections/container.astro";
 import Sectionhead from "../components/sections/sectionhead.astro";
-import Title from "~/components/shared/Title.astro";
-import Paragraph from "~/components/shared/Paragraph.astro";
-import Subtitle from "~/components/shared/Subtitle.astro";
+import Title from "../components/shared/Title.astro";
+import Paragraph from "../components/shared/Paragraph.astro";
+import Subtitle from "../components/shared/Subtitle.astro";
 
 // Filter blog entries with 'draft: false' & date before current date
 const publishedBlogEntries = await getCollection("blog", ({ data }) => {

@@ -1,16 +1,17 @@
 ---
-draft: false
-title: " 3 Simple Reasons Why You Still Need a Website in 2024"
-snippet: "A well-designed website serves as the cornerstone of your online presence, providing a platform that you fully control and serves as a 24/7 digital brochure."
-image: {
-    src: "images/do-I-still-need-a-website-blog.jpg",
-    src2: "https://unsplash.com/photos/white-and-black-laptop-bs2Ba7t69mM?&fit=crop&w=430&h=240",
-    alt: "Do I need A Website?"
+{
+  "draft": false,
+  "title": "3 Simple Reasons Why You Still Need a Website in 2024",
+  "snippet": "A well-designed website serves as the cornerstone of your online presence, providing a platform that you fully control and serves as a 24/7 digital brochure.",
+  "image": {
+    "src": "https://www.hinterlandweb.com/do-I-still-need-a-website-blog.jpg",
+    "alt": "Do I need A Website?"
+  },
+  "publishDate": "2024-07-03 13:05",
+  "category": "Knowledge",
+  "author": "André Silva",
+  "tags": ["online", "branding", "SEO"]
 }
-publishDate: "2024-07-03 13:05"
-category: "Knowledge"
-author: "André Silva"
-tags: [online, branding, SEO]
 ---
 
 A couple of days ago I was talking to an artist that is part of the administration board of a local Art Gallery. After telling her what I do and what Hinterland Web is all about. She mentioned that in the last meeting, the board was not keen on investing in a website, but rather use the power of social media to promote the the work and events of the the Art Gallery.
