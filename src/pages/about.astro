@@ -5,6 +5,7 @@ import Container from "../components/sections/container.astro";
 import Sectionhead from "../components/sections/sectionhead.astro";
 import Title from "../components/shared/Title.astro";
 import Paragraph from "../components/shared/Paragraph.astro";
+import Subtitle from "components/shared/Subtitle.astro";
 
 //Filter team entries with 'draft: false' & date before current date
 const publishedTeamMembers = await getCollection("team", ({ data }) => {
@@ -19,14 +20,12 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
       
     </Sectionhead> -->
     <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-40">
-    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-">
-      <Title class="font-bold text-3xl text-gray-800">
-        It´s never too late
-      </Title>
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl">
+      <h1 class="text-6xl font-black text-secondary">
+        <span class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600">Olá!</span> <br/> My name is André 
+      </h1>
       <Paragraph className="text-lg leading-relaxed">
-        We're a multi-cultural team from around the world! We come from diverse
-        backgrounds, bringing different personalities, experiences and skills to
-        the job. This is what makes our team so special.
+        I am passionate about empowering local businesses and individuals in the digital world. The mission is simple: to help you establish and enhance your online presence, no matter where you're starting from.
       </Paragraph>
     </div>
     
@@ -40,13 +39,13 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
                 sizes="(max-width: 800px) 100vw, 400px"
                 width={400}
                 height={400}
-                class="w-full rounded-md transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-cover object-center aspect-square"
+                class="w-full rounded-lg transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-cover object-center aspect-square"
               />
             </div>
 
             <div class="mt-4 text-center">
-              <h2 class="text-lg text-gray-800">{teamMemberEntry.data.name}</h2>
-              <h3 class="text-sm text-slate-500">
+              <h2 class="text-lg text-secondary dark:text-tertiary">{teamMemberEntry.data.name}</h2>
+              <h3 class="text-sm text-slate-500 dark:text-primary">
                 {teamMemberEntry.data.title}
               </h3>
             </div>
@@ -54,5 +53,16 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
         ))
       }
     </div>
-  </Container>
+  
+  <div class="flex flex-col gap-3 mx-auto max-w-4xl">
+    <h2 class="font-bold text-xl text-gray-800">
+      It's never too late
+    </h2>
+    <Paragraph className="text-lg leading-relaxed">
+      We're a multi-cultural team from around the world! We come from diverse
+      backgrounds, bringing different personalities, experiences and skills to
+      the job. This is what makes our team so special.
+    </Paragraph>
+  </div>
+</Container>
 </Layout>
