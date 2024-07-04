@@ -20,6 +20,7 @@ const blogCollection = defineCollection({
 
 const teamCollection = defineCollection({
   schema: z.object({
+    bio: z.string(),
     draft: z.boolean(),
     name: z.string(),
     title: z.string(),

@@ -1,6 +1,6 @@
 ---
 {
-  "draft": false,
+  "draft": true,
   "title": "Navigating a Career Change into Tech at 40",
   "snippet": "Shifting careers is hard as hell",
   "image": {
@@ -26,9 +26,7 @@ Whether you're in your 40s, juggling family responsibilities, or simply craving 
 
 ## Golden Handcuffs
 
-For nearly 15 years, I had built a successful career in marketing, working my way up the corporate ladder at various companies in Berlin. On paper, I had achieved the kind of professional success that many people strive for - a stable job, a comfortable income, and a respectable title.
-
-After more than 10 years working as a teacher and teacher trainer, I had built a great reputation and was cherished by team members and colleagues. I really enjoyed my work, my team was amazing and I had the pleasure of working with a pool of 80+ great freelance teachers. On paper, I had what many people look for all their lives: a job they enjoy doing!
+After more than 10 years working firstly as freelance teacher and later as a teacher trainer, I had built a great reputation and was cherished by team members and colleagues. I really enjoyed my work, my team was amazing and I had the pleasure of working with a pool of 80+ great freelance teachers. On paper, I had what many people look for all their lives: a job they enjoy doing!
 
 But deep down, I couldn't shake the feeling that something was missing. On top of that our move to Australia was imminent (one year away) and I knew there wasn't much opportunity on the Sunshine Coast for language teachers. So I slowly started pondering about other options. I had hear of success stories of people who self-taught coding or did a bootcamp and landed a job in a technology company, I spoke to some of these people and other friends, who are software engineers and they all told me it was a great idea. Throughout this journey, I have always felt this unique sense of "everything is possible" amongst the developer community and just because you were never into programming, doesn't mean you can't!
 

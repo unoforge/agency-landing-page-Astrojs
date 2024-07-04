@@ -5,12 +5,17 @@ import Container from "../components/sections/container.astro";
 import Sectionhead from "../components/sections/sectionhead.astro";
 import Title from "../components/shared/Title.astro";
 import Paragraph from "../components/shared/Paragraph.astro";
-import Subtitle from "components/shared/Subtitle.astro";
+
+import Button from "components/shared/Button.astro";
 
 //Filter team entries with 'draft: false' & date before current date
 const publishedTeamMembers = await getCollection("team", ({ data }) => {
   return !data.draft && data.publishDate < new Date();
 });
+
+
+
+
 ---
 
 <Layout title="About" value="about">
@@ -55,14 +60,24 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
     </div>
   
   <div class="flex flex-col gap-3 mx-auto max-w-4xl">
-    <h2 class="font-bold text-xl text-gray-800">
+    <h2 class="font-bold text-4xl text-secondary dark:text-tertiary">
       It's never too late
     </h2>
     <Paragraph className="text-lg leading-relaxed">
-      We're a multi-cultural team from around the world! We come from diverse
-      backgrounds, bringing different personalities, experiences and skills to
-      the job. This is what makes our team so special.
+      {publishedTeamMembers[0].data.bio}
+   
     </Paragraph>
+    
   </div>
+  <div class="mx-auto max-w-md sm:max-w-xl pt-10 text-center">
+    <a href=`https://tidycal.com/silvandre/15-minute-meeting` target="_blank">
+    <Button variant={"primary"}>
+      <span class="text-white text-2xl relative z-[5]">Book a free call</span>
+    </Button>
+  </a>
+  
+  </div>
+</div>
 </Container>
+
 </Layout>
