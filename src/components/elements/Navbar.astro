@@ -6,19 +6,19 @@ import  Navitem from "../shared/Navitem.astro";
 const navItems = [
     {
         href:"#",
-        text:"Home"
+        text:"Inicio"
     },
     {
         href:"#services",
-        text:"Services"
+        text:"Servicios"
     },
     {
         href:"#about-us",
-        text:"About us"
+        text:"Sobre nosotros"
     },
     {
         href:"#features",
-        text:"Features"
+        text:"Características"
     },
 ]
 ---
@@ -29,14 +29,9 @@ const navItems = [
             <!-- logo -->
             <div class="min-w-max inline-flex relative">
                 <a href="/" class="relative flex items-center gap-3">
-                    <div class="relative w-7 h-7 overflow-hidden flex rounded-xl">
-                        <span class="absolute w-4 h-4 -top-1 -right-1 bg-green-500 rounded-md rotate-45"></span>
-                        <span class="absolute w-4 h-4 -bottom-1 -right-1 bg-[#FCDC58] rounded-md rotate-45"></span>
-                        <span class="absolute w-4 h-4 -bottom-1 -left-1 bg-primary rounded-md rotate-45"></span>
-                        <span class="absolute w-2 h-2 rounded-full bg-heading-1 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></span>
-                    </div>
+					<img src="/logos/logo.png" alt="QuarryCode" class="w-16 h-16 rounded-full"/>
                     <div class="inline-flex text-lg font-semibold text-heading-1">
-                        AgenceX
+                        QuarryCode
                     </div>
                 </a>
             </div>
@@ -51,7 +46,7 @@ const navItems = [
                 </ul>
 
                 <div class="lg:min-w-max flex items-center sm:w-max w-full pb-6 lg:pb-0 border-b border-box-bg lg:border-0 px-6 lg:px-0">
-                    <BtnLink text="Get Started" href="#cta" className="flex justify-center w-full sm:w-max" variant="primary"/>
+					<BtnLink text="Comienza aquí" href="#cta" className="flex justify-center w-full sm:w-max" variant="primary"/>
                 </div>
             </div>
 
@@ -64,10 +59,10 @@ const navItems = [
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 dark:hidden">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
                       </svg>
-                                    
-                    <span class="sr-only">switch theme</span>
+
+                    <span class="sr-only">Cambiar tema</span>
                 </button>
-                
+
                 <button data-toggle-nav data-open-nav="false" class="lg:hidden lg:invisible outline-none w-7 h-auto flex flex-col relative">
                     <span id="line1" class="w-6 h-0.5 rounded-full bg-heading-2 transition-all duration-300 ease-linear"></span> 
                     <span id="line2" class="w-6 origin-center  mt-1 h-0.5 rounded-ful bg-heading-2 transition-all duration-300 ease-linear"></span> 
