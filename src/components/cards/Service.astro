@@ -1,24 +1,37 @@
 ---
-import Paragraph from '../shared/Paragraph.astro';
+import Paragraph from "../shared/Paragraph.astro";
 
-export interface Props{
-    title:string,
-    description:string
+import BtnLink from "../shared/BtnLink.astro";
+
+export interface Props {
+  title: string;
+  description: string;
+  link: string;
 }
 
-const {title, description} = Astro.props
+const { title, description, link } = Astro.props;
 ---
-<div class="p-5 sm:p-6 lg:p-8 lg:text-left text-center rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden">
-    <div class="rounded-xl lg:mx-0 mx-auto bg-gray-300 dark:bg-gray-950 p-3 text-heading-1 w-max relative">
-        <slot name="icon"/>
-    </div>
-    <div class="mt-6 space-y-4 relative">
-        <h2 class="text-lg md:text-xl font-semibold text-heading-2">
-            {title}
-        </h2>
-        <Paragraph>
-            {description}
-        </Paragraph>
-    </div>
-    <span class="absolute w-32 aspect-square -bottom-16 -right-16 bg-primary/10 rounded-full"></span>
+
+<div
+  class="p-5 sm:p-6 lg:p-8 lg:text-left text-center rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden"
+>
+  <div
+    class="rounded-xl lg:mx-0 mx-auto bg-gray-100 dark:bg-gray-950 p-3 text-heading-1 w-max relative"
+  >
+    <slot name="icon" />
+  </div>
+  <div class="mt-6 space-y-4 relative h-46 md:h-36">
+    <h2 class="text-lg md:text-xl font-semibold text-heading-2">
+      {title}
+    </h2>
+    <Paragraph>
+      {description}
+    </Paragraph>
+  </div>
+  <div class="flex sm:flex-row flex-col gap-5 w-full justify-start mt-5">
+   <BtnLink href={link} text="Saber más" variant="secondary" />
+  </div>
+  <span
+    class="absolute w-32 aspect-square -bottom-16 -right-16 bg-primary/10 rounded-full"
+  ></span>
 </div>

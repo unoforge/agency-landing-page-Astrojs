@@ -4,36 +4,27 @@ import Container from "../shared/Container.astro";
 import Paragraph from "../shared/Paragraph.astro";
 import Title from "../shared/Title.astro";
 
-const mobilePic = "https://res.cloudinary.com/dxsosgojl/image/upload/v1696683213/undraw_mobile_posts_re_bpuw_sdmwgr.svg"
-const crmPic = "https://res.cloudinary.com/dxsosgojl/image/upload/v1696683217/undraw_people_search_re_5rre_wm0njl.svg"
-const corpPic = "https://res.cloudinary.com/dxsosgojl/image/upload/v1696683206/undraw_building_websites_i78t_nehbtg.svg"
-const landingPic = "https://res.cloudinary.com/dxsosgojl/image/upload/v1696683212/undraw_mobile_development_re_wwsn_ybytko.svg"
-const ecommercePic = "https://res.cloudinary.com/dxsosgojl/image/upload/v1696683221/undraw_web_shopping_re_owap_hv34cv.svg"
-const ideaPic = "https://res.cloudinary.com/dxsosgojl/image/upload/v1696683209/undraw_lightbulb_moment_re_ulyo_uhgt43.svg"
+const wordpressIcon = "/images/icons8-wordpress-96.png"
+const woocommerceIcon = "/images/icons8-woocommerce-96.png"
+const codingIcon = "/images/icons8-laptop-coding-96.png"
+const mobileIcon = "/images/icons8-iphone-14-96.png"
+const supportIcon = "/images/icons8-support-96.png"
+const fullstackIcon = "/images/icons8-stack-96.png"
 ---
 
 
 <section id="services">
   <Container className="space-y-10 md:sapce-y-12">
-    <div class=" max-w-3xl  space-y-4 ml-4 lg:text-left text-center">
-      <p class="text-heading-1 font-semibold text-2xl sm:text-3xl md:text-4xl"><b>Servicios</b> y <b>Soluciones</b> para tu Negocio </p>
-      <!-- <Paragraph>
-        Cuando se decide crear un sitio web, es común que el cliente no tenga
-        una visión clara de lo que necesita y por dónde empezar. Por lo tanto,
-        es esencial organizar reuniones entre el cliente y los desarrolladores
-        para comprender la idea correctamente. Esto ahorra tiempo, recursos y
-        dinero.
-      </Paragraph> -->
-    
-      
+    <div class=" max-w-3xl  space-y-4 ml-4 lg:text-left text-center">           
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
       <Service
-        title="Landing Page"
-        description="Convierte visitantes en clientes potenciales de tu producto o servicio mediante una oferta clara y específica."
+        title="Sitios Web"
+        description="Desarrollamos sitios web atractívos, dinámicos y con diseño adaptable para mostrar la mejor faceta de tu negocio ."
+        link="/services/#"
       >
         <span slot="icon">
-          <img src={landingPic} width={80} height={80} alt="Landing Page" />
+          <img src={wordpressIcon} width={80} height={80} alt="sitios web" />
 
             <path
               stroke-linecap="round"
@@ -44,11 +35,12 @@ const ideaPic = "https://res.cloudinary.com/dxsosgojl/image/upload/v1696683209/u
         </span>
       </Service>
       <Service
-        title="Páginas Corporativas"
-        description="Destaca tu empresa en Internet y brinda información relevante a los visitantes mediante una plataforma propia que refleje su esencia."
+        title="E-commerce"
+        description="Creamos tiendas virtuales con las mejores herramientas del mercado, con las que tendrás el control total de tus operaciones comerciales."
+        link="/services/#"
       >
         <span slot="icon">
-          <img src={corpPic} width={80} height={80} alt="Web corporativa" />
+          <img src={woocommerceIcon} width={80} height={80} alt="e-commerce" />
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -58,26 +50,13 @@ const ideaPic = "https://res.cloudinary.com/dxsosgojl/image/upload/v1696683209/u
         </span>
       </Service>
       <Service
-        title="Comercio Electrónico"
-        description="Aumenta las ventas de tu negocio ofreciendo tus productos/servicios a millones de potenciales compradores."
+        title="Aplicaciones Web"
+        description="Desarrollamos proyectos web a tu medida, implementando soluciones adaptadas a tu negocio con los mejores estándares de la industria, garantizando seguridad y escalabilidad."
+        link="/services/#"
       >
         <span slot="icon">
-          <img src={ecommercePic} width={80} height={80} alt="Comercio electronico" />
+          <img src={codingIcon} width={80} height={80} alt="aplicaciones web" />
           
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
-            ></path>
-          </svg>
-        </span>
-      </Service>
-      <Service
-        title="CRM"
-        description="Centraliza, organiza, administra y visualiza toda la información y actividades de tus clientes en un solo lugar."
-      >
-        <span slot="icon">
-          <img src={crmPic} width={70} height={70} alt="CRM" />
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -88,10 +67,11 @@ const ideaPic = "https://res.cloudinary.com/dxsosgojl/image/upload/v1696683209/u
       </Service>
       <Service
         title="Aplicaciones Móviles"
-        description="Implementa diversas funciones o servicios para gestiones propias y/o para usuarios-clientes, tanto en Android como en iOS."
+        description="Implementamos aplicaciones nativas para birndar servicios específicos a tus clientes tanto en Android como en iOS."
+        link="/services/#"
       >
         <span slot="icon">
-          <img src={mobilePic} width={80} height={80} alt="Aplicacion movil" />
+          <img src={mobileIcon} width={70} height={70} alt="aplicaciones móviles" />
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -101,12 +81,28 @@ const ideaPic = "https://res.cloudinary.com/dxsosgojl/image/upload/v1696683209/u
         </span>
       </Service>
       <Service
-        title="Proyectos Personalizados"
-        description="Tu idea no cuadra con las opciones anteriores? No te preocupes! Contáctanos para asesorarte de manera personalizada."
+      title="Desarrollo Fullstack"
+      description="Desarrollamos proyectos end to end a medida de nuestros clientes, combinando herramientas de administración de bases de datos, servidores backend y aplicaciones frontend."
+      link="/services/#"
+    >
+      <span slot="icon">
+        <img src={fullstackIcon} width={70} height={70} alt="Proyecto personalizado" />
+        
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
+          ></path>
+        </svg>
+      </span>
+    </Service>
+      <Service
+        title="Soporte"
+        description="¿Tienes un proyecto en funcionamiento y necesitas ayuda para manejarlo? Cuenta con nosotros como tu aliado para su mantenimiento."
+        link="/services/#"
       >
         <span slot="icon">
-          <img src={ideaPic} width={70} height={70} alt="Proyecto personalizado" />
-          
+          <img src={supportIcon} width={70} height={70} alt="Soporte" />
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -114,7 +110,7 @@ const ideaPic = "https://res.cloudinary.com/dxsosgojl/image/upload/v1696683209/u
             ></path>
           </svg>
         </span>
-      </Service>
+      </Service>    
     </div>
     
     <article class="bg-gray-200 rounded-2xl lg:px-4 lg:py-10 px-2 py-4 dark:bg-gray-900">
