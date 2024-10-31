@@ -56,68 +56,12 @@ import Paragraph from "../shared/Paragraph.astro";
           <br /><br />¡Contáctanos ahora para ayudarte a dar el próximo paso!
         </Paragraph>
         <div class="mx-auto max-w-md sm:max-w-xl pt-6">
-          <form
-            action="https://formsubmit.co/wwizard.lab@gmail.com"
-            method="POST"
-            name="contactForm"
-            class="text-center"
+          <a
+            href="/contact"
+            class="bg-blue-800 hover:bg-blue-950 text-white font-semibold py-4 lg:px-20 px-14 mt-8 rounded-full focus:outline-none focus:shadow-outline"
           >
-            <label
-              for="nombre"
-              class="block text-gray-700 text-sm font-bold mb-4"></label>
-            <input
-              type="text"
-              pattern="[a-z, A-Z]{3,25}"
-              title="Utiliza solo letras"
-              id="nombre"
-              name="nombre"
-              placeholder="Nombre"
-              required
-              class="w-[80%] px-3 py-2 text-gray-500 border-b border-gray-400 bg-transparent shadow-sm"
-            />
-
-            <label
-              for="email"
-              class="block text-gray-700 text-sm font-bold mb-4"></label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Correo electrónico"
-              required
-              class="w-[80%] px-3 py-2 text-gray-500 border-b border-gray-400 bg-transparent shadow-sm"
-            />
-
-            <label
-              for="mensaje"
-              class="block text-gray-700 text-sm font-bold mb-4"></label>
-            <textarea
-              id="mensaje"
-              name="mensaje"
-              rows="4"
-              placeholder="Mensaje"
-              required
-              class="w-[80%] px-3 py-2 text-gray-500 border-b border-gray-400 bg-transparent shadow-sm"
-            ></textarea>
-
-            <button
-              type="submit"
-              id="enviar"
-              class="bg-blue-800 hover:bg-blue-950 text-white font-semibold py-4 lg:px-20 px-14 mt-8 rounded-full focus:outline-none focus:shadow-outline"
-            >
-              Enviar Mensaje
-            </button>
-            <input
-            type="hidden"
-            name="_next"
-            value="https://webwizardlab.vercel.app/"
-          />
-          <input type="hidden" name="_captcha" value="false" />
-          
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_subject" value="Hola! Recibimos tu consulta.">
-          <input type="hidden" name="_autoresponse" value="Hola! Recibimos tu consulta. Gracias por comunicarte con WebWizard Lab! En las próximas 48 horas hábiles nos estaremos comunicando con novedades. Te deseamos un bonito día :)">
-        </form>
+            Contáctanos
+          </a>
         </div>
       </div>
     </div>
