@@ -1,0 +1,147 @@
+---
+import Service from "../components/cards/Service.astro";
+import Container from "../components/shared/Container.astro";
+import Paragraph from "../components/shared/Paragraph.astro";
+import Title from "../components/shared/Title.astro";
+
+const wordpressIcon = "/images/icons8-wordpress-96.png"
+const woocommerceIcon = "/images/icons8-woocommerce-96.png"
+const codingIcon = "/images/icons8-laptop-coding-96.png"
+const mobileIcon = "/images/icons8-iphone-14-96.png"
+const supportIcon = "/images/icons8-support-96.png"
+const fullstackIcon = "/images/icons8-stack-96.png"
+---
+
+
+<section id="services">
+  <Container className="space-y-10 md:sapce-y-12">
+    <div class=" max-w-3xl  space-y-4 ml-4 lg:text-left text-center">           
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      <Service
+        title="Sitios Web"
+        description="Desarrollamos sitios web atractívos, dinámicos y con diseño adaptable para mostrar la mejor faceta de tu negocio ."
+        link="/services/#"
+      >
+        <span slot="icon">
+          <img src={wordpressIcon} width={80} height={80} alt="sitios web" />
+
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
+            ></path>
+          </svg>
+        </span>
+      </Service>
+      <Service
+        title="E-commerce"
+        description="Creamos tiendas virtuales con las mejores herramientas del mercado, con las que tendrás el control total de tus operaciones comerciales."
+        link="/services/#"
+      >
+        <span slot="icon">
+          <img src={woocommerceIcon} width={80} height={80} alt="e-commerce" />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
+            ></path>
+          </svg>
+        </span>
+      </Service>
+      <Service
+        title="Aplicaciones Web"
+        description="Desarrollamos proyectos web a tu medida, implementando soluciones adaptadas a tu negocio con los mejores estándares de la industria, garantizando seguridad y escalabilidad."
+        link="/services/#"
+      >
+        <span slot="icon">
+          <img src={codingIcon} width={80} height={80} alt="aplicaciones web" />
+          
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
+            ></path>
+          </svg>
+        </span>
+      </Service>
+      <Service
+        title="Aplicaciones Móviles"
+        description="Implementamos aplicaciones nativas para birndar servicios específicos a tus clientes tanto en Android como en iOS."
+        link="/services/#"
+      >
+        <span slot="icon">
+          <img src={mobileIcon} width={70} height={70} alt="aplicaciones móviles" />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
+            ></path>
+          </svg>
+        </span>
+      </Service>
+      <Service
+      title="Desarrollo Fullstack"
+      description="Desarrollamos proyectos end to end a medida de nuestros clientes, combinando herramientas de administración de bases de datos, servidores backend y aplicaciones frontend."
+      link="/services/#"
+    >
+      <span slot="icon">
+        <img src={fullstackIcon} width={70} height={70} alt="Proyecto personalizado" />
+        
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
+          ></path>
+        </svg>
+      </span>
+    </Service>
+      <Service
+        title="Soporte"
+        description="¿Tienes un proyecto en funcionamiento y necesitas ayuda para manejarlo? Cuenta con nosotros como tu aliado para su mantenimiento."
+        link="/services/#"
+      >
+        <span slot="icon">
+          <img src={supportIcon} width={70} height={70} alt="Soporte" />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
+            ></path>
+          </svg>
+        </span>
+      </Service>    
+    </div>
+    
+    <article class="bg-gray-200 rounded-2xl lg:px-4 lg:py-10 px-2 py-4 dark:bg-gray-900">
+    <p class="lg:ml-10 text-center font-semibold text-heading-1 text-xl">Trabajando con nosotros obtienes:</p>
+    <ul class="lg:grid lg:grid-cols-3 mx-auto w-full lg:w-[95%] gap-2 mt-8 text-heading-3 dark:text-white">
+      <li>
+          <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">&checkmark;</span>Las mejores prácticas de SEO
+      </li>
+      <li class="mt-2">
+        <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">&checkmark;</span>Alojamiento en servidores confiables
+    </li>
+      
+      <li class="mt-2">
+          <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">&checkmark;</span>Accesibilidad en cualquier dispositivo 
+      </li>
+      <li class="mt-2">
+        <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">&checkmark;</span>Optimización de contenido
+    </li>
+    <li class="mt-2">
+      <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">&checkmark;</span>Excelente experiencia al usuario
+  </li>
+      
+    <li class="mt-2">
+      <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">&checkmark;</span>Asesoramiento en politicas de privacidad
+  </li>
+    
+    
+  </ul>
+    
+</article>
+
+    
+  </Container>
+</section>
