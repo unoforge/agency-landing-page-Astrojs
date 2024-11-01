@@ -5,24 +5,25 @@ import Navitem from "../shared/Navitem.astro";
 
 const navItems = [
   {
-    href: "#",
+    href: "/",
     text: "Inicio"
   },
   {
-    href: "#services",
+    href: "/about",
+    text: "Nosotros"
+  },
+  {
+    href: "/services",
     text: "Servicios"
   },
   {
-    href: "#portfolio",
+    href: "/projects",
     text: "Proyectos"
-  },
+  }, 
+  
   {
-    href: "#planes",
-    text: "Planes"
-  },
-  {
-    href: "/about",
-    text: "Sobre Nosotros"
+    href: "/contact",
+    text: "Contacto"
   }
 ];
 
@@ -31,7 +32,7 @@ const logo =
 ---
 
 <header
-  class="bg-bgHeader dark:bg-bgHeaderDark fixed inset-x-0 top-0 z-[999] py-6"
+  class="fixed inset-x-0 top-0 z-[999] py-6 bg-gradient-to-tr from-bgHeader to-gray-200 dark:from-gray-900 pt-10 rounded-b-3xl"
 >
   <Container>
     <nav class="w-full flex justify-between gap-6 relative">
