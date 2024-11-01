@@ -1,7 +1,8 @@
 ---
 import Footer from "../components/elements/Footer.astro";
 import Navbar from "../components/elements/Navbar.astro";
-const logo = "https://res.cloudinary.com/dqefppqdd/image/upload/v1695232256/WebWizards_01_Artboard_1_wnkmvg.svg"
+const logo =
+  "https://res.cloudinary.com/dqefppqdd/image/upload/v1695232256/WebWizards_01_Artboard_1_wnkmvg.svg";
 
 export interface Props {
   title: string;
@@ -10,30 +11,41 @@ export interface Props {
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href={logo}/>
+    <link rel="icon" type="image/svg+xml" href={logo} />
     <meta name="generator" content={Astro.generator} />
 
-    <meta name="description" content="Web Wizard Lab - SEO Agencia de desarrollo web. Desarrollamos páginas web profesionales que acercan clientes a tu marca.">
-    
-  <!-- openGraph -->
-    <meta property="og:title" content="Web Wizard Lab - Tu agencia de desarrollo web." />
-    <meta property="og:description" content="Web Wizard Lab - SEO Agencia de desarrollo web. Desarrollamos páginas web profesionales que acercan clientes a tu marca." />
-    <meta property="og:image" content="../../public/images/wwlLogo.png"/>
+    <meta
+      name="description"
+      content="Web Wizard Lab - SEO Agencia de desarrollo web. Desarrollamos páginas web profesionales que acercan clientes a tu marca."
+    />
+
+    <!-- openGraph -->
+    <meta
+      property="og:title"
+      content="Web Wizard Lab - Tu agencia de desarrollo web."
+    />
+    <meta
+      property="og:description"
+      content="Web Wizard Lab - SEO Agencia de desarrollo web. Desarrollamos páginas web profesionales que acercan clientes a tu marca."
+    />
+    <meta property="og:image" content="../../public/images/wwlLogo.png" />
     <meta property="og:url" content="https://webwizardlab.vercel.app" />
     <meta property="og:type" content="website" />
-    <meta property="og:image:alt" content="El logo de Web Wizard Lab - Tu agencia de desarrollo web."/>
+    <meta
+      property="og:image:alt"
+      content="El logo de Web Wizard Lab - Tu agencia de desarrollo web."
+    />
 
     <title>Web Wizard Lab : Agencia de desarrollo web</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" href="estilos.css">
   </head>
   <body class="overflow-hidden overflow-y-auto bg-body">
     <Navbar />
@@ -41,8 +53,9 @@ const { title } = Astro.props;
     <Footer />
     <div class="whatsapp-button">
       <a href="https://wa.me/34602637525" target="_blank">
-        <img src="https://res.cloudinary.com/dxsosgojl/image/upload/v1698522086/PortfolioWebWizard/whatsapp_g4bvjr.png" >
-    
+        <img
+          src="https://res.cloudinary.com/dxsosgojl/image/upload/v1698522086/PortfolioWebWizard/whatsapp_g4bvjr.png"
+        />
       </a>
     </div>
   </body>
@@ -95,36 +108,33 @@ const { title } = Astro.props;
       "[data-nav-overlay]"
     ) as HTMLDivElement;
     if (toggleMenu) {
-      toggleMenu.addEventListener("click", e => {
+      toggleMenu.addEventListener("click", (e) => {
         e.preventDefault();
         if (toggleMenu.getAttribute("data-open-nav") === "false") {
           toggleMenu.setAttribute("data-open-nav", "true");
           overlayNav.setAttribute("data-is-visible", "true");
           document.body.classList.add("!overflow-y-hidden");
-		  navbar.style.height = `${navbar.scrollHeight}px`
-
-        }else{
-			toggleMenu.setAttribute("data-open-nav", "false");
-        	overlayNav.setAttribute("data-is-visible", "false");
-        	document.body.classList.remove("!overflow-y-hidden");
-		  	navbar.style.height = "0px"
-		}
-		
-        
+          navbar.style.height = `${navbar.scrollHeight}px`;
+        } else {
+          toggleMenu.setAttribute("data-open-nav", "false");
+          overlayNav.setAttribute("data-is-visible", "false");
+          document.body.classList.remove("!overflow-y-hidden");
+          navbar.style.height = "0px";
+        }
       });
 
       navbar.addEventListener("click", () => {
         toggleMenu.setAttribute("data-open-nav", "false");
         overlayNav.setAttribute("data-is-visible", "false");
         document.body.classList.remove("!overflow-y-hidden");
-		  	navbar.style.height = "0px"
+        navbar.style.height = "0px";
       });
 
       overlayNav.addEventListener("click", () => {
         toggleMenu.setAttribute("data-open-nav", "false");
-        	overlayNav.setAttribute("data-is-visible", "false");
-        	document.body.classList.remove("!overflow-y-hidden");
-		  	navbar.style.height = "0px"
+        overlayNav.setAttribute("data-is-visible", "false");
+        document.body.classList.remove("!overflow-y-hidden");
+        navbar.style.height = "0px";
       });
     }
   </script>
@@ -136,9 +146,9 @@ const { title } = Astro.props;
     --color-box: 255 255 255;
     --box-border: 229 231 235;
     --box-sd: 226 232 240 / 0.5;
-	--heading-1:  23 37 84;
-	--heading-2: 31 41 55;
-	--heading-3: 55 65 81;
+    --heading-1: 23 37 84;
+    --heading-2: 31 41 55;
+    --heading-3: 55 65 81;
   }
 
   .dark {
@@ -147,13 +157,12 @@ const { title } = Astro.props;
     --box-border: 243 244 246/0.1;
     --box-sd: transparent;
 
-	
-	--heading-1:  255 255 255;
-	--heading-2:  243 244 246;
-	--heading-3:  209 213 219;
+    --heading-1: 255 255 255;
+    --heading-2: 243 244 246;
+    --heading-3: 209 213 219;
   }
 
-  html{
+  html {
     scroll-behavior: smooth;
   }
   body {
@@ -171,27 +180,24 @@ const { title } = Astro.props;
     transform: translateY(-0.375rem) rotate(-40deg);
   }
 
-  
   [data-nav-overlay][data-is-visible="true"] {
     visibility: visible;
     display: flex;
   }
   .whatsapp-button {
-  position: fixed;
-  bottom: 20px; /* Ajusta la distancia desde el borde inferior de la pantalla */
-  right: 20px; /* Ajusta la distancia desde el borde derecho de la pantalla */
-  color: #fff;
-  text-decoration: none;
-  padding: 5px 10px; /* Reducir el espacio interno (padding) */
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 14px; /* Ajustar el tamaño de la fuente */
-  z-index: 999; /* Asegura que esté por encima de otros elementos */
-}
-.whatsapp-button img {
-  max-width: 70px; /* Establece el ancho máximo de la imagen */
-  height: auto; /* Mantiene la relación de aspecto original */
-}
-
-
+    position: fixed;
+    bottom: 20px; /* Ajusta la distancia desde el borde inferior de la pantalla */
+    right: 20px; /* Ajusta la distancia desde el borde derecho de la pantalla */
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px; /* Reducir el espacio interno (padding) */
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px; /* Ajustar el tamaño de la fuente */
+    z-index: 999; /* Asegura que esté por encima de otros elementos */
+  }
+  .whatsapp-button img {
+    max-width: 70px; /* Establece el ancho máximo de la imagen */
+    height: auto; /* Mantiene la relación de aspecto original */
+  }
 </style>
