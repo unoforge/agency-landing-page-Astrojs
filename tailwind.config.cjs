@@ -15,7 +15,7 @@ module.exports = {
 				"heading-1": "rgb(var(--heading-1))",
 				"heading-2": "rgb(var(--heading-2))",
 				"heading-3": "rgb(var(--heading-3))",
-				bgHeader: "rgba(255, 255, 255, 0.7)",
+				bgHeader: "rgba(239, 241, 243, 0.3)",
 				bgHeaderDark: "rgba(3, 7,18, 0.7)"
 			},
 			screens:{

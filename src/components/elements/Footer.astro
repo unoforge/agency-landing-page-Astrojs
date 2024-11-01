@@ -4,151 +4,211 @@ import Container from "../shared/Container.astro";
 import FooterNav from "../shared/FooterNav.astro";
 import Paragraph from "../shared/Paragraph.astro";
 const footerNav1 = [
-{
-        itemText:"Servicios",
-        itemLink:"#services"
-    },
-    {
-        itemText:"Planes",
-        itemLink:"#planes"
-    }
-]
+  {
+    itemText: "Servicios",
+    itemLink: "/services"
+  }
+];
 
 const footerSupport = [
-    
-    {
-        itemText:"Contacto",
-        itemLink:"#cta"
-    }
-]
+  {
+    itemText: "Contacto",
+    itemLink: "/contact"
+  }
+];
 
 const footerCompany = [
-    {
-        itemText:"Nosotros",
-        itemLink:"#"
-    },
-    
-    {
-        itemText:"Proyectos",
-        itemLink:"#portfolio"
-    }
-]
+  {
+    itemText: "Inicio",
+    itemLink: "/"
+  },
+  {
+    itemText: "Nosotros",
+    itemLink: "/about"
+  },
+
+  {
+    itemText: "Proyectos",
+    itemLink: "/proyectos"
+  }
+];
 const footerLegal = [
-    {
-        itemText:"Privacidad",
-        itemLink:"https://drive.google.com/file/d/1dVuauKrh9HEL7PdQpwvgDnAEgJyX5fpe/view?usp=share_link"
-    },
-    {
-        itemText:"Términos & Condiciones",
-        itemLink:"https://drive.google.com/file/d/14fv5Nmu7sG8wagub94RTEsEWINlv3m-_/view?usp=share_link"
-    }
-]
+  {
+    itemText: "Privacidad",
+    itemLink:
+      "https://drive.google.com/file/d/1dVuauKrh9HEL7PdQpwvgDnAEgJyX5fpe/view?usp=share_link"
+  },
+  {
+    itemText: "Términos & Condiciones",
+    itemLink:
+      "https://drive.google.com/file/d/14fv5Nmu7sG8wagub94RTEsEWINlv3m-_/view?usp=share_link"
+  }
+];
 
-const logo = "https://res.cloudinary.com/dqefppqdd/image/upload/v1695232256/WebWizards_01_Artboard_1_wnkmvg.svg"
-
+const logo =
+  "https://res.cloudinary.com/dqefppqdd/image/upload/v1695232256/WebWizards_01_Artboard_1_wnkmvg.svg";
 ---
+
 <div class="mt-16">
-<footer class="relative  bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-900 pt-10 rounded-t-3xl">
+  <footer
+    class="relative bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-900 pt-10 rounded-t-3xl"
+  >
     <div class="absolute right-0 top-0 h-full w-full flex justify-end">
-        <div class="w-28 h-28 overflow-hidden flex rounded-xl relative blur-2xl">
-            <span
-              class="absolute w-16 h-16 -top-1 -right-1 bg-green-500 rounded-md rotate-45"
-            ></span>
-            <span
-              class="absolute w-16 h-16 -bottom-1 -right-1 bg-[#FCDC58] rounded-md rotate-45"
-            ></span>
-            <span
-              class="absolute w-16 h-16 -bottom-1 -left-1 bg-primary rounded-md rotate-45"
-            ></span>
-          </div>
+      <div class="w-28 h-28 overflow-hidden flex rounded-xl relative blur-2xl">
+        <span
+          class="absolute w-16 h-16 -top-1 -right-1 bg-green-500 rounded-md rotate-45"
+        ></span>
+        <span
+          class="absolute w-16 h-16 -bottom-1 -right-1 bg-[#FCDC58] rounded-md rotate-45"
+        ></span>
+        <span
+          class="absolute w-16 h-16 -bottom-1 -left-1 bg-primary rounded-md rotate-45"
+        ></span>
       </div>
+    </div>
 
-      <div class="absolute left-0 bottom-0 h-full w-full flex items-end">
-        <div class="w-28 h-28 overflow-hidden flex rounded-xl relative blur-2xl">
-            
-            
-            <span
-              class="absolute w-16 h-16 -top-1 -right-1 bg-green-500 rounded-md rotate-45"
-            ></span>
-            <span
-              class="absolute w-16 h-16 -bottom-1 -right-1 bg-[#FCDC58] rounded-md rotate-45"
-            ></span>
-            <span
-              class="absolute w-16 h-16 -bottom-1 -left-1 bg-primary rounded-md rotate-45"
-            ></span>
-          </div>
+    <div class="absolute left-0 bottom-0 h-full w-full flex items-end">
+      <div class="w-28 h-28 overflow-hidden flex rounded-xl relative blur-2xl">
+        <span
+          class="absolute w-16 h-16 -top-1 -right-1 bg-green-500 rounded-md rotate-45"
+        ></span>
+        <span
+          class="absolute w-16 h-16 -bottom-1 -right-1 bg-[#FCDC58] rounded-md rotate-45"
+        ></span>
+        <span
+          class="absolute w-16 h-16 -bottom-1 -left-1 bg-primary rounded-md rotate-45"
+        ></span>
       </div>
+    </div>
     <Container className="pb-8 relative overflow-hidden">
-        
-        <span class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 blur-2xl opacity-20 w-24 h-16 sm:w-48 sm:h-36 rounded-full rotate-12 skew-x-6 bg-primary"></span>
-        <div class="grid grid-cols-2 lg:grid-cols-3 lg:items-stretch gap-8 relative">
-            <div class="col-span-2 lg:col-span-1 h-auto flex flex-col">
-                <div class="h-full">
-                    <a href="#" class="relative flex items-center gap-3">
-                        <div class="relative w-16 h-16 overflow-hidden flex rounded-xl">
-                            <img src={logo} alt="logo"  class="absolute w-16 h-16 -top-1 -right-1">
-                                                   </div>
-                        <div class="inline-flex text-lg font-semibold text-heading-1">
-                            WebWizard Lab
-                        </div>
-                    </a>
-                    <Paragraph className={"mt-4"}>
-                        Hacemos realidad tu proyecto web.
-                    </Paragraph>
-                    <Paragraph>
-                        Nos dedicamos a construir la <b>sede digital</b> de tu marca, transformamos ideas en sitios web <b>excepcionales</b>.
-                        
-                    </Paragraph>
-                </div>
+      <span
+        class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 blur-2xl opacity-20 w-24 h-16 sm:w-48 sm:h-36 rounded-full rotate-12 skew-x-6 bg-primary"
+      ></span>
+      <div
+        class="grid grid-cols-2 lg:grid-cols-3 lg:items-stretch gap-8 relative"
+      >
+        <div class="col-span-2 lg:col-span-1 h-auto flex flex-col">
+          <div class="h-full">
+            <a href="#" class="relative flex items-center gap-3">
+              <div class="relative w-16 h-16 overflow-hidden flex rounded-xl">
+                <img
+                  src={logo}
+                  alt="logo"
+                  class="absolute w-16 h-16 -top-1 -right-1"
+                />
+              </div>
+              <div class="inline-flex text-lg font-semibold text-heading-1">
+                WebWizard Lab
+              </div>
+            </a>
+            <Paragraph className={"mt-4"}>
+              Hacemos realidad tu proyecto web.
+            </Paragraph>
+            <Paragraph>
+              Nos dedicamos a construir la <b>sede digital</b> de tu marca, transformamos
+              ideas en sitios web <b>excepcionales</b>.
+            </Paragraph>
+          </div>
 
-                <!-- social links -->
-                <div class="min-h-max flex items-center gap-4 text-heading-3 mt-8">
-                    <a href="https://www.instagram.com/wwizard.lab" class="transition hover:text-heading-1 hover:scale-105">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-6 h-6" viewBox="0 0 448 512"><path d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z"/></svg>
-                        <span class="sr-only">social link</span>
-                    </a>
+          <!-- social links -->
+          <div class="min-h-max flex items-center gap-4 text-heading-3 mt-8">
+            <a
+              href="https://www.instagram.com/wwizard.lab"
+              class="transition hover:text-heading-1 hover:scale-105"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="w-6 h-6"
+                viewBox="0 0 448 512"
+                ><path
+                  d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z"
+                ></path></svg
+              >
+              <span class="sr-only">social link</span>
+            </a>
 
-                    <a href="https://www.linkedin.com/company/webwizard-lab" class="transition hover:text-heading-1 hover:scale-105">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-5 h-5" viewBox="0 0 16 16">
-                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
-                        </svg>
-                        <span class="sr-only">social link</span>
-                    </a>
+            <a
+              href="https://www.linkedin.com/company/webwizard-lab"
+              class="transition hover:text-heading-1 hover:scale-105"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="w-5 h-5"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
+                ></path>
+              </svg>
+              <span class="sr-only">social link</span>
+            </a>
 
-                    <a href="https://twitter.com/WebwizardLab" class="transition hover:text-heading-1 hover:scale-105">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-5 h-5" viewBox="0 0 512 512">
-                            <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/>
-                        </svg>
-                        <span class="sr-only">social link</span>
-                    </a>      
-                        <a href="https://youtube.com/@WebWizardLab?si=wSENEhsRL5JJsub6" class="transition hover:text-heading-1 hover:scale-105">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-6 h-6" viewBox="0 0 576 512">
-                                <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
-                        <span class="sr-only">social link</span>
-                    </a>
-                </div>
+            <a
+              href="https://twitter.com/WebwizardLab"
+              class="transition hover:text-heading-1 hover:scale-105"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="w-5 h-5"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
+                ></path>
+              </svg>
+              <span class="sr-only">social link</span>
+            </a>
+            <a
+              href="https://youtube.com/@WebWizardLab?si=wSENEhsRL5JJsub6"
+              class="transition hover:text-heading-1 hover:scale-105"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="w-6 h-6"
+                viewBox="0 0 576 512"
+              >
+                <path
+                  d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"
+                ></path></svg
+              >
+              <span class="sr-only">social link</span>
+            </a>
+          </div>
+        </div>
+
+        <GroupFooterNav>
+          <FooterNav title={"Compañia"} navItems={footerCompany} />
+          <FooterNav title={"Soluciones"} navItems={footerNav1} />
+        </GroupFooterNav>
+
+        <GroupFooterNav>
+          <FooterNav title={"Soporte"} navItems={footerSupport} />
+          <FooterNav title={"Legales"} navItems={footerLegal} />
+        </GroupFooterNav>
+      </div>
+      <div class="from-box-bg pt-12 relative">
+        <Container>
+          <div
+            class="flex justify-end items-center gap-6 md:text-lg text-heading-3"
+          >
+            <div class="pt-11">
+              &copy; <span id="year">2024</span> WebWizard Lab. All rights reserved.
             </div>
-
-            <GroupFooterNav>
-                <FooterNav title={"Compañia"} navItems={footerCompany}/>
-                <FooterNav title={"Soluciones"} navItems={footerNav1}/>
-            </GroupFooterNav>
-
-            <GroupFooterNav>
-                <FooterNav title={"Soporte"} navItems={footerSupport}/>
-                <FooterNav title={"Legales"} navItems={footerLegal}/>
-            </GroupFooterNav>
-            
-
-        </div>
-        <div class="from-box-bg pt-12 relative">
-            <Container>
-                <div class="flex justify-end items-center gap-6 md:text-lg text-heading-3">
-                    <div class="pt-11">
-                     &copy; <span id="year">2024</span> WebWizard Lab. All rights reserved.
-                    </div>                    
-                </div>
-            </Container>
-        </div>
+          </div>
+        </Container>
+      </div>
     </Container>
-</footer>
+  </footer>
+</div>
