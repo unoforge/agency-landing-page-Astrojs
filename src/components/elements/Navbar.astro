@@ -30,10 +30,11 @@ const logo =
   "https://res.cloudinary.com/dqefppqdd/image/upload/v1695232256/WebWizards_01_Artboard_1_wnkmvg.svg";
 ---
 
-<header class="absolute inset-x-0 top-0 z-50 py-6">
+<header
+  class="bg-bgHeader dark:bg-bgHeaderDark fixed inset-x-0 top-0 z-[999] py-6"
+>
   <Container>
     <nav class="w-full flex justify-between gap-6 relative">
-      <!-- logo -->
       <div class="min-w-max inline-flex relative">
         <a href="/" class="relative flex items-center gap-3">
           <div class="relative w-14 h-16 overflow-hidden flex rounded-xl">
@@ -55,6 +56,7 @@ const logo =
         class="fixed hidden inset-0 lg:!hidden bg-box-bg bg-opacity-50 backdrop-filter backdrop-blur-xl"
       >
       </div>
+
       <div
         data-navbar
         class="flex h-0 overflow-hidden lg:!h-auto lg:scale-y-100 duration-300 ease-linear flex-col gap-y-6 gap-x-4 lg:flex-row w-full lg:justify-between lg:items-center absolute lg:relative top-full lg:top-0 bg-body lg:bg-transparent border-x border-x-box-border lg:border-x-0"
@@ -141,3 +143,5 @@ const logo =
     </nav>
   </Container>
 </header>
+
+
