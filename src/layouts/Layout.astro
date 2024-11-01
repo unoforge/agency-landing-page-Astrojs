@@ -41,11 +41,11 @@ const { title } = Astro.props;
       content="El logo de Web Wizard Lab - Tu agencia de desarrollo web."
     />
 
-    <title>Web Wizard Lab : Agencia de desarrollo web</title>
+    <title>{title}</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
-    />
+    />    
   </head>
   <body class="overflow-hidden overflow-y-auto bg-body">
     <Navbar />
@@ -186,18 +186,18 @@ const { title } = Astro.props;
   }
   .whatsapp-button {
     position: fixed;
-    bottom: 20px; 
-    right: 20px; 
+    bottom: 20px;
+    right: 20px;
     color: #fff;
     text-decoration: none;
-    padding: 5px 10px; 
+    padding: 5px 10px;
     border-radius: 5px;
     font-weight: bold;
-    font-size: 14px; 
-    z-index: 999; 
+    font-size: 14px;
+    z-index: 999;
   }
   .whatsapp-button img {
-    max-width: 70px; 
-    height: auto; 
+    max-width: 70px;
+    height: auto;
   }
 </style>
