@@ -3,30 +3,135 @@ import Container from "../shared/Container.astro";
 import Paragraph from "../shared/Paragraph.astro";
 import Title from "../shared/Title.astro";
 
-const workflow = "/images/workflow.png";
+const workflow = "/images/pc-working.jpg";
 ---
 
 <section id="about">
   <Container
-    className="bg-red-400 flex flex-col midmd:flex-row gap-10 lg:gap-12 p-0"
+    className="flex flex-col md:flex-row gap-10 lg:gap-12 h-auto"
   >
-    <div class="w-full flex gap-10 h-[40rem]">
-      <div
-        class="bg-cover bg-center w-1/2 scale-x-[-1]"
-        style={`background-image: url(${workflow})`}
-      >
+    <div
+      class="hidden md:flex max-w-md mx-auto midmd:max-w-none lg:mx-0 flex-1 w-full sm:w-5/12 lg:w-1/2 h-auto lg:h-[40rem] bg-cover bg-center rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative"
+      style={`background-image: url(${workflow})`}
+    >
+    </div>
+
+    <div
+      class="max-w-md mx-auto midmd:max-w-none lg:mx-0 flex flex-col justify-between w-full sm:w-7/12 lg:w-1/2 sm:h-fit lg:h-[40rem] p-4 md:p-0"
+    >
+      <div class="flex flex-col justify-center items-start mb-6 md:mb-4">
+        <Title>
+          Tu idea <b>convertida en realidad</b>
+        </Title>
+        <Paragraph className="mt-4 md:mt-8">
+          Empezamos con una sencilla reunión para conocer los
+          objetivos de tu proyecto. Esto nos permite diseñar una solución a tu
+          medida, estimar los tiempos de ejecución y calcular el presupuesto
+          necesario.
+        </Paragraph>
       </div>
-      <div class="bg-yellow-400 w-1/2 h-full flex flex-col justify-start items-start gap-8">
-        <div class="p-0 flex flex-col justify-center items-start">
-            <Title>
-                Tu idea <b>convertida en realidad</b>
-              </Title>
-              <Paragraph className="mt-8">
-                  Empezamos cada proyecto con una sencilla reunión para conocer los objetivos de tu proyecto. Esto nos permite diseñar una solución a tu medida, estimar los tiempos de ejecución y calcular el presupuesto necesario.
-                </Paragraph>
-        </div>
-        
-          <div class="bg-blue-400 sm:p-6 lg:p-8 h-[28rem] w-full sm:h-3/4 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden"></div>
+
+      <div
+        class="p-2 md:p-4 w-full md:h-3/4 flex flex-col justify-center items-center rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden"
+      >
+        <ol class="w-full flex flex-col gap-6">
+            <li
+            class="flex w-full justify-start items-center gap-3 p-2 rounded-lg"
+          >
+            <div
+              class="bg-white flex justify-center items-center w-[3rem] md:w-[5rem] h-[3rem] md:h-[5rem] rounded-full border-box-border bg-box-bg shadow-lg shadow-box-shadow"
+            >
+              <p
+                class="top-0 left-0 text-left font-semibold text-heading-1 text-xl md:text-3xl text-primary dark:text-primary-dark"
+              >
+                1
+              </p>
+            </div>
+            <div class="flex-col w-3/4">
+              <p
+                class="text-left font-semibold text-heading-1 text-lg md:text-xl"
+              >
+                Entrevista inicial
+              </p>
+              <Paragraph>
+                En ella realizamos una serie de preguntas para validar las
+                necesidades del proyecto.
+              </Paragraph>
+            </div>
+          </li>
+          <li
+            class="flex w-full justify-start items-center gap-3 p-2 rounded-lg"
+          >
+            <div
+              class="bg-white flex justify-center items-center w-[3rem] md:w-[5rem] h-[3rem] md:h-[5rem] rounded-full border-box-border bg-box-bg shadow-lg shadow-box-shadow"
+            >
+              <p
+                class="text-left font-semibold text-heading-1 text-xl md:text-3xl text-primary dark:text-primary-dark"
+              >
+                2
+              </p>
+            </div>
+            <div class="flex flex-col w-3/4">
+              <p
+                class="text-left font-semibold text-heading-1 text-lg md:text-xl"
+              >
+                Reunión de estrategia
+              </p>
+              <Paragraph>
+                Proponemos nuestro enfoque para encarar el proyecto.
+              </Paragraph>
+            </div>
+          </li>
+          <li
+            class="flex w-full justify-start items-center gap-3 p-2 rounded-lg"
+          >
+            <div
+              class="bg-white flex justify-center items-center w-[3rem] md:w-[5rem] h-[3rem] md:h-[5rem] rounded-full border-box-border bg-box-bg shadow-lg shadow-box-shadow"
+            >
+              <p
+                class="text-left font-semibold text-heading-1 text-xl md:text-3xl text-primary dark:text-primary-dark"
+              >
+                3
+              </p>
+            </div>
+            <div class="flex flex-col w-3/4">
+              <p
+                class="text-left font-semibold text-heading-1 text-lg md:text-xl"
+              >
+                Diseño de la solución
+              </p>
+              <Paragraph>
+                Nos encargamos de diseñar la arquitectura del sitio y propuestas
+                visuales orientadas a brindar un funcionamiento óptimo y una
+                experiencia intuitiva para el usuario.
+              </Paragraph>
+            </div>
+          </li>
+          <li
+            class="flex w-full justify-start items-center gap-3 p-2 rounded-lg"
+          >
+            <div
+              class="bg-white flex justify-center items-center w-[3rem] md:w-[5rem] h-[3rem] md:h-[5rem] rounded-full border-box-border bg-box-bg shadow-lg shadow-box-shadow"
+            >
+              <p
+                class="text-left font-semibold text-heading-1 text-xl md:text-3xl text-primary dark:text-primary-dark"
+              >
+                4
+              </p>
+            </div>
+            <div class="flex flex-col w-3/4">
+              <p
+                class="text-left font-semibold text-heading-1 text-lg md:text-xl"
+              >
+                Tu proyecto cobra vida
+              </p>
+              <Paragraph>
+                Ejecutamos el desarrollo del proyecto con código limpio y
+                escalable para darle vida a tu idea.
+              </Paragraph>
+            </div>
+          </li>
+        </ol>
       </div>
     </div>
   </Container>
