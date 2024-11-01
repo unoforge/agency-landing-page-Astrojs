@@ -4,6 +4,7 @@ import Container from "../components/shared/Container.astro";
 import Paragraph from "../components/shared/Paragraph.astro";
 import Title from "../components/shared/Title.astro";
 import Layout from "../layouts/Layout.astro";
+import Button from "../components/shared/Button.astro";
 
 const wordpressIcon = "/images/icons8-wordpress-96.png"
 const woocommerceIcon = "/images/icons8-woocommerce-96.png"
@@ -13,136 +14,306 @@ const supportIcon = "/images/icons8-support-96.png"
 const fullstackIcon = "/images/icons8-stack-96.png"
 ---
 
+//flex flex-col gap-y-20 md:gap-y-32 overflow-hidden
 <Layout title="WebWizard Lab | Agencia de desarrollo web - Servicios">
-  <section id="services">
-    <Container className="space-y-10 md:sapce-y-12">
-      <div class=" max-w-3xl  space-y-4 ml-4 lg:text-left text-center">           
+  <section id="planes">
+    <Container className="space-y-10 md:sapce-y-12 ">
+      <div class="text-left max-w-[3/4] mx-auto">
+        <div class="my-[12px] lg:ml-4 lg:text-left text-center">
+          <p class="text-heading-1 font-semibold text-2xl sm:text-3xl md:text-4xl">Conoce nuestros <b>Planes</b></p>
+        </div>
+        <!-- <Paragraph>
+        Cuando se decide crear un sitio web, es común que el cliente no tenga
+        una visión clara de lo que necesita y por dónde empezar. Por lo tanto,
+        es esencial organizar reuniones entre el cliente y los desarrolladores
+        para comprender la idea correctamente. Esto ahorra tiempo, recursos y
+        dinero.
+      </Paragraph> -->
+        
+        
+  
+        <!-- <div class="max-w-md mx-auto midmd:max-w-none lg:mx-0  lg:pr-10 xl:pr-2 flex-1 flex w-11/12 midmd:w-5/12 lg:w-1/2 midmd:h-auto justify-end">
+              <div class="w-full h-80 sm:h-96 midmd:h-full relative">
+                  <div class="absolute rotate-45 -left-5 md:-left-10 lg:-left-20 xl:-left-24 p-1 top-1/2 w-16 h-16 bg-gradient-to-br from-primary to-orange-400 blur-3xl opacity-50"></div>
+                  <div class="absolute  p-1 -top-4 md:-top-10 right-0  w-20 h-20 bg-gradient-to-br from-primary to-orange-400 rounded-full blur-3xl opacity-60"></div>
+                  
+                  <span class="absolute w-full aspect-[16/5] -skew-x-12 rounded-full bg-gradient-to-tr from-primary to-green-400 opacity-40 blur-2xl left-0 bottom-0"></span>
+              </div>
+          </div> 
+         -->
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-        <Service
-          title="Sitios Web"
-          description="Desarrollamos sitios web atractívos, dinámicos y con diseño adaptable para mostrar la mejor faceta de tu negocio ."
-          link="/services/#"
+        <div
+          class="p-5 h-full sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden"
         >
-          <span slot="icon">
-            <img src={wordpressIcon} width={80} height={80} alt="sitios web" />
+          <div class="p-2 text-heading-1 flex justify-center">
+            <h2 class="md:text-lg font-bold text-heading-2 mb-2">Sitios Web</h2>
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512 " stroke-width="1.5" stroke="currentColor" class="w-4 h-4 sm:w-5 sm:h-5" width="30">
+                      <path d="M160 0c17.7 0 32 14.3 32 32V67.7c1.6 .2 3.1 .4 4.7 .7c.4 .1 .7 .1 1.1 .2l48 8.8c17.4 3.2 28.9 19.9 25.7 37.2s-19.9 28.9-37.2 25.7l-47.5-8.7c-31.3-4.6-58.9-1.5-78.3 6.2s-27.2 18.3-29 28.1c-2 10.7-.5 16.7 1.2 20.4c1.8 3.9 5.5 8.3 12.8 13.2c16.3 10.7 41.3 17.7 73.7 26.3l2.9 .8c28.6 7.6 63.6 16.8 89.6 33.8c14.2 9.3 27.6 21.9 35.9 39.5c8.5 17.9 10.3 37.9 6.4 59.2c-6.9 38-33.1 63.4-65.6 76.7c-13.7 5.6-28.6 9.2-44.4 11V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V445.1c-.4-.1-.9-.1-1.3-.2l-.2 0 0 0c-24.4-3.8-64.5-14.3-91.5-26.3c-16.1-7.2-23.4-26.1-16.2-42.2s26.1-23.4 42.2-16.2c20.9 9.3 55.3 18.5 75.2 21.6c31.9 4.7 58.2 2 76-5.3c16.9-6.9 24.6-16.9 26.8-28.9c1.9-10.6 .4-16.7-1.3-20.4c-1.9-4-5.6-8.4-13-13.3c-16.4-10.7-41.5-17.7-74-26.3l-2.8-.7 0 0C119.4 279.3 84.4 270 58.4 253c-14.2-9.3-27.5-22-35.8-39.6c-8.4-17.9-10.1-37.9-6.1-59.2C23.7 116 52.3 91.2 84.8 78.3c13.3-5.3 27.9-8.9 43.2-11V32c0-17.7 14.3-32 32-32z"/>
+                  </svg>   -->
+          </div>
   
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
-              ></path>
-            </svg>
-          </span>
-        </Service>
-        <Service
-          title="E-commerce"
-          description="Creamos tiendas virtuales con las mejores herramientas del mercado, con las que tendrás el control total de tus operaciones comerciales."
-          link="/services/#"
+          <div>
+            <Paragraph className="text-left h-1/6 p-2 mb-3 text-heading-2">
+              Optimiza el resultado de tus campañas publicitarias con una Landing
+              Page profesional.
+            </Paragraph>
+            <Paragraph className="h-3/5 mt-3">
+              - 1 cuenta de correo corporativo<br />
+               - Diseño profesional, moderno y llamativo<br />
+               - Banner principal con movimiento<br />
+               - Redacción de textos persuasivos<br />
+               - Búsqueda y compra de imágenes<br />
+               - Banner de testimonios<br />
+               - Formulario para captura de Leads<br />
+               - Botón de WhatsApp y de llamada<br />
+               - Integración con redes sociales<br />
+               - Integración con Google Analytics<br />
+               - Diseño ideal para Google Ads<br />
+               - Contenido 100% editable<br />
+               - 1 reunión de diseño de la página web<br />
+               - 1 reunión de capacitación de uso del sitio
+            </Paragraph>
+          </div>
+  
+          <div class="text-center mt-6">
+            <Paragraph className="text-center p-2">
+              <b>Sin pago de mensualidad por administración</b>
+            </Paragraph>
+            <div class="mt-4">
+              <Button variant={"primary"}>
+                <a href="/contact" class="text-white font-semibold relative z-[5]"
+                  >Quiero consultar</a
+                >
+              </Button>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div
+          class="p-5 h-full sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden"
         >
-          <span slot="icon">
-            <img src={woocommerceIcon} width={80} height={80} alt="e-commerce" />
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
-              ></path>
-            </svg>
-          </span>
-        </Service>
-        <Service
-          title="Aplicaciones Web"
-          description="Desarrollamos proyectos web a tu medida, implementando soluciones adaptadas a tu negocio con los mejores estándares de la industria, garantizando seguridad y escalabilidad."
-          link="/services/#"
+          <div class="p-2 text-heading-1 flex justify-center">
+            <h2 class="md:text-lg font-bold text-heading-2 mb-2">Aplicaciones Web</h2>
+          </div>
+  
+          <div>
+            <Paragraph className="h-1/6 pb-3 p-2 text-left text-heading-2">
+              Muestra tus servicios y/o productos con tus formas de contacto.
+            </Paragraph>
+            <Paragraph className="h-3/5 mt-3">
+              - 2 cuentas de correo corporativo<br />
+               - 3 filtrados principales<br />
+               - Configuración inicial de 20 unidades, <b
+                >luego puedes cargar todos los que quieras</b
+              ><br />
+               - Integración de la página web a redes sociales<br />
+               - Perfil de usuario y perfil de administrador (<b
+                >máximo 2 vistas de usuario y 2 vistas de admin</b
+              >)<br />
+               - Contenido 100% editable<br />
+               - Diseño ideal para Google Ads<br />
+               - 2 reuniones de diseño de la página web<br />
+               - 1 reunión de capacitación de uso del sitio
+            </Paragraph>
+          </div>
+  
+          <div class="text-center mt-20">
+            <Paragraph className="text-center p-2">
+              <b>Sin pago de mensualidad por administración</b>
+            </Paragraph>
+            <div class="mt-4">
+              <Button variant={"primary"}>
+                <a href="/contact" class="text-white font-semibold relative z-[5]"
+                  >Quiero consultar</a
+                >
+              </Button>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Card 3 -->
+        <div
+          class="h-full p-3 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden"
         >
-          <span slot="icon">
-            <img src={codingIcon} width={80} height={80} alt="aplicaciones web" />
-            
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
-              ></path>
-            </svg>
-          </span>
-        </Service>
-        <Service
-          title="Aplicaciones Móviles"
-          description="Implementamos aplicaciones nativas para birndar servicios específicos a tus clientes tanto en Android como en iOS."
-          link="/services/#"
+          <div class="p-2 text-heading-1 flex justify-center">
+            <h2 class="md:text-lg font-bold text-heading-2 mb-2">E-commerce</h2>
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512 " stroke-width="1.5" stroke="currentColor" class="w-4 h-4 sm:w-5 sm:h-5" width="30">
+              <path d="M160 0c17.7 0 32 14.3 32 32V67.7c1.6 .2 3.1 .4 4.7 .7c.4 .1 .7 .1 1.1 .2l48 8.8c17.4 3.2 28.9 19.9 25.7 37.2s-19.9 28.9-37.2 25.7l-47.5-8.7c-31.3-4.6-58.9-1.5-78.3 6.2s-27.2 18.3-29 28.1c-2 10.7-.5 16.7 1.2 20.4c1.8 3.9 5.5 8.3 12.8 13.2c16.3 10.7 41.3 17.7 73.7 26.3l2.9 .8c28.6 7.6 63.6 16.8 89.6 33.8c14.2 9.3 27.6 21.9 35.9 39.5c8.5 17.9 10.3 37.9 6.4 59.2c-6.9 38-33.1 63.4-65.6 76.7c-13.7 5.6-28.6 9.2-44.4 11V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V445.1c-.4-.1-.9-.1-1.3-.2l-.2 0 0 0c-24.4-3.8-64.5-14.3-91.5-26.3c-16.1-7.2-23.4-26.1-16.2-42.2s26.1-23.4 42.2-16.2c20.9 9.3 55.3 18.5 75.2 21.6c31.9 4.7 58.2 2 76-5.3c16.9-6.9 24.6-16.9 26.8-28.9c1.9-10.6 .4-16.7-1.3-20.4c-1.9-4-5.6-8.4-13-13.3c-16.4-10.7-41.5-17.7-74-26.3l-2.8-.7 0 0C119.4 279.3 84.4 270 58.4 253c-14.2-9.3-27.5-22-35.8-39.6c-8.4-17.9-10.1-37.9-6.1-59.2C23.7 116 52.3 91.2 84.8 78.3c13.3-5.3 27.9-8.9 43.2-11V32c0-17.7 14.3-32 32-32z"/>
+          </svg>   -->
+          </div>
+          <div>
+            <Paragraph className="text-left h-15/100 pb-3 p-2 text-heading-2">
+              Una tienda completa con carro de compras, pasarela de pago y métodos
+              de envio.
+            </Paragraph>
+            <Paragraph className="h-3/5 mt-3">
+              - 5 cuentas de correo corporativo<br />
+               - Carro de compras<br />
+               - Pasarela de pago a elección<br />
+               - Gestión de stock y ventas<br />
+               - 5 filtrados principales, puedes agregar filtros adicionales por
+              solo USD 9.99 c/u<br />
+               - Configuración inicial de 20 unidades, <b
+                >luego puedes cargar todos los que quieras</b
+              ><br />
+               - Perfil de usuario, perfil de administrador (<b
+                >máximo 5 vistas de usuario y 2 vistas de admin</b
+              >)<br />
+               - Integración de la página web a redes sociales<br />
+               - Contenido 100% editable<br />
+               - 2 reuniones de diseño de la página web<br />
+               - 1 reunión de capacitación de uso del sitio
+            </Paragraph>
+          </div>
+  
+          <div class="text-center mt-5">
+            <Paragraph className="text-center p-2">
+              <b>Sin pago de mensualidad por administración</b>
+            </Paragraph>
+            <div class="mt-4">
+              <Button variant={"primary"}>
+                <a href="/contact" class="text-white font-semibold relative z-[5]"
+                  >Quiero consultar</a
+                >
+              </Button>
+            </div>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div
+          class="h-full p-3 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden"
         >
-          <span slot="icon">
-            <img src={mobileIcon} width={70} height={70} alt="aplicaciones móviles" />
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
-              ></path>
-            </svg>
-          </span>
-        </Service>
-        <Service
-        title="Desarrollo Fullstack"
-        description="Desarrollamos proyectos end to end a medida de nuestros clientes, combinando herramientas de administración de bases de datos, servidores backend y aplicaciones frontend."
-        link="/services/#"
-      >
-        <span slot="icon">
-          <img src={fullstackIcon} width={70} height={70} alt="Proyecto personalizado" />
-          
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
-            ></path>
-          </svg>
-        </span>
-      </Service>
-        <Service
-          title="Soporte"
-          description="¿Tienes un proyecto en funcionamiento y necesitas ayuda para manejarlo? Cuenta con nosotros como tu aliado para su mantenimiento."
-          link="/services/#"
+          <div class="p-2 text-heading-1 flex justify-center">
+            <h2 class="md:text-lg font-bold text-heading-2 mb-2">
+              Aplicaciones Moviles
+            </h2>
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512 " stroke-width="1.5" stroke="currentColor" class="w-4 h-4 sm:w-5 sm:h-5" width="30">
+                  <path d="M160 0c17.7 0 32 14.3 32 32V67.7c1.6 .2 3.1 .4 4.7 .7c.4 .1 .7 .1 1.1 .2l48 8.8c17.4 3.2 28.9 19.9 25.7 37.2s-19.9 28.9-37.2 25.7l-47.5-8.7c-31.3-4.6-58.9-1.5-78.3 6.2s-27.2 18.3-29 28.1c-2 10.7-.5 16.7 1.2 20.4c1.8 3.9 5.5 8.3 12.8 13.2c16.3 10.7 41.3 17.7 73.7 26.3l2.9 .8c28.6 7.6 63.6 16.8 89.6 33.8c14.2 9.3 27.6 21.9 35.9 39.5c8.5 17.9 10.3 37.9 6.4 59.2c-6.9 38-33.1 63.4-65.6 76.7c-13.7 5.6-28.6 9.2-44.4 11V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V445.1c-.4-.1-.9-.1-1.3-.2l-.2 0 0 0c-24.4-3.8-64.5-14.3-91.5-26.3c-16.1-7.2-23.4-26.1-16.2-42.2s26.1-23.4 42.2-16.2c20.9 9.3 55.3 18.5 75.2 21.6c31.9 4.7 58.2 2 76-5.3c16.9-6.9 24.6-16.9 26.8-28.9c1.9-10.6 .4-16.7-1.3-20.4c-1.9-4-5.6-8.4-13-13.3c-16.4-10.7-41.5-17.7-74-26.3l-2.8-.7 0 0C119.4 279.3 84.4 270 58.4 253c-14.2-9.3-27.5-22-35.8-39.6c-8.4-17.9-10.1-37.9-6.1-59.2C23.7 116 52.3 91.2 84.8 78.3c13.3-5.3 27.9-8.9 43.2-11V32c0-17.7 14.3-32 32-32z"/>
+              </svg>   -->
+          </div>
+          <div>
+            <Paragraph className="text-left h-1/6 pb-3 p-2 text-heading-2">
+              Presenta tus servicios y/o productos con tus formas de contacto.
+              Además, cuenta con una agenda en línea donde tus clientes podrán
+              reservar su cita.
+            </Paragraph>
+            <Paragraph className="h-3/5 mt-3">
+              - 2 cuentas de correo corporativo<br />
+               - Configuración inicial de 20 unidades, <b
+                >luego puedes cargar todos los que quieras</b
+              ><br />
+               - Integración de la página web a redes sociales<br />
+               - Contenido 100% editable<br />
+               - 2 reunión de diseño de la página web<br />
+               - 1 reunión de capacitación de uso de la página web
+            </Paragraph>
+          </div>
+  
+          <div class="text-center mt-56">
+            <Paragraph className="text-center p-2">
+              <b>Sin pago de mensualidad por administración</b>
+            </Paragraph>
+            <div class="mt-4">
+              <Button variant={"primary"}>
+                <a href="/contact" class="text-white font-semibold relative z-[5]"
+                  >Quiero consultar</a
+                >
+              </Button>
+            </div>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div
+          class="h-full p-3 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden"
         >
-          <span slot="icon">
-            <img src={supportIcon} width={70} height={70} alt="Soporte" />
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
-              ></path>
-            </svg>
-          </span>
-        </Service>    
+          <div class="p-2 text-heading-1 flex justify-center">
+            <h2 class="md:text-lg font-bold text-heading-2 mb-2">
+             Desarrollo Fullstack
+            </h2>
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512 " stroke-width="1.5" stroke="currentColor" class="w-4 h-4 sm:w-5 sm:h-5" width="30">
+              <path d="M160 0c17.7 0 32 14.3 32 32V67.7c1.6 .2 3.1 .4 4.7 .7c.4 .1 .7 .1 1.1 .2l48 8.8c17.4 3.2 28.9 19.9 25.7 37.2s-19.9 28.9-37.2 25.7l-47.5-8.7c-31.3-4.6-58.9-1.5-78.3 6.2s-27.2 18.3-29 28.1c-2 10.7-.5 16.7 1.2 20.4c1.8 3.9 5.5 8.3 12.8 13.2c16.3 10.7 41.3 17.7 73.7 26.3l2.9 .8c28.6 7.6 63.6 16.8 89.6 33.8c14.2 9.3 27.6 21.9 35.9 39.5c8.5 17.9 10.3 37.9 6.4 59.2c-6.9 38-33.1 63.4-65.6 76.7c-13.7 5.6-28.6 9.2-44.4 11V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V445.1c-.4-.1-.9-.1-1.3-.2l-.2 0 0 0c-24.4-3.8-64.5-14.3-91.5-26.3c-16.1-7.2-23.4-26.1-16.2-42.2s26.1-23.4 42.2-16.2c20.9 9.3 55.3 18.5 75.2 21.6c31.9 4.7 58.2 2 76-5.3c16.9-6.9 24.6-16.9 26.8-28.9c1.9-10.6 .4-16.7-1.3-20.4c-1.9-4-5.6-8.4-13-13.3c-16.4-10.7-41.5-17.7-74-26.3l-2.8-.7 0 0C119.4 279.3 84.4 270 58.4 253c-14.2-9.3-27.5-22-35.8-39.6c-8.4-17.9-10.1-37.9-6.1-59.2C23.7 116 52.3 91.2 84.8 78.3c13.3-5.3 27.9-8.9 43.2-11V32c0-17.7 14.3-32 32-32z"/>
+          </svg>   -->
+          </div>
+  
+          <div>
+            <Paragraph className="text-left h-20/100 pb-3 p-2">
+              Diseñaremos un sitio web informativo sobre su empresa
+            </Paragraph>
+            <Paragraph className="h-3/4 text-heading-2 mt-3">
+              - 5 cuentas de correo corporativo<br />
+               - 4 Banners principales con movimiento<br />
+               - 7 páginas de navegación internas (Inicio, Nosotros...)<br />
+               - Diseño profesional, moderno y llamativo<br />
+               - Sección Blog/Noticias<br />
+               - Búsqueda y compra de imágenes<br />
+               - Galeria de fotos y videos<br />
+               - Carrusel de testimonios<br />
+               - Formulario de contacto<br />
+               - Botón de WhatsApp y de llamada<br />
+               - Configuración de chatbot<br />
+               - Integración con redes sociales<br />
+               - Integración de Google Maps<br />
+               - Integración con Google Analytics<br />
+               - Contenido 100% Editable<br />
+               - Diseño ideal para Google Ads<br />
+               - 1 reunión de diseño de la página web<br />
+               - 1 reunión de capacitación de uso de la página web
+            </Paragraph>
+          </div>
+  
+          <div class="text-center mt-6">
+            <Paragraph className="text-center p-2">
+              <b>Sin pago de mensualidad por administración</b>
+            </Paragraph>
+            <div class="mt-4">
+              <Button variant={"primary"}>
+                <a href="/contact" class="text-white font-semibold relative z-[5]"
+                  >Quiero consultar</a
+                >
+              </Button>
+            </div>
+          </div>
+        </div>
+        <!-- Card 6 -->
+        <div
+          class="h-full p-3 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden"
+        >
+          <Paragraph className="pt-36 text-center">
+            <b class="text-2xl">Soporte Técnico</b>
+          </Paragraph>
+  
+          <div class="pt-7 text-center pb-16 align-end">
+            <div class="mt-4">
+              <Button variant={"primary"}>
+                <a href="/contact" class="text-white font-semibold relative z-[5]"
+                  >Quiero consultar</a
+                >
+              </Button>
+            </div>
+          </div>
+        </div>
       </div>
-      
-      <article class="bg-gray-200 rounded-2xl lg:px-4 lg:py-10 px-2 py-4 dark:bg-gray-900">
-      <p class="lg:ml-10 text-center font-semibold text-heading-1 text-xl">Trabajando con nosotros obtienes:</p>
-      <ul class="lg:grid lg:grid-cols-3 mx-auto w-full lg:w-[95%] gap-2 mt-8 text-heading-3 dark:text-white">
-        <li>
-            <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">&checkmark;</span>Las mejores prácticas de SEO
-        </li>
-        <li class="mt-2">
-          <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">&checkmark;</span>Alojamiento en servidores confiables
-      </li>
-        
-        <li class="mt-2">
-            <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">&checkmark;</span>Accesibilidad en cualquier dispositivo 
-        </li>
-        <li class="mt-2">
-          <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">&checkmark;</span>Optimización de contenido
-      </li>
-      <li class="mt-2">
-        <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">&checkmark;</span>Excelente experiencia al usuario
-    </li>
-        
-      <li class="mt-2">
-        <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">&checkmark;</span>Asesoramiento en politicas de privacidad
-    </li>
-      
-      
-    </ul>
-      
-  </article>      
+      <p class="pt-8 text-lg text-heading-3 lg:pb-2 lg:ml-10 text-left ml-2">
+        <b>Todos incluyen:</b>
+      </p>
+      <Paragraph className="lg:pt-0 lg:ml-10 mt-3 ml-3">
+        <span
+          class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center"
+          >&checkmark;</span
+        > Hosting y Dominio por 1 año <br />
+        <span
+          class="mt-2 font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center"
+          >&checkmark;</span
+        > Certificado SSL<br />
+        <span
+          class="mt-2 font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center"
+          >&checkmark;</span
+        > Sitio protegido con Antivirus
+      </Paragraph>
     </Container>
   </section>
   
 </Layout>
+
+

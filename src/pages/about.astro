@@ -13,102 +13,78 @@ const daniProfile = "/images/daniela-profile.jpg";
 
 <Layout title="WebWizard Lab | Agencia de desarrollo web - Nosotros">
   <section id="about">
-    <Container className="flex flex-col midmd:flex-row gap-10 lg:gap-12">
-      <div
-        class="max-w-md mx-auto midmd:max-w-none lg:mx-0 flex-1 flex w-11/12 midmd:w-5/12 lg:w-1/2 h-[40rem]"
-      >
-        <div class="flex content-center justify-center w-full h-auto gap-4">
-          <div
-            class="flex flex-col content-center justify-center gap-4 w-1/2 h-full"
-          >
+    <Container className="flex flex-col midmd:flex-row gap-10 lg:gap-16 py-10">
+      <div class="max-w-md mx-auto midmd:max-w-none lg:mx-0 flex-1 flex w-11/12 midmd:w-5/12 lg:w-1/2">
+        <div class="flex justify-center w-full gap-6">
+          <div class="flex flex-col gap-y-20 md:gap-y-32 overflow-hidden">
             <img
-              class="w-full sm:h-1/2 rounded-tl-3xl shadow-lg shadow-box-shadow"
+              class="w-36 h-36 rounded-full shadow-lg shadow-box-shadow object-cover"
               src={crisProfile}
               alt="cristian"
             />
             <img
-              class="w-full sm:h-1/2 rounded-bl-3xl shadow-lg shadow-box-shadow"
+              class="w-36 h-36 rounded-full shadow-lg shadow-box-shadow object-cover"
               src={ivanProfile}
               alt="ivan"
             />
           </div>
-          <div
-            class="flex flex-col content-center justify-center gap-4 w-1/2 h-full"
-          >
+          <div class="flex flex-col items-center gap-6 w-1/2">
             <img
-              class="w-full h-1/2 sm:h-1/2 rounded-r-3xl shadow-lg shadow-box-shadow object-auto"
+              class="w-36 h-36 rounded-full shadow-lg shadow-box-shadow object-cover"
               src={daniProfile}
               alt="daniela"
             />
           </div>
         </div>
       </div>
-      <div class="flex-1 flex midmd:w-7/12 lg:w-1/2 flex-col">
-        <Title>
+      
+      <div class="flex-1 flex flex-col items-start midmd:w-7/12 lg:w-1/2">
+        <Title className="text-3xl sm:text-4xl md:text-5xl text-left font-bold">
           Ayudamos a <b>impulsar</b> tu negocio <b>más rápido</b>
         </Title>
-        <Paragraph className="mt-8">
-          En WebWizard Lab, somos un equipo de desarrolladores apasionados por la
-          tecnología y capaces de convertir tus ideas en un MVP.
-        </Paragraph>
-        <div
-          class="pt-8 grid grid-cols-2 items-center gap-4 max-w-3xl md:max-w-[none]"
-        >
-          <Info
-            description="Desarrollar tus proyectos digitales con los mejores estándares de la industria, garantizando una experiencia de usuario de primera, seguridad y escalabilidad."
-            title="Misión"
-          >
-            <span slot="icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-4 h-4 sm:w-5 sm:h-5"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
-                ></path>
-              </svg>
-            </span>
-          </Info>
-          <Info
-            description="Ser líderes en desarrollo web y mobile, destacándonos por la constante innovación, la creatividad y entrega de soluciones digitales de calidad."
-            title="Visión"
-          >
-            <span slot="icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-4 h-4 sm:w-5 sm:h-5"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"
-                ></path>
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-              </svg>
-            </span>
-          </Info>
-        </div>
-        <div class="flex sm:flex-row flex-col gap-5 w-full justify-start mt-5">
-          <BtnLink href="#" text="Saber más" variant="secondary" />
-        </div>
         
+        <Paragraph className="mt-6 text-lg text-gray-700 leading-relaxed">
+          En WebWizard Lab, nos dedicamos a transformar ideas en soluciones digitales innovadoras y de alta calidad. Nuestra agencia se enfoca en los siguientes pilares:
+          
+          <span class="block mt-2">
+            <strong>1. Innovación en Soluciones Digitales:</strong> Transformamos ideas en soluciones web innovadoras y de alta calidad.
+          </span>
+          
+          <span class="block mt-2">
+            <strong>2. Experiencia en Desarrollo Web:</strong> Creamos experiencias digitales que reflejan la esencia de cada proyecto y potencian el crecimiento en el entorno digital.
+          </span>
+          
+          <span class="block mt-2">
+            <strong>3. Compromiso con la Calidad:</strong> Mantenemos altos estándares en diseño y desarrollo, asegurando productos escalables y seguros.
+          </span>
+          
+          <span class="block mt-2">
+            <strong>4. Estrategia y Tecnología:</strong> Combinamos creatividad, tecnología y estrategia para construir soluciones adaptadas a cada cliente.
+          </span>
+          
+          <span class="block mt-2">
+            <strong>5. Optimización para SEO:</strong> Ofrecemos servicios de SEO que aumentan la visibilidad y competitividad en los motores de búsqueda.
+          </span>
+          
+          <span class="block mt-2">
+            <strong>6. Experiencia de Usuario Superior:</strong> Nos enfocamos en la funcionalidad y la estética para mejorar la experiencia de usuario.
+          </span>
+          
+          <span class="block mt-2">
+            <strong>7. Asociación Estratégica con Nuestros Clientes:</strong> Trabajamos de la mano con cada cliente, comprometidos con su éxito en línea.
+          </span>
+          
+          Nos mueve la pasión por la tecnología y el objetivo de ayudar a nuestros clientes a alcanzar el éxito en línea, siempre trabajando como socios estratégicos para cada uno de sus proyectos.
+        </Paragraph>
+        
+        
+        
+        
+
+        <!-- <div class="flex gap-4 w-full justify-start mt-8">
+          <BtnLink href="#" text="Saber más" variant="secondary" />
+        </div> -->
       </div>
     </Container>
   </section>
 </Layout>
-
