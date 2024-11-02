@@ -1,4 +1,5 @@
 ---
+import Brands from "../components/sections/Brands.astro";
 import Container from "../components/shared/Container.astro";
 import Paragraph from "../components/shared/Paragraph.astro";
 import Title from "../components/shared/Title.astro";
@@ -7,9 +8,9 @@ const aboutImage = "/images/person-codes-manages-system-laptop.jpg";
 ---
 
 <Layout title="WebWizard Lab | Agencia de desarrollo web - Nosotros">
-  <section id="about">
+  <section id="about" class="relative pt-32 lg:pt-36 mb-36">
     <Container
-      className="flex flex-col sm:flex-row gap-4 md:gap-12 mt-36 lg:mt-40 h-auto sm:h-[40rem]"
+      className="flex flex-col sm:flex-row gap-4 md:gap-12 h-auto sm:h-[40rem]"
     >
       <div class="w-full sm:w-1/2 flex flex-col items-start justify-center">
         <Title>Nosotros</Title>
@@ -29,4 +30,5 @@ const aboutImage = "/images/person-codes-manages-system-laptop.jpg";
       </div>      
     </Container>
   </section>
+  <Brands />
 </Layout>
