@@ -1,90 +1,19 @@
 ---
-import Info from "../components/cards/Info.astro";
+import AboutHero from "../components/sections/AboutHero.astro";
+import Brands from "../components/sections/Brands.astro";
+import CTA from "../components/sections/CTA.astro";
+import TeamGrid from "../components/sections/TeamGrid.astro";
 import Container from "../components/shared/Container.astro";
 import Paragraph from "../components/shared/Paragraph.astro";
 import Title from "../components/shared/Title.astro";
-import BtnLink from "../components/shared/BtnLink.astro";
-import Layout from '../layouts/Layout.astro';
-
-const crisProfile = "/images/cris-profile.png";
-const ivanProfile = "/images/ivan-profile.jpg";
-const daniProfile = "/images/daniela-profile.jpg";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="WebWizard Lab | Agencia de desarrollo web - Nosotros">
-  <section id="about">
-    <Container className="flex flex-col midmd:flex-row gap-10 lg:gap-16 py-10">
-      <div class="max-w-md mx-auto midmd:max-w-none lg:mx-0 flex-1 flex w-11/12 midmd:w-5/12 lg:w-1/2">
-        <div class="flex justify-center w-full gap-6">
-          <div class="flex flex-col gap-y-20 md:gap-y-32 overflow-hidden">
-            <img
-              class="w-36 h-36 rounded-full shadow-lg shadow-box-shadow object-cover"
-              src={crisProfile}
-              alt="cristian"
-            />
-            <img
-              class="w-36 h-36 rounded-full shadow-lg shadow-box-shadow object-cover"
-              src={ivanProfile}
-              alt="ivan"
-            />
-          </div>
-          <div class="flex flex-col items-center gap-6 w-1/2">
-            <img
-              class="w-36 h-36 rounded-full shadow-lg shadow-box-shadow object-cover"
-              src={daniProfile}
-              alt="daniela"
-            />
-          </div>
-        </div>
-      </div>
-      
-      <div class="flex-1 flex flex-col items-start midmd:w-7/12 lg:w-1/2">
-        <Title className="text-3xl sm:text-4xl md:text-5xl text-left font-bold">
-          Ayudamos a <b>impulsar</b> tu negocio <b>más rápido</b>
-        </Title>
-        
-        <Paragraph className="mt-6 text-lg text-gray-700 leading-relaxed">
-          En WebWizard Lab, nos dedicamos a transformar ideas en soluciones digitales innovadoras y de alta calidad. Nuestra agencia se enfoca en los siguientes pilares:
-          
-          <span class="block mt-2">
-            <strong>1. Innovación en Soluciones Digitales:</strong> Transformamos ideas en soluciones web innovadoras y de alta calidad.
-          </span>
-          
-          <span class="block mt-2">
-            <strong>2. Experiencia en Desarrollo Web:</strong> Creamos experiencias digitales que reflejan la esencia de cada proyecto y potencian el crecimiento en el entorno digital.
-          </span>
-          
-          <span class="block mt-2">
-            <strong>3. Compromiso con la Calidad:</strong> Mantenemos altos estándares en diseño y desarrollo, asegurando productos escalables y seguros.
-          </span>
-          
-          <span class="block mt-2">
-            <strong>4. Estrategia y Tecnología:</strong> Combinamos creatividad, tecnología y estrategia para construir soluciones adaptadas a cada cliente.
-          </span>
-          
-          <span class="block mt-2">
-            <strong>5. Optimización para SEO:</strong> Ofrecemos servicios de SEO que aumentan la visibilidad y competitividad en los motores de búsqueda.
-          </span>
-          
-          <span class="block mt-2">
-            <strong>6. Experiencia de Usuario Superior:</strong> Nos enfocamos en la funcionalidad y la estética para mejorar la experiencia de usuario.
-          </span>
-          
-          <span class="block mt-2">
-            <strong>7. Asociación Estratégica con Nuestros Clientes:</strong> Trabajamos de la mano con cada cliente, comprometidos con su éxito en línea.
-          </span>
-          
-          Nos mueve la pasión por la tecnología y el objetivo de ayudar a nuestros clientes a alcanzar el éxito en línea, siempre trabajando como socios estratégicos para cada uno de sus proyectos.
-        </Paragraph>
-        
-        
-        
-        
-
-        <!-- <div class="flex gap-4 w-full justify-start mt-8">
-          <BtnLink href="#" text="Saber más" variant="secondary" />
-        </div> -->
-      </div>
-    </Container>
-  </section>
+  <main class="flex flex-col gap-y-20 md:gap-y-32 overflow-hidden">
+    <AboutHero />
+    <TeamGrid/>
+    <Brands />
+    <CTA/>
+  </main>
 </Layout>
