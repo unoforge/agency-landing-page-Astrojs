@@ -10,6 +10,7 @@ module.exports = {
 				"box-bg": "rgb(var(--color-box))",
 				"box-shadow": "rgb(var(--box-sd))",
 				"box-border": "rgb(var(--box-border))",
+				"tech-box-bg": "rgba(255, 255, 255, 0.5)",
 				primary: "#1d4ed8",
 				"primary-dark": "#3b82f6", 
 				"heading-1": "rgb(var(--heading-1))",
