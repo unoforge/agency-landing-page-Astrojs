@@ -4,9 +4,11 @@ export interface Props {
   text: string;
   className?: string;
   variant: "primary" | "secondary";
+  target?: string; // Nueva propiedad
+  rel?: string;    // Nueva propiedad
 }
 
-const { href, text, className, variant } = Astro.props;
+const { href, text, className, variant, rel, target } = Astro.props;
 
 const getThemeStyle = (variant: "primary" | "secondary") => {
   if (variant === "primary") {
@@ -18,6 +20,8 @@ const getThemeStyle = (variant: "primary" | "secondary") => {
 ---
 <a
   href={href}
+  target={target} 
+  rel={rel}      
   class={`px-6 py-3 rounded-full outline-none relative overflow-hidden border duration-300 ease-linear text-center
          after:absolute after:inset-x-0 after:aspect-square after:scale-0 after:opacity-70 after:origin-center 
          after:duration-300 after:ease-linear after:rounded-full after:top-0 after:left-0 after:bg-[#172554] 

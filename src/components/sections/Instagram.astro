@@ -1,54 +1,54 @@
 ---
-// Instagram.astro
+import BtnLink from '../shared/BtnLink.astro'
+import Container from '../shared/Container.astro'
+import Paragraph from '../shared/Paragraph.astro'
+import Title from '../shared/Title.astro'
 
-import BtnLink from "../shared/BtnLink.astro";
-import Container from "../shared/Container.astro";
-import Paragraph from "../shared/Paragraph.astro";
-import Title from "../shared/Title.astro";
-
-const instagramLink = "https://www.instagram.com/wwizard.lab/";
+const instagramLink = 'https://www.instagram.com/wwizard.lab/'
 const instagramImage =
-  "https://res.cloudinary.com/dxsosgojl/image/upload/v1730584954/DALL_E_2024-11-02_18.58.04_-_A_professional_banner_design_for_a_web_development_website_called_WebWizard_Lab_integrating_the_Instagram_logo_with_a_sleek_modern_aesthetic._The_sifkwk.webp";
+  'https://res.cloudinary.com/dxsosgojl/image/upload/v1730584954/DALL_E_2024-11-02_18.58.04_-_A_professional_banner_design_for_a_web_development_website_called_WebWizard_Lab_integrating_the_Instagram_logo_with_a_sleek_modern_aesthetic._The_sifkwk.webp'
 ---
 
-<section id="instagram">
-  <Container className="flex flex-col items-center py-10 gap-8">
+<section id='instagram'>
+  <Container className='flex flex-col items-center py-10 gap-8'>
     <div
-      class="flex flex-col md:flex-row justify-center items-center w-full max-w-5xl gap-8"
+      class='flex flex-col md:flex-row justify-center items-center w-full max-w-5xl gap-8'
     >
-      <div class="w-1/2 justify-center items-start">
+      <div class='w-1/2 justify-center items-start'>
         <Title
-          className="text-3xl sm:text-4xl md:text-5xl text-center font-bold"
+          className='text-3xl sm:text-4xl md:text-5xl text-center font-bold'
         >
           Síguenos en <span
-            class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600"
+            class='text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600'
             >Instagram</span
           >
         </Title>
         <br />
         <Paragraph
-          className="text-lg text-gray-700 leading-relaxed text-center md:text-left"
+          className='text-lg text-gray-700 leading-relaxed text-center md:text-left'
         >
           Explora más sobre nuestro trabajo y proyectos a través de nuestro
           Instagram. Conoce cómo creamos experiencias digitales personalizadas.
         </Paragraph>
       </div>
 
-      <div class="flex-1 flex justify-center items-center relative group">
-        <a href={instagramLink} target="_blank" rel="noopener noreferrer">
+      <div class='flex-1 flex justify-center items-center relative group'>
+        <a href={instagramLink} target='_blank' rel='noopener noreferrer'>
           <img
             src={instagramImage}
-            alt="Instagram de WebWizard Lab"
-            class="rounded-lg shadow-lg w-full object-cover transition-opacity duration-300 group-hover:opacity-0"
+            alt='Instagram de WebWizard Lab'
+            class='rounded-lg shadow-lg w-full object-cover transition-opacity duration-300 group-hover:opacity-0'
           />
         </a>
         <div
-          class="absolute inset-0 flex justify-center items-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          class='absolute inset-0 flex justify-center items-center opacity-0 transition-opacity duration-300 group-hover:opacity-100'
         >
           <BtnLink
             href={instagramLink}
-            text="Ver en Instagram"
-            variant="primary"
+            target='_blank'
+            rel='noopener noreferrer'
+            text='Ver en Instagram'
+            variant='primary'
           />
         </div>
       </div>
