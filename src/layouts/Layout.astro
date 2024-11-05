@@ -1,48 +1,48 @@
 ---
-import Footer from "../components/elements/Footer.astro";
-import Navbar from "../components/elements/Navbar.astro";
+import Footer from '../components/elements/Footer.astro'
+import Navbar from '../components/elements/Navbar.astro'
 const logo =
-  "https://res.cloudinary.com/dqefppqdd/image/upload/v1695232256/WebWizards_01_Artboard_1_wnkmvg.svg";
+  'https://res.cloudinary.com/dqefppqdd/image/upload/v1695232256/WebWizards_01_Artboard_1_wnkmvg.svg'
 
 export interface Props {
-  title: string;
+  title: string
 }
 
-const { title } = Astro.props;
+const { title } = Astro.props
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang='en'>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href={logo} />
-    <meta name="generator" content={Astro.generator} />
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href={logo} />
+    <meta name='generator' content={Astro.generator} />
     <meta
-      name="description"
-      content="Desarrollo de páginas web, tiendas online y aplicaciones móviles en España y Argentina"
+      name='description'
+      content='Desarrollo de páginas web, tiendas online y aplicaciones móviles en España y Argentina'
     />
     <meta
-      name="keywords"
-      content="personal,website,ecommerce,template,kit,ivan,trejo,webdev,web,developer,fullstack,frontend,backend,españa,argentina,wordpress,gutenberg,react,github,linkedin,google,gitlab,material,design,ui,webapp,native,express,postgres,mysql,mongodb,firebase,javascript,diseño,ux,typescript,desarrollo,mobile,aplicaciones,páginas,tienda,online,proyectos,digital,desarrolladores,developers,aws,woocommerce,node,express,nestjs,wizard,lab"
+      name='keywords'
+      content='personal,website,ecommerce,template,kit,ivan,trejo,webdev,web,developer,fullstack,frontend,backend,españa,argentina,wordpress,gutenberg,react,github,linkedin,google,gitlab,material,design,ui,webapp,native,express,postgres,mysql,mongodb,firebase,javascript,diseño,ux,typescript,desarrollo,mobile,aplicaciones,páginas,tienda,online,proyectos,digital,desarrolladores,developers,aws,woocommerce,node,express,nestjs,wizard,lab'
     />
     <!-- openGraph -->
     <meta
-      property="og:title"
-      content="WebWizard Lab - Tu agencia de desarrollo web."
+      property='og:title'
+      content='WebWizard Lab - Tu agencia de desarrollo web.'
     />
     <meta
-      property="og:description"
-      content="Desarrollo de páginas web, tiendas online y aplicaciones móviles en España y Argentina"
+      property='og:description'
+      content='Desarrollo de páginas web, tiendas online y aplicaciones móviles en España y Argentina'
     />
-    <meta property="og:image" content="../../public/images/wwlLogo.png" />
-    <meta property="og:url" content="https://webwizardlab.vercel.app" />
-    <meta property="og:type" content="website" />
+    <meta property='og:image' content='../../public/images/wwlLogo.png' />
+    <meta property='og:url' content='https://webwizardlab.vercel.app' />
+    <meta property='og:type' content='website' />
     <meta
-      property="og:image:alt"
-      content="El logo de Web Wizard Lab - Tu agencia de desarrollo web."
+      property='og:image:alt'
+      content='El logo de Web Wizard Lab - Tu agencia de desarrollo web.'
     />
-    <script is:inline type="application/ld+json">
+    <script is:inline type='application/ld+json'>
       {
         "@context": "https://schema.org",
         "@type": "Organization",
@@ -54,99 +54,99 @@ const { title } = Astro.props;
 
     <title>{title}</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
+      href='https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap'
+      rel='stylesheet'
     />
   </head>
-  <body class="overflow-hidden overflow-y-auto bg-body">
+  <body class='overflow-hidden overflow-y-auto bg-body'>
     <Navbar />
     <slot />
     <Footer />
-    <div class="whatsapp-button">
-      <a href="https://wa.me/573202430789" target="_blank">
+    <div class='whatsapp-button'>
+      <a href='https://wa.me/573202430789' target='_blank'>
         <img
-          src="https://res.cloudinary.com/dxsosgojl/image/upload/v1698522086/PortfolioWebWizard/whatsapp_g4bvjr.png"
+          src='https://res.cloudinary.com/dxsosgojl/image/upload/v1698522086/PortfolioWebWizard/whatsapp_g4bvjr.png'
         />
       </a>
     </div>
   </body>
   <script>
     const switchTheme = document.querySelector(
-      "[data-switch-theme]"
-    ) as HTMLButtonElement;
+      '[data-switch-theme]'
+    ) as HTMLButtonElement
 
     if (
-      localStorage.getItem("appTheme") === "dark" ||
-      (!("appTheme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
+      localStorage.getItem('appTheme') === 'dark' ||
+      (!('appTheme' in localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
     ) {
-      document.documentElement.classList.add("dark");
+      document.documentElement.classList.add('dark')
     } else {
-      document.documentElement.classList.remove("dark");
+      document.documentElement.classList.remove('dark')
     }
     if (switchTheme) {
-      switchTheme.addEventListener("click", (e) => {
-        e.preventDefault();
-        const doc = document.documentElement;
+      switchTheme.addEventListener('click', (e) => {
+        e.preventDefault()
+        const doc = document.documentElement
         if (doc) {
-          if (localStorage.getItem("appTheme")) {
-            if (localStorage.getItem("appTheme") === "light") {
-              doc.classList.add("dark");
-              localStorage.setItem("appTheme", "dark");
+          if (localStorage.getItem('appTheme')) {
+            if (localStorage.getItem('appTheme') === 'light') {
+              doc.classList.add('dark')
+              localStorage.setItem('appTheme', 'dark')
             } else {
-              document.documentElement.classList.remove("dark");
-              localStorage.setItem("appTheme", "light");
+              document.documentElement.classList.remove('dark')
+              localStorage.setItem('appTheme', 'light')
             }
           } else {
-            if (doc.classList.contains("dark")) {
-              doc.classList.remove("dark");
-              localStorage.setItem("appTheme", "light");
+            if (doc.classList.contains('dark')) {
+              doc.classList.remove('dark')
+              localStorage.setItem('appTheme', 'light')
             } else {
-              doc.classList.add("dark");
-              localStorage.setItem("appTheme", "dark");
+              doc.classList.add('dark')
+              localStorage.setItem('appTheme', 'dark')
             }
           }
         }
-      });
+      })
     }
   </script>
   <script>
     const toggleMenu = document.querySelector(
-      "[data-toggle-nav]"
-    ) as HTMLButtonElement;
-    const navbar = document.querySelector("[data-navbar]") as HTMLDivElement;
+      '[data-toggle-nav]'
+    ) as HTMLButtonElement
+    const navbar = document.querySelector('[data-navbar]') as HTMLDivElement
     const overlayNav = document.querySelector(
-      "[data-nav-overlay]"
-    ) as HTMLDivElement;
+      '[data-nav-overlay]'
+    ) as HTMLDivElement
     if (toggleMenu) {
-      toggleMenu.addEventListener("click", (e) => {
-        e.preventDefault();
-        if (toggleMenu.getAttribute("data-open-nav") === "false") {
-          toggleMenu.setAttribute("data-open-nav", "true");
-          overlayNav.setAttribute("data-is-visible", "true");
-          document.body.classList.add("!overflow-y-hidden");
-          navbar.style.height = `${navbar.scrollHeight}px`;
+      toggleMenu.addEventListener('click', (e) => {
+        e.preventDefault()
+        if (toggleMenu.getAttribute('data-open-nav') === 'false') {
+          toggleMenu.setAttribute('data-open-nav', 'true')
+          overlayNav.setAttribute('data-is-visible', 'true')
+          document.body.classList.add('!overflow-y-hidden')
+          navbar.style.height = `${navbar.scrollHeight}px`
         } else {
-          toggleMenu.setAttribute("data-open-nav", "false");
-          overlayNav.setAttribute("data-is-visible", "false");
-          document.body.classList.remove("!overflow-y-hidden");
-          navbar.style.height = "0px";
+          toggleMenu.setAttribute('data-open-nav', 'false')
+          overlayNav.setAttribute('data-is-visible', 'false')
+          document.body.classList.remove('!overflow-y-hidden')
+          navbar.style.height = '0px'
         }
-      });
+      })
 
-      navbar.addEventListener("click", () => {
-        toggleMenu.setAttribute("data-open-nav", "false");
-        overlayNav.setAttribute("data-is-visible", "false");
-        document.body.classList.remove("!overflow-y-hidden");
-        navbar.style.height = "0px";
-      });
+      navbar.addEventListener('click', () => {
+        toggleMenu.setAttribute('data-open-nav', 'false')
+        overlayNav.setAttribute('data-is-visible', 'false')
+        document.body.classList.remove('!overflow-y-hidden')
+        navbar.style.height = '0px'
+      })
 
-      overlayNav.addEventListener("click", () => {
-        toggleMenu.setAttribute("data-open-nav", "false");
-        overlayNav.setAttribute("data-is-visible", "false");
-        document.body.classList.remove("!overflow-y-hidden");
-        navbar.style.height = "0px";
-      });
+      overlayNav.addEventListener('click', () => {
+        toggleMenu.setAttribute('data-open-nav', 'false')
+        overlayNav.setAttribute('data-is-visible', 'false')
+        document.body.classList.remove('!overflow-y-hidden')
+        navbar.style.height = '0px'
+      })
     }
   </script>
 </html>
@@ -177,21 +177,21 @@ const { title } = Astro.props;
     scroll-behavior: smooth;
   }
   body {
-    font-family: "Raleway", sans-serif;
+    font-family: 'Raleway', sans-serif;
   }
 
-  [data-toggle-nav][data-open-nav="true"] #line1 {
+  [data-toggle-nav][data-open-nav='true'] #line1 {
     transform: translateY(0.375rem) rotate(40deg);
   }
-  [data-toggle-nav][data-open-nav="true"] #line2 {
+  [data-toggle-nav][data-open-nav='true'] #line2 {
     transform: scaleX(0);
     opacity: 0;
   }
-  [data-toggle-nav][data-open-nav="true"] #line3 {
+  [data-toggle-nav][data-open-nav='true'] #line3 {
     transform: translateY(-0.375rem) rotate(-40deg);
   }
 
-  [data-nav-overlay][data-is-visible="true"] {
+  [data-nav-overlay][data-is-visible='true'] {
     visibility: visible;
     display: flex;
   }
