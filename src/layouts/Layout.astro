@@ -18,20 +18,22 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href={logo} />
     <meta name="generator" content={Astro.generator} />
-
     <meta
       name="description"
-      content="Web Wizard Lab - SEO Agencia de desarrollo web. Desarrollamos páginas web profesionales que acercan clientes a tu marca."
+      content="Desarrollo de páginas web, tiendas online y aplicaciones móviles en España y Argentina"
     />
-
+    <meta
+      name="keywords"
+      content="personal,website,ecommerce,template,kit,ivan,trejo,webdev,web,developer,fullstack,frontend,backend,españa,argentina,wordpress,gutenberg,react,github,linkedin,google,gitlab,material,design,ui,webapp,native,express,postgres,mysql,mongodb,firebase,javascript,diseño,ux,typescript,desarrollo,mobile,aplicaciones,páginas,tienda,online,proyectos,digital,desarrolladores,developers,aws,woocommerce,node,express,nestjs,wizard,lab"
+    />
     <!-- openGraph -->
     <meta
       property="og:title"
-      content="Web Wizard Lab - Tu agencia de desarrollo web."
+      content="WebWizard Lab - Tu agencia de desarrollo web."
     />
     <meta
       property="og:description"
-      content="Web Wizard Lab - SEO Agencia de desarrollo web. Desarrollamos páginas web profesionales que acercan clientes a tu marca."
+      content="Desarrollo de páginas web, tiendas online y aplicaciones móviles en España y Argentina"
     />
     <meta property="og:image" content="../../public/images/wwlLogo.png" />
     <meta property="og:url" content="https://webwizardlab.vercel.app" />
@@ -40,12 +42,21 @@ const { title } = Astro.props;
       property="og:image:alt"
       content="El logo de Web Wizard Lab - Tu agencia de desarrollo web."
     />
+    <script is:inline type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "WebWizard Lab",
+        "url": "https://webwizardlab.com/",
+        "email": "mailto:wwizard.lab@gmail.com"
+      }
+    </script>
 
     <title>{title}</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
-    />    
+    />
   </head>
   <body class="overflow-hidden overflow-y-auto bg-body">
     <Navbar />

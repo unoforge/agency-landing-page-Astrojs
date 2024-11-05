@@ -3,7 +3,7 @@ import Container from "../shared/Container.astro";
 import Paragraph from "../shared/Paragraph.astro";
 import BtnLink from "../shared/BtnLink.astro";
 
-import Button from "../shared/Button.astro";
+
 
 const wordpressIcon = "/images/icons8-wordpress-96.png";
 const woocommerceIcon = "/images/icons8-woocommerce-96.png";
@@ -20,7 +20,7 @@ const fullstackIcon = "/images/icons8-stack-96.png";
         <p
           class="text-heading-1 font-semibold text-2xl sm:text-3xl md:text-4xl"
         >
-          Conoce nuestros <b>Planes</b>
+          Conoce nuestros <b>Servicios</b>
         </p>
       </div>
     </div>
@@ -56,19 +56,6 @@ const fullstackIcon = "/images/icons8-stack-96.png";
             - Landing Page 1 vista 6 secciones
           </Paragraph>
         </div>
-
-        <!-- <div class="text-center mt-6">
-          <Paragraph className="text-center p-2">
-            <b>Sin pago de mensualidad por administración</b>
-          </Paragraph>
-          <div class="mt-4">
-            <Button variant={"primary"}>
-              <a href="/contact" class="text-white font-semibold relative z-[5]"
-                >Quiero consultar</a
-              >
-            </Button>
-          </div>
-        </div> -->
       </div>
       <!-- Card 2 -->
       <div
@@ -98,19 +85,6 @@ const fullstackIcon = "/images/icons8-stack-96.png";
             - 1 reunión de capacitación de uso del sitio
           </Paragraph>
         </div>
-
-        <!-- <div class="text-center mt-20">
-          <Paragraph className="text-center p-2">
-            <b></b>
-          </Paragraph>
-          <div class="mt-4">
-            <Button variant={"primary"}>
-              <a href="/contact" class="text-white font-semibold relative z-[5]"
-                >Quiero consultar</a
-              >
-            </Button>
-          </div>
-        </div> -->
       </div>
 
       <!-- Card 3 -->
@@ -147,19 +121,6 @@ const fullstackIcon = "/images/icons8-stack-96.png";
             - 1 reunión de capacitación de uso del sitio
           </Paragraph>
         </div>
-
-        <!-- <div class="text-center mt-5">
-          <Paragraph className="text-center p-2">
-            <b>Sin pago de mensualidad por administración</b>
-          </Paragraph>
-          <div class="mt-4">
-            <Button variant={"primary"}>
-              <a href="/contact" class="text-white font-semibold relative z-[5]"
-                >Quiero consultar</a
-              >
-            </Button>
-          </div>
-        </div> -->
       </div>
       <!-- Card 4 -->
       <div
@@ -185,20 +146,7 @@ const fullstackIcon = "/images/icons8-stack-96.png";
             - 2 reuniones de diseño de la página web<br />
             - 1 reunión de capacitación de uso del sitio
           </Paragraph>
-        </div>
-
-        <!-- <div class="text-center mt-56">
-          <Paragraph className="text-center p-2">
-            <b>Sin pago de mensualidad por administración</b>
-          </Paragraph>
-          <div class="mt-4">
-            <Button variant={"primary"}>
-              <a href="/contact" class="text-white font-semibold relative z-[5]"
-                >Quiero consultar</a
-              >
-            </Button>
-          </div>
-        </div> -->
+        </div>       
       </div>
       <!-- Card 5 -->
       <div
@@ -223,57 +171,47 @@ const fullstackIcon = "/images/icons8-stack-96.png";
             como el backend con tecnologías avanzadas, asegurando una
             experiencia fluida y de alto rendimiento para tus usuarios.
           </Paragraph>
-        </div>
-
-        <!-- <div class="text-center mt-6">
-          <Paragraph className="text-center p-2">
-            <b>Sin pago de mensualidad por administración</b>
-          </Paragraph>
-          <div class="mt-4">
-            <Button variant={"primary"}>
-              <a href="/contact" class="text-white font-semibold relative z-[5]"
-                >Quiero consultar</a
-              >
-            </Button>
-          </div>
-        </div> -->
+        </div>        
       </div>
       <!-- Card 6 -->
       <div
-        class="h-full p-3 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden"
+        class="h-full p-3 sm:p-6 lg:p-8 flex flex-col justify-center items-center rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden"
       >
-        <Paragraph className="pt-36 text-center">
+        <Paragraph className="text-center">
           <b class="text-2xl">¿Listo para hacer realidad tu proyecto?</b>
         </Paragraph>
 
-        <div class="pt-7 text-center pb-16 align-end">
+        <div class="pt-7 text-center align-end">
           <div class="mt-4">
             <BtnLink
-              text="Contáctanos"
-              href="/contact"
-              className=" w-full sm:w-max font-semibold text-md "
-              variant="primary"
-            />
+            text="Contáctanos"
+
+            href="/contacto"
+            className="flex justify-center w-full sm:w-max font-semibold text-md tracking-normal"
+            variant="primary"
+          />
           </div>
         </div>
       </div>
     </div>
-  </Container>
-  <p class="pt-8 text-lg text-heading-3 lg:pb-2 lg:ml-10 text-left ml-2">
-    <b>Todos incluyen:</b>
-  </p>
-  <Paragraph className="lg:pt-0 lg:ml-10 mt-3 ml-3">
-    <span
-      class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center"
-      >&checkmark;</span
-    > Hosting y Dominio por 1 año <br />
-    <span
-      class="mt-2 font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center"
-      >&checkmark;</span
-    > Certificado SSL<br />
-    <span
-      class="mt-2 font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center"
-      >&checkmark;</span
-    > Sitio protegido con Antivirus
-  </Paragraph>
+    <div class="">
+      <p class="pt-8 text-lg text-heading-3 lg:pb-2 lg:ml-10 text-left ml-2">
+        <b>Todos incluyen:</b>
+      </p>
+      <Paragraph className="lg:pt-0 lg:ml-10 mt-3 ml-3">
+        <span
+          class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center"
+          >&checkmark;</span
+        > Hosting y Dominio por 1 año <br />
+        <span
+          class="mt-2 font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center"
+          >&checkmark;</span
+        > Certificado SSL<br />
+        <span
+          class="mt-2 font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center"
+          >&checkmark;</span
+        > Sitio protegido con Antivirus
+      </Paragraph>
+    </div>
+  </Container>    
 </section>
