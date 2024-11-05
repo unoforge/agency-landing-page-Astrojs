@@ -1,0 +1,24 @@
+---
+import BtnLink from "../components/shared/BtnLink.astro";
+import Container from "../components/shared/Container.astro";
+import Title from "../components/shared/Title.astro";
+import Layout from "../layouts/Layout.astro";
+
+const erroIcon = "images/icons8-error-100-transformed.png";
+---
+
+<Layout
+  title="WebWizard Lab | Agencia de desarrollo web - No se encontró lo que buscas"
+>
+  <main class="flex flex-col gap-y-20 md:gap-y-32 overflow-hidden">
+    <section class="h-screen relative pt-12">
+      <Container className={"h-full flex flex-col items-center justify-center gap-10 lg:gap-12"}>
+        <div class="w-32 h-32 flex items-center justify-center">
+            <img class="w-full h-full object-cover" src={erroIcon} alt="error-404">
+        </div>       
+        <Title className="text-center">Opps... No se encontró la página que estabas buscando</Title>
+        <BtnLink href="/" text="Volver a home" variant="primary"/>
+      </Container>
+    </section>
+  </main>
+</Layout>

@@ -1,3 +1,13 @@
-<h1 class="text-heading-1 font-semibold text-2xl sm:text-3xl md:text-4xl">
-    <slot/>
+---
+export interface Props {
+  className?: string;
+}
+
+const { className } = Astro.props;
+---
+
+<h1
+  class={`text-heading-1 font-semibold text-2xl sm:text-3xl md:text-4xl ${className}`}
+>
+  <slot />
 </h1>
