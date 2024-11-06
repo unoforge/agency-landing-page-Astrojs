@@ -1,45 +1,43 @@
 ---
-import Container from "../shared/Container.astro";
-import Paragraph from "../shared/Paragraph.astro";
-import BtnLink from "../shared/BtnLink.astro";
+import Container from '../shared/Container.astro'
+import Paragraph from '../shared/Paragraph.astro'
+import BtnLink from '../shared/BtnLink.astro'
 
-
-
-const wordpressIcon = "/images/icons8-wordpress-96.png";
-const woocommerceIcon = "/images/icons8-woocommerce-96.png";
-const codingIcon = "/images/icons8-laptop-coding-96.png";
-const mobileIcon = "/images/icons8-iphone-14-96.png";
-const supportIcon = "/images/icons8-support-96.png";
-const fullstackIcon = "/images/icons8-stack-96.png";
+const wordpressIcon = '/images/icons8-wordpress-96.png'
+const woocommerceIcon = '/images/icons8-woocommerce-96.png'
+const codingIcon = '/images/icons8-laptop-coding-96.png'
+const mobileIcon = '/images/icons8-iphone-14-96.png'
+const supportIcon = '/images/icons8-support-96.png'
+const fullstackIcon = '/images/icons8-stack-96.png'
 ---
 
-<section id="planes" class="relative pt-32 lg:pt-40 lg:mb-5">
-  <Container className="space-y-10 md:sapce-y-12 ">
-    <div class="text-left max-w-[3/4] mx-auto">
-      <div class="my-[12px] lg:ml-4 lg:text-left text-center">
+<section id='planes' class='relative pt-32 lg:pt-40 lg:mb-5'>
+  <Container className='space-y-10 md:sapce-y-12 '>
+    <div class='text-left max-w-[3/4] mx-auto'>
+      <div class='my-[12px] lg:ml-4 lg:text-left text-center'>
         <p
-          class="text-heading-1 font-semibold text-2xl sm:text-3xl md:text-4xl"
+          class='text-heading-1 font-semibold text-2xl sm:text-3xl md:text-4xl'
         >
           Conoce nuestros <b>Servicios</b>
         </p>
       </div>
     </div>
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+    <div class='grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8'>
       <div
-        class="p-5 h-full sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden"
+        class='p-5 h-full sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden'
       >
-        <div class="p-2 text-heading-1 flex justify-center">
-          <img src={wordpressIcon} alt="WordPress Icon" class="w-8 h-8 mr-2" />
-          <h2 class="md:text-lg font-bold text-heading-2 mb-2">Sitios Web</h2>
+        <div class='p-2 text-heading-1 flex justify-center'>
+          <img src={wordpressIcon} alt='WordPress Icon' class='w-8 h-8 mr-2' />
+          <h2 class='md:text-lg font-bold text-heading-2 mb-2'>Sitios Web</h2>
         </div>
 
         <div>
-          <Paragraph className="text-left h-1/6 p-2 mb-3 text-heading-2">
+          <Paragraph className='text-left h-1/6 p-2 mb-3 text-heading-2'>
             Optimiza tu presencia en línea con un sitio web profesional,
             diseñado para atraer, retener y convertir visitantes en clientes.
           </Paragraph>
-          <Paragraph className="h-3/5 mt-3">
+          <Paragraph className='h-3/5 mt-3'>
             - 1 cuenta de correo corporativo<br />
             - Diseño profesional, moderno y llamativo<br />
             - Redacción de textos persuasivos<br />
@@ -59,22 +57,22 @@ const fullstackIcon = "/images/icons8-stack-96.png";
       </div>
       <!-- Card 2 -->
       <div
-        class="p-5 h-full sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden"
+        class='p-5 h-full sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden'
       >
-        <div class="p-2 text-heading-1 flex justify-center">
-          <img src={codingIcon} alt="WordPress Icon" class="w-8 h-8 mr-2" />
-          <h2 class="md:text-lg font-bold text-heading-2 mb-2">
+        <div class='p-2 text-heading-1 flex justify-center'>
+          <img src={codingIcon} alt='WordPress Icon' class='w-8 h-8 mr-2' />
+          <h2 class='md:text-lg font-bold text-heading-2 mb-2'>
             Aplicaciones Web
           </h2>
         </div>
 
         <div>
-          <Paragraph className="h-1/6 pb-3 p-2 text-left text-heading-2">
+          <Paragraph className='h-1/6 pb-3 p-2 text-left text-heading-2'>
             Impulsa tu negocio con una aplicación web personalizada, diseñada
             para mejorar la experiencia del usuario, optimizar procesos y
             adaptarse a tus necesidades.
           </Paragraph>
-          <Paragraph className="h-3/5 mt-3">
+          <Paragraph className='h-3/5 mt-3'>
             - Aplicacion Personalizada <br />
             - Desarrollo FrontEnd React <br />
             - Base de Datos Relacional PostgresSQL o No relacional MongoDB <br
@@ -89,22 +87,22 @@ const fullstackIcon = "/images/icons8-stack-96.png";
 
       <!-- Card 3 -->
       <div
-        class="h-full p-3 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden"
+        class='h-full p-3 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden'
       >
-        <div class="p-2 text-heading-1 flex justify-center">
+        <div class='p-2 text-heading-1 flex justify-center'>
           <img
             src={woocommerceIcon}
-            alt="WordPress Icon"
-            class="w-8 h-8 mr-2"
+            alt='WordPress Icon'
+            class='w-8 h-8 mr-2'
           />
-          <h2 class="md:text-lg font-bold text-heading-2 mb-2">E-commerce</h2>
+          <h2 class='md:text-lg font-bold text-heading-2 mb-2'>E-commerce</h2>
         </div>
         <div>
-          <Paragraph className="text-left h-15/100 pb-3 p-2 text-heading-2">
+          <Paragraph className='text-left h-15/100 pb-3 p-2 text-heading-2'>
             Una tienda completa con carro de compras, pasarela de pago y métodos
             de envio.
           </Paragraph>
-          <Paragraph className="h-3/5 mt-3">
+          <Paragraph className='h-3/5 mt-3'>
             - 1 cuentas de correo corporativo<br />
             - Carro de compras<br />
             - Pasarela de pago a elección<br />
@@ -124,21 +122,21 @@ const fullstackIcon = "/images/icons8-stack-96.png";
       </div>
       <!-- Card 4 -->
       <div
-        class="h-full p-3 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden"
+        class='h-full p-3 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden'
       >
-        <div class="p-2 text-heading-1 flex justify-center">
-          <img src={mobileIcon} alt="WordPress Icon" class="w-8 h-8 mr-2" />
-          <h2 class="md:text-lg font-bold text-heading-2 mb-2">
+        <div class='p-2 text-heading-1 flex justify-center'>
+          <img src={mobileIcon} alt='WordPress Icon' class='w-8 h-8 mr-2' />
+          <h2 class='md:text-lg font-bold text-heading-2 mb-2'>
             Aplicaciones Moviles
           </h2>
         </div>
         <div>
-          <Paragraph className="text-left h-1/6 pb-3 p-2 text-heading-2">
+          <Paragraph className='text-left h-1/6 pb-3 p-2 text-heading-2'>
             Lleva tu negocio a todos lados con una aplicación móvil
             personalizada, diseñada para mejorar la conexión con tus clientes y
             ofrecer una experiencia intuitiva y accesible.
           </Paragraph>
-          <Paragraph className="h-3/5 mt-3">
+          <Paragraph className='h-3/5 mt-3'>
             - Aplicacion Personalizada <br />
             - Desarrollo FrontEnd React Native <br />
             - Base de Datos SQlite <br />
@@ -146,72 +144,71 @@ const fullstackIcon = "/images/icons8-stack-96.png";
             - 2 reuniones de diseño de la página web<br />
             - 1 reunión de capacitación de uso del sitio
           </Paragraph>
-        </div>       
+        </div>
       </div>
       <!-- Card 5 -->
       <div
-        class="h-full p-3 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden"
+        class='h-full p-3 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden'
       >
-        <div class="p-2 text-heading-1 flex justify-center">
-          <img src={fullstackIcon} alt="WordPress Icon" class="w-8 h-8 mr-2" />
-          <h2 class="md:text-lg font-bold text-heading-2 mb-2">
+        <div class='p-2 text-heading-1 flex justify-center'>
+          <img src={fullstackIcon} alt='WordPress Icon' class='w-8 h-8 mr-2' />
+          <h2 class='md:text-lg font-bold text-heading-2 mb-2'>
             Desarrollo Fullstack
           </h2>
         </div>
 
         <div>
-          <Paragraph className="text-left h-20/100 pb-3 p-2">
-            Impulsa tu proyecto desde el frontend hasta el backend con una
+          <Paragraph className='text-left h-20/100 pb-3 p-2'
+            >Impulsa tu proyecto desde el frontend hasta el backend con una
             solución Full Stack completa.
           </Paragraph>
-          <Paragraph className="h-3/4 text-heading-2 mt-3">
+          <Paragraph className='h-3/4 text-heading-2 mt-3'>
             Desde la interfaz de usuario hasta la gestión de datos,
             desarrollamos aplicaciones completas y personalizadas que optimizan
             cada aspecto de tu negocio. Nuestro equipo maneja tanto el frontend
             como el backend con tecnologías avanzadas, asegurando una
             experiencia fluida y de alto rendimiento para tus usuarios.
           </Paragraph>
-        </div>        
+        </div>
       </div>
       <!-- Card 6 -->
       <div
-        class="h-full p-3 sm:p-6 lg:p-8 flex flex-col justify-center items-center rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden"
+        class='h-full p-3 sm:p-6 lg:p-8 flex flex-col justify-center items-center rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden'
       >
-        <Paragraph className="text-center">
-          <b class="text-2xl">¿Listo para hacer realidad tu proyecto?</b>
+        <Paragraph className='text-center'>
+          <b class='text-2xl'>¿Listo para hacer realidad tu proyecto?</b>
         </Paragraph>
 
-        <div class="pt-7 text-center align-end">
-          <div class="mt-4">
+        <div class='pt-7 text-center align-end'>
+          <div class='mt-4'>
             <BtnLink
-            text="Contáctanos"
-
-            href="/contacto"
-            className="flex justify-center w-full sm:w-max font-semibold text-md tracking-normal"
-            variant="primary"
-          />
+              text='Contáctanos'
+              href='/contacto'
+              className='flex justify-center w-full sm:w-max font-semibold text-md tracking-normal'
+              variant='primary'
+            />
           </div>
         </div>
       </div>
     </div>
-    <div class="">
-      <p class="pt-8 text-lg text-heading-3 lg:pb-2 lg:ml-10 text-left ml-2">
+    <div class=''>
+      <p class='pt-8 text-lg text-heading-3 lg:pb-2 lg:ml-10 text-left ml-2'>
         <b>Todos incluyen:</b>
       </p>
-      <Paragraph className="lg:pt-0 lg:ml-10 mt-3 ml-3">
+      <Paragraph className='lg:pt-0 lg:ml-10 mt-3 ml-3'>
         <span
-          class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center"
+          class='font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center'
           >&checkmark;</span
         > Hosting y Dominio por 1 año <br />
         <span
-          class="mt-2 font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center"
+          class='mt-2 font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center'
           >&checkmark;</span
         > Certificado SSL<br />
         <span
-          class="mt-2 font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center"
+          class='mt-2 font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center'
           >&checkmark;</span
         > Sitio protegido con Antivirus
       </Paragraph>
     </div>
-  </Container>    
+  </Container>
 </section>

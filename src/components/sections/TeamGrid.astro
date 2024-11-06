@@ -1,179 +1,103 @@
 ---
-import Container from "../shared/Container.astro";
-import Paragraph from "../shared/Paragraph.astro";
-import Title from "../shared/Title.astro";
-const ivanPhoto = "/images/ivan-profile.jpg";
-const crisPhoto = "/images/cris-profile.png";
-const daniPhoto = "/images/daniela-removebg-preview.png";
-const facebookIcon = "/images/icons8-facebook-96.png";
-const linkedinIcon = "/images/icons8-linkedin-96.png";
-const instagramIcon = "images/icons8-instagram-96.png";
+import Container from '../shared/Container.astro'
+import Paragraph from '../shared/Paragraph.astro'
+import Title from '../shared/Title.astro'
+const ivanPhoto = '/images/ivan-profile.jpg'
+const crisPhoto = '/images/cris-profile.png'
+const daniPhoto = '/images/daniela-removebg-preview.png'
+const facebookIcon = '/images/icons8-facebook-96.png'
+const linkedinIcon = '/images/icons8-linkedin-96.png'
+const instagramIcon = 'images/icons8-instagram-96.png'
+
+const employees = [
+  {
+    id: 1,
+    name: 'Iván Trejo',
+    position: 'Fullstack developer & Founder',
+    image: ivanPhoto,
+    instagramUrl: 'https://www.instagram.com/ivantrejoc/',
+    facebookUrl: 'https://www.facebook.com/ivantrejoc/',
+    linkedinUrl: 'https://www.linkedin.com/in/ivanjtrejoc/'
+  },
+  {
+    id: 2,
+    name: 'Crisitian Molina',
+    position: 'Fullstack developer & Founder',
+    image: crisPhoto,
+    instagramUrl: 'https://www.instagram.com/cristianmolina84',
+    facebookUrl:
+      'https://www.facebook.com/people/Cristian-Molina/pfbid02XXCpGBunbFmko3ZHYqaFUJRdV9SH6v9uwVZJFStmwsfBRxhSTBJVahK6myEsYsiZl/?rdid=u4Z33U94YP7d004G&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F6uV6w3q3wfW8xcUV%2F',
+    linkedinUrl: 'https://www.linkedin.com/in/cristiandavidmolina/'
+  },
+  {
+    id: 3,
+    name: 'Erika Daniela Quintero',
+    position: 'Q&A Tester - Social Media Specialist',
+    image: daniPhoto,
+    instagramUrl: 'https://www.instagram.com/daniquin29',
+    facebookUrl: 'https://www.facebook.com/daniela.quintero1',
+    linkedinUrl: 'http://www.linkedin.com/in/danielaquintero2903'
+  }
+]
 ---
 
-<section id="about" class="relative pt-10 lg:mb-10">
-  <Container className="flex flex-col h-auto ">
-    <div class="w-full text-center justify-center">
+<section id='about' class='relative pt-10 lg:mb-10'>
+  <Container className='flex flex-col h-auto '>
+    <div class='w-full text-center justify-center'>
       <Title>Nuestro equipo</Title>
     </div>
     <div
-      class="w-full h-[100%] grid grid-rows-2 grid-cols-2 lg:grid-rows-1 lg:grid-cols-4 gap-4 mt-8"
+      class='w-full h-full flex flex-col md:grid md:grid-cols-3 md:grid-rows-1 gap-4 mt-8'
     >
-      <div
-        class="h-fit flex flex-col pb-5 justify-start items-center gap-2 sm:gap-4 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden"
-      >
-        <img
-          class="w-full h-40 sm:h-80 object-cover transition-transform duration-300 transform hover:scale-110"
-          src={crisPhoto}
-          alt="cristian-molina"
-        />
-        <div
-          class="flex flex-col justify-start items-center gap-2 self-stretch"
-        >
-          <h2 class="md:text-xl font-semibold text-heading-2 text-center h-12">
-            Cristian Molina
-          </h2>
-          <Paragraph className="text-xs text-center"
-            >Fullstack Web Developer & Co-founder</Paragraph
-          >
-        </div>
-        <div class="w-full grid grid-cols-3 gap-0 justify-items-center">
-          <a
-            href="#"
-            class="flex items-center justify-center rounded-3xl w-8 h-8 sm:w-12 sm:h-12 lg:mx-0 mx-auto bg-gray-100 dark:bg-gray-950 p-1 text-heading-1 relative transition-transform duration-300 transform hover:scale-110"
-          >
-            <img src={linkedinIcon} class="w-full h-full" alt="linkedin" />
-          </a>
-          <a
-            href="#"
-            class="flex items-center justify-center rounded-3xl w-8 h-8 sm:w-12 sm:h-12 lg:mx-0 mx-auto bg-gray-100 dark:bg-gray-950 p-1 text-heading-1 relative transition-transform duration-300 transform hover:scale-110"
-          >
-            <img src={instagramIcon} class="w-full h-full" alt="instagram" />
-          </a>
-          <a
-            href="#"
-            class="flex items-center justify-center rounded-3xl w-8 h-8 sm:w-12 sm:h-12 lg:mx-0 mx-auto bg-gray-100 dark:bg-gray-950 p-1 text-heading-1 relative transition-transform duration-300 transform hover:scale-110"
-          >
-            <img src={facebookIcon} class="w-full h-full" alt="facebook" />
-          </a>
-        </div>
-      </div>
-      <div
-        class="h-fit flex flex-col pb-5 justify-start items-center gap-2 sm:gap-4 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden"
-      >
-        <img
-          class="w-full h-40 sm:h-80 object-cover transition-transform duration-300 transform hover:scale-110"
-          src={ivanPhoto}
-          alt="ivan-trejo"
-        />
-        <div
-          class="flex flex-col justify-start items-center gap-2 self-stretch"
-        >
-          <h2 class="md:text-xl font-semibold text-heading-2 text-center h-12">
-            Iván Trejo
-          </h2>
-          <Paragraph className="text-xs text-center"
-            >Fullstack Web Developer & Co-founder</Paragraph
-          >
-        </div>
-        <div class="w-full grid grid-cols-3 gap-0 justify-items-center">
-          <a
-            href="#"
-            class="flex items-center justify-center rounded-3xl w-8 h-8 sm:w-12 sm:h-12 lg:mx-0 mx-auto bg-gray-100 dark:bg-gray-950 p-1 text-heading-1 relative transition-transform duration-300 transform hover:scale-110"
-          >
-            <img src={linkedinIcon} class="w-full h-full" alt="linkedin" />
-          </a>
-          <a
-            href="#"
-            class="flex items-center justify-center rounded-3xl w-8 h-8 sm:w-12 sm:h-12 lg:mx-0 mx-auto bg-gray-100 dark:bg-gray-950 p-1 text-heading-1 relative transition-transform duration-300 transform hover:scale-110"
-          >
-            <img src={instagramIcon} class="w-full h-full" alt="instagram" />
-          </a>
-          <a
-            href="#"
-            class="flex items-center justify-center rounded-3xl w-8 h-8 sm:w-12 sm:h-12 lg:mx-0 mx-auto bg-gray-100 dark:bg-gray-950 p-1 text-heading-1 relative transition-transform duration-300 transform hover:scale-110"
-          >
-            <img src={facebookIcon} class="w-full h-full" alt="facebook" />
-          </a>
-        </div>
-      </div>
-      <div
-        class="h-fit flex flex-col pb-5 justify-start items-center gap-2 sm:gap-4 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden"
-      >
-        <img
-          class="w-full h-40 sm:h-80 object-cover transition-transform duration-300 transform hover:scale-110"
-          src={crisPhoto}
-          alt="german-montenegro"
-        />
-        <div
-          class="flex flex-col justify-start items-center gap-2 self-stretch"
-        >
-          <h2 class="md:text-xl font-semibold text-heading-2 text-center h-12">
-            Germán Montenegro
-          </h2>
-          <Paragraph className="text-xs text-center"
-            >Fullstack Web Developer & Co-founder</Paragraph
-          >
-        </div>
-        <div class="w-full grid grid-cols-3 gap-0 justify-items-center">
-          <a
-            href="#"
-            class="flex items-center justify-center rounded-3xl w-8 h-8 sm:w-12 sm:h-12 lg:mx-0 mx-auto bg-gray-100 dark:bg-gray-950 p-1 text-heading-1 relative transition-transform duration-300 transform hover:scale-110"
-          >
-            <img src={linkedinIcon} class="w-full h-full" alt="linkedin" />
-          </a>
-          <a
-            href="#"
-            class="flex items-center justify-center rounded-3xl w-8 h-8 sm:w-12 sm:h-12 lg:mx-0 mx-auto bg-gray-100 dark:bg-gray-950 p-1 text-heading-1 relative transition-transform duration-300 transform hover:scale-110"
-          >
-            <img src={instagramIcon} class="w-full h-full" alt="instagram" />
-          </a>
-          <a
-            href="#"
-            class="flex items-center justify-center rounded-3xl w-8 h-8 sm:w-12 sm:h-12 lg:mx-0 mx-auto bg-gray-100 dark:bg-gray-950 p-1 text-heading-1 relative transition-transform duration-300 transform hover:scale-110"
-          >
-            <img src={facebookIcon} class="w-full h-full" alt="facebook" />
-          </a>
-        </div>
-      </div>
-      <div
-        class="h-fit flex flex-col pb-5 justify-start items-center gap-2 sm:gap-4 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden"
-      >
-        <img
-          class="w-full h-40 sm:h-80 object-cover object-right-top transition-transform duration-300 transform hover:scale-110"
-          src={daniPhoto}
-          alt="cristian-molina"
-        />
-        <div
-          class="flex flex-col justify-start items-center gap-2 self-stretch"
-        >
-          <h2 class="md:text-xl font-semibold text-heading-2 text-center h-12">
-            Daniela Quintero
-          </h2>
-          <Paragraph className="text-xs text-center"
-            >Q&A Tester - Social Media Specialist</Paragraph
-          >
-        </div>
-        <div class="w-full grid grid-cols-3 gap-0 justify-items-center">
-          <a
-            href="#"
-            class="flex items-center justify-center rounded-3xl w-8 h-8 sm:w-12 sm:h-12 lg:mx-0 mx-auto bg-gray-100 dark:bg-gray-950 p-1 text-heading-1 relative transition-transform duration-300 transform hover:scale-110"
-          >
-            <img src={linkedinIcon} class="w-full h-full" alt="linkedin" />
-          </a>
-          <a
-            href="#"
-            class="flex items-center justify-center rounded-3xl w-8 h-8 sm:w-12 sm:h-12 lg:mx-0 mx-auto bg-gray-100 dark:bg-gray-950 p-1 text-heading-1 relative transition-transform duration-300 transform hover:scale-110"
-          >
-            <img src={instagramIcon} class="w-full h-full" alt="instagram" />
-          </a>
-          <a
-            href="#"
-            class="flex items-center justify-center rounded-3xl w-8 h-8 sm:w-12 sm:h-12 lg:mx-0 mx-auto bg-gray-100 dark:bg-gray-950 p-1 text-heading-1 relative transition-transform duration-300 transform hover:scale-110"
-          >
-            <img src={facebookIcon} class="w-full h-full" alt="facebook" />
-          </a>
-        </div>
-      </div>
+      {
+        employees?.map((employee) => (
+          <div class='h-full flex flex-col pb-5 justify-start items-center gap-2 sm:gap-4 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden'>
+            <img
+              class='w-full h-72 sm:h-96 object-cover object-top transition-transform duration-300 transform hover:scale-110'
+              src={employee.image}
+              alt={employee.image}
+            />
+            <div class='flex flex-col justify-start items-center gap-2 self-stretch mb-2'>
+              <h2 class='md:text-xl font-semibold text-heading-2 text-center sm:h-8 md:h-16 lg:h-8'>
+                {employee.name}
+              </h2>
+              <Paragraph className='text-xs text-center md:h-16 lg:h-auto'>
+                {employee.position}
+              </Paragraph>
+            </div>
+            <div class='w-full flex justify-around justify-items-center'>
+              <a
+                href={employee.linkedinUrl}
+                target='_blank'
+                rel='noopener noreferrer'
+                class='flex items-center justify-center rounded-3xl w-10 h-10 sm:w-12 sm:h-12 lg:mx-0 mx-auto bg-gray-100 dark:bg-gray-950 p-1 text-heading-1 relative transition-transform duration-300 transform hover:scale-110'
+              >
+                <img src={linkedinIcon} class='w-full h-full' alt='linkedin' />
+              </a>
+              <a
+                href={employee.instagramUrl}
+                target='_blank'
+                rel='noopener noreferrer'
+                class='flex items-center justify-center rounded-3xl w-10 h-10 sm:w-12 sm:h-12 lg:mx-0 mx-auto bg-gray-100 dark:bg-gray-950 p-1 text-heading-1 relative transition-transform duration-300 transform hover:scale-110'
+              >
+                <img
+                  src={instagramIcon}
+                  class='w-full h-full'
+                  alt='instagram'
+                />
+              </a>
+              <a
+                href={employee.facebookUrl}
+                target='_blank'
+                rel='noopener noreferrer'
+                class='flex items-center justify-center rounded-3xl w-10 h-10 sm:w-12 sm:h-12 lg:mx-0 mx-auto bg-gray-100 dark:bg-gray-950 p-1 text-heading-1 relative transition-transform duration-300 transform hover:scale-110'
+              >
+                <img src={facebookIcon} class='w-full h-full' alt='facebook' />
+              </a>
+            </div>
+          </div>
+        ))
+      }
     </div>
   </Container>
 </section>
