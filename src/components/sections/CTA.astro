@@ -6,9 +6,9 @@ import Paragraph from "../shared/Paragraph.astro";
 <section id="cta">
   <Container>
     <div
-      class="w-full relative py-10 lg:px-6 px-8 rounded-2xl bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-900"
+      class="w-full relative flex flex-col justify-center items-center py-10 lg:px-6 px-8 rounded-2xl bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-900"
     >
-      <div class="absolute right-0 top-0 h-full w-full flex justify-end">
+      <div class="absolute right-0 top-0 h-full w-full flex justify-center">
         <div
           class="w-28 h-28 overflow-hidden flex rounded-xl relative blur-2xl"
         >
@@ -44,80 +44,23 @@ import Paragraph from "../shared/Paragraph.astro";
           class="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight
           font-bold text-heading-1"
         >
-          Comienza ya <br /><span
+          Transforma tu visión<br /><span
             class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600"
-            >tu estrategia digital</span
+            >En un proyecto web de alto impacto</span
           >
-      </header>
-        <Paragraph className={"pt-10"}>
-          Tener una web ya no es un aspecto que te diferencie de tu competencia.
-          <br /><b>Debes destacar en línea y llegar a tu audiencia potencial.</b
-          >
-          <br /><br />¡Contáctanos ahora para ayudarte a dar el próximo paso!
-        </Paragraph>
+        </header>
+        <p class={"pt-10 text-lg sm:text-2xl text-heading-3"}>
+          Lleva a tu marca más allá de las expectativas.
+          <br /><b>Creamos experiencias digitales que inspiran y convierten.</b>
+          <br /><br />¡Descubre lo que podemos hacer por ti!
+        </p>
         <div class="mx-auto max-w-md sm:max-w-xl pt-6">
-          <form
-            action="https://formsubmit.co/wwizard.lab@gmail.com"
-            method="POST"
-            name="contactForm"
-            class="text-center"
+          <a
+            href="/contact"
+            class="bg-blue-800 hover:bg-blue-950 text-white font-semibold py-4 lg:px-20 px-14 mt-8 rounded-full focus:outline-none focus:shadow-outline"
           >
-            <label
-              for="nombre"
-              class="block text-gray-700 text-sm font-bold mb-4"></label>
-            <input
-              type="text"
-              pattern="[a-z, A-Z]{3,25}"
-              title="Utiliza solo letras"
-              id="nombre"
-              name="nombre"
-              placeholder="Nombre"
-              required
-              class="w-[80%] px-3 py-2 text-gray-500 border-b border-gray-400 bg-transparent shadow-sm"
-            />
-
-            <label
-              for="email"
-              class="block text-gray-700 text-sm font-bold mb-4"></label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Correo electrónico"
-              required
-              class="w-[80%] px-3 py-2 text-gray-500 border-b border-gray-400 bg-transparent shadow-sm"
-            />
-
-            <label
-              for="mensaje"
-              class="block text-gray-700 text-sm font-bold mb-4"></label>
-            <textarea
-              id="mensaje"
-              name="mensaje"
-              rows="4"
-              placeholder="Mensaje"
-              required
-              class="w-[80%] px-3 py-2 text-gray-500 border-b border-gray-400 bg-transparent shadow-sm"
-            ></textarea>
-
-            <button
-              type="submit"
-              id="enviar"
-              class="bg-blue-800 hover:bg-blue-950 text-white font-semibold py-4 lg:px-20 px-14 mt-8 rounded-full focus:outline-none focus:shadow-outline"
-            >
-              Enviar Mensaje
-            </button>
-            <input
-            type="hidden"
-            name="_next"
-            value="https://webwizardlab.vercel.app/"
-          />
-          <input type="hidden" name="_captcha" value="false" />
-          
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_subject" value="Hola! Recibimos tu consulta.">
-          <input type="hidden" name="_autoresponse" value="Hola! Recibimos tu consulta. Gracias por comunicarte con WebWizard Lab! En las próximas 48 horas hábiles nos estaremos comunicando con novedades. Te deseamos un bonito día :)">
-        </form>
+            Contáctanos
+          </a>
         </div>
       </div>
     </div>

@@ -1,0 +1,28 @@
+---
+import Container from "../shared/Container.astro";
+import Paragraph from "../shared/Paragraph.astro";
+import Title from "../shared/Title.astro";
+const aboutImage = "/images/person-codes-manages-system-laptop.jpg";
+---
+<section id="about" class="relative pt-36 lg:pt-44 lg:mb-5">
+    <Container
+      className="flex flex-col sm:flex-row gap-4 md:gap-12 h-auto sm:h-[40rem]"
+    >
+      <div class="w-full sm:w-1/2 flex flex-col items-start justify-center">
+        <Title>Nosotros</Title>
+        <Paragraph className="mt-8">
+          Somos un grupo de desarrolladores altamente capacitados para ejecutar
+          proyectos de pequeña y gran envergadura con los mejores estándares de
+          la industria. No importa el tamaño de tu idea, nosotros podemos
+          convertirla en un MVP con código a medida y una experiencia de usuario
+          de clase mundial.
+        </Paragraph>
+        <Paragraph className="mt-8">
+          Trabajamos con las tecnologías más avanzadas y robustas del mercado, adaptándonos siempre a las últimas innovaciones de la industria para ofrecerle a nuestros clientes soluciones de última generación con flexibilidad, escalabilidad y eficiencia.
+        </Paragraph>
+      </div>
+      <div class="flex content-center justify-center sm:w-1/2 h-full gap-4">
+        <img class="w-full sm:h-full object-cover rounded-3xl border border-box-border shadow-lg shadow-box-shadow" src={aboutImage} alt="desarrollador-web"/>
+      </div>      
+    </Container>
+  </section>

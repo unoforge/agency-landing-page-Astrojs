@@ -3,46 +3,103 @@ import Info from "../cards/Info.astro";
 import Container from "../shared/Container.astro";
 import Paragraph from "../shared/Paragraph.astro";
 import Title from "../shared/Title.astro";
+import BtnLink from "../shared/BtnLink.astro";
 
+const crisProfile = "/images/cris-profile.png";
+const ivanProfile = "/images/ivan-profile.jpg";
+const daniProfile = "/images/daniela-removebg-preview.png";
 ---
 
 <section id="about">
-    <Container className="flex flex-col midmd:flex-row gap-10 lg:gap-12">
-        <div class="max-w-md mx-auto midmd:max-w-none lg:mx-0  lg:pr-10 xl:pr-2 flex-1 flex w-11/12 midmd:w-5/12 lg:w-1/2 midmd:h-auto">
-            <div class="bg-cyan-500 w-full h-80 sm:h-96 midmd:h-full relative">
-                <div class="absolute rotate-45 -left-5 md:-left-10 lg:-left-20 xl:-left-24 p-1 top-1/2 w-16 h-16 bg-gradient-to-br from-primary to-orange-400 blur-3xl opacity-50"></div>
-                <div class="absolute  p-1 -top-4 md:-top-10 right-0 w-20 h-20 bg-gradient-to-br from-primary to-orange-400 rounded-full blur-3xl opacity-60"></div>
-                
-                <span class="absolute w-full aspect-[16/5] -skew-x-12 rounded-full bg-gradient-to-tr from-primary to-green-400 opacity-40 blur-2xl left-0 bottom-0"></span>
-                <img src={"https://res.cloudinary.com/dxsosgojl/image/upload/v1697486907/Fondo%203.png"} alt="banner image" 
-                width="1240" height="1385"
-                class=" w-auto left-1/2 -translate-x-1/2 absolute bottom-0 max-h-full" />
-            </div>
+  <Container className="flex flex-col midmd:flex-row gap-10 lg:gap-16 py-10">
+    <div class="max-w-md mx-auto midmd:max-w-none lg:mx-0 flex-1 flex w-11/12 midmd:w-5/12 lg:w-1/2">
+      <div class="flex justify-center w-full gap-6">
+        <div class="flex flex-col items-center gap-6 w-1/2">
+          <img
+            class="w-full h-1/2 rounded-tl-3xl shadow-lg shadow-box-shadow object-cover"
+            src={crisProfile}
+            alt="cristian"
+          />
+          <img
+            class="w-full h-1/2 rounded-bl-3xl shadow-lg shadow-box-shadow object-cover"
+            src={ivanProfile}
+            alt="ivan"
+          />
         </div>
-        <div class="flex-1 flex midmd:w-7/12 lg:w-1/2 flex-col">
-            <Title>
-                Ayudamos a <b>impulsar</b> tu negocio <b>más rápido</b>
-            </Title>
-            <Paragraph className="mt-8">
-                En WebWizard Lab, somos un equipo de desarrolladores apasionados por la tecnología y capaces de convertir tus ideas en un MVP.
-            </Paragraph>
-            <div class="pt-8 grid grid-cols-2 items-center gap-4 max-w-3xl md:max-w-[none]">
-                <Info description="Desarrollar tus proyectos digitales con los mejores estándares de la industria, garantizando una experiencia de usuario de primera, seguridad y escalabilidad." title="Misión">
-                    <span slot="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 sm:w-5 sm:h-5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-                        </svg>                              
-                    </span>
-                </Info>
-                <Info description="Ser líderes en desarrollo web y mobile, destacándonos por la constante innovación, la creatividad y entrega de soluciones digitales de calidad." title="Visión">
-                    <span slot="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 sm:w-5 sm:h-5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
-                    </span>
-                </Info>
-            </div>
+        <div class="flex flex-col items-center justify-center gap-6 w-1/2">
+          <img
+            class="w-full h-1/2 rounded-r-3xl shadow-lg shadow-box-shadow object-cover object-right-top"
+            src={daniProfile}
+            alt="daniela"
+          />
         </div>
-    </Container>
+      </div>
+    </div>
+    
+    <div class="flex-1 flex flex-col items-center lg:items-start midmd:w-7/12 lg:w-1/2">
+      <Title className="text-3xl sm:text-4xl md:text-5xl text-left font-bold">
+        Ayudamos a <b>impulsar</b> tu negocio <b>más rápido</b>
+      </Title>
+      
+      <Paragraph className="mt-6 text-lg text-gray-700 leading-relaxed">
+        En WebWizard Lab, somos un equipo de desarrolladores apasionados por la tecnología, listos para convertir tus ideas en un MVP.
+      </Paragraph>
+      
+      <div class="pt-8 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-lg">
+        <Info
+          title="Misión"
+          description="Desarrollar tus proyectos digitales con los mejores estándares de la industria, garantizando una experiencia de usuario de primera, seguridad y escalabilidad."
+        >
+          <span slot="icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6 text-primary"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
+              ></path>
+            </svg>
+          </span>
+        </Info>
+        <Info
+          title="Visión"
+          description="Ser líderes en desarrollo web y mobile, destacándonos por la constante innovación, la creatividad y entrega de soluciones digitales de calidad."
+        >
+          <span slot="icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6 text-primary"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"
+              ></path>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+              ></path>
+            </svg>
+          </span>
+        </Info>
+      </div>
+
+      <div class="flex gap-4 w-full justify-start mt-8">
+        <BtnLink href="/about" text="Saber más" variant="secondary" />
+      </div>
+    </div>
+  </Container>
 </section>

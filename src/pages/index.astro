@@ -1,27 +1,26 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Hero from '../components/sections/Hero.astro';
-import Services from '../components/sections/Services.astro';
-import AboutUs from '../components/sections/AboutUs.astro';
-import Features from '../components/sections/Features.astro';
-import CTA from '../components/sections/CTA.astro';
-import Brands from '../components/sections/Brands.astro';
-import Portfolio from '../components/sections/Portfolio.astro';
-import Plan from '../components/sections/Plan.astro';
-import Portfolio2 from '../components/sections/Portfolio2.astro';
-import Faq from '../components/sections/Faq.astro'
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/sections/Hero.astro";
+import Services from "../components/sections/Services.astro";
+import AboutUs from "../components/sections/AboutUs.astro";
+import CTA from "../components/sections/CTA.astro";
+import Portfolio from "../components/sections/Portfolio.astro";
+import Portfolio2 from "../components/sections/Portfolio2.astro";
+import Workflow from "../components/sections/Workflow.astro";
+import Faq from "../components/sections/Faq.astro";
+import Instagram from "../components/sections/Instagram.astro";
 ---
 
-<Layout title="web wizard lab home">
-	<main class="flex flex-col gap-y-20 md:gap-y-32 overflow-hidden">
-		<Hero/>
-		<AboutUs/>
-		<!-- <Brands/> -->
-		<Services/>
-		<Plan/>
-		<Portfolio />
-		<Portfolio2 />
-		<CTA/>
-		<Faq />
-	</main>
+<Layout title="WebWizard Lab | Agencia de desarrollo web - Home">
+  <main class="flex flex-col gap-y-20 md:gap-y-32 overflow-hidden">
+    <Hero />
+    <AboutUs />
+    <Services />
+    <Portfolio />
+    <Portfolio2 />
+    <Workflow />    
+    <CTA />
+	<Instagram />
+    <Faq />
+  </main>
 </Layout>
