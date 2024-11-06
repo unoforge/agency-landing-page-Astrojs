@@ -1,0 +1,86 @@
+---
+
+import Container from "../shared/Container.astro";
+
+---
+
+
+  <section id="contact" class="relative pt-32 lg:pt-40 lg:mb-5">
+    <Container>
+      <div class="flex flex-col lg:flex-row w-full bg-gray-900 text-white rounded-lg p-10">
+        
+        <!-- Formulario de contacto -->
+        <div class="w-full lg:w-1/2 p-4">
+          <h2 class="text-lg font-semibold uppercase mb-6">Envíanos un mensaje</h2>
+          <form action="https://formsubmit.co/wwizard.lab@gmail.com" method="POST" class="space-y-4">
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Tu Nombre"
+              required
+              class="w-full p-3 bg-transparent border-b border-gray-700 text-gray-300 focus:outline-none"
+            />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Tu Email"
+              required
+              class="w-full p-3 bg-transparent border-b border-gray-700 text-gray-300 focus:outline-none"
+            />
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              placeholder="Asunto"
+              required
+              class="w-full p-3 bg-transparent border-b border-gray-700 text-gray-300 focus:outline-none"
+            />
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="4"
+              placeholder="Tu Mensaje"
+              required
+              class="w-full p-3 bg-transparent border-b border-gray-700 text-gray-300 focus:outline-none"
+            ></textarea>
+            
+            <button
+              type="submit"
+              class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 font-semibold rounded-full mt-6"
+            >
+              Enviar
+            </button>
+
+            <!-- Campos ocultos para configuración adicional -->
+            <input type="hidden" name="_next" value="https://webwizardlab.vercel.app/" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_subject" value="Hola! Recibimos tu consulta." />
+            <input type="hidden" name="_autoresponse" value="Hola! Recibimos tu consulta. Gracias por comunicarte con WebWizard Lab! En las próximas 48 horas hábiles nos estaremos comunicando con novedades. Te deseamos un bonito día :)" />
+          </form>
+        </div>
+
+        <!-- Información de contacto -->
+        <div class="w-full lg:w-1/2 p-4">
+          <h2 class="text-lg font-semibold uppercase mb-6">Información de contacto</h2>
+          <p class="mb-4 text-gray-400">
+            <strong>WebWizard Lab</strong><br />
+            <br />
+            Dirección:
+            Sant Jaume 29, Arbucies 17401, Girona, España
+          </p>
+          <p class="mb-4 text-gray-400">
+            Email: <a href="mailto:wwizard.lab@gmail.com" class="text-blue-500 hover:underline">wwizard.lab@gmail.com</a>
+          </p>
+          <p class="mb-4 text-gray-400">
+            Teléfono: (+54) 123 4567 890
+          </p>
+          
+        </div>
+
+      </div>
+    </Container>
+  </section>
+
