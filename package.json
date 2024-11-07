@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.0.0",
+    "@emailjs/browser": "^4.4.1",
     "@material-tailwind/html": "^2.0.0",
     "@material-tailwind/react": "^2.1.4",
     "animate.css": "^4.1.1",

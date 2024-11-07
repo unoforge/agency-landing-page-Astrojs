@@ -17,11 +17,7 @@ const phoneIcon = '/images/icons8-phone-96.png'
         >
           Envíanos un mensaje
         </h2>
-        <form
-          action='https://formsubmit.co/hola@webwizardlab.com'
-          method='POST'
-          class='space-y-4'
-        >
+        <form class='space-y-4'>
           <input
             type='text'
             id='nombre'
@@ -63,7 +59,7 @@ const phoneIcon = '/images/icons8-phone-96.png'
           </button>
 
           <!-- Campos ocultos para configuración adicional -->
-          <input
+          <!-- <input
             type='hidden'
             name='_next'
             value='https://webwizardlab.com/'
@@ -80,7 +76,7 @@ const phoneIcon = '/images/icons8-phone-96.png'
             type='hidden'
             name='_autoresponse'
             value='Hola! Recibimos tu consulta. Gracias por comunicarte con WebWizard Lab! En las próximas 48 horas hábiles nos estaremos comunicando con novedades. Te deseamos un bonito día :)'
-          />
+          /> -->
         </form>
       </div>
       <div class='w-full lg:w-1/2 p-4'>
@@ -148,4 +144,51 @@ const phoneIcon = '/images/icons8-phone-96.png'
   nombreInput?.addEventListener('input', () => {
     subjectField.value = `Tienes un nuevo mensaje de ${nombreInput.value} desde webwizardlab.com`
   })
+</script>
+
+<!-- Form handler -->
+<script
+  type='text/javascript'
+  src='https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js'
+></script>
+<script>
+  ;(function () {
+    // Initialize EmailJS
+    emailjs.init('YOUR_USER_ID')
+
+    document
+      .getElementById('contactForm')
+      .addEventListener('submit', function (event) {
+        event.preventDefault()
+
+        // Capture form data
+        const name = event.target.name.value
+        const email = event.target.email.value
+        const company = event.target.company.value
+        const message = event.target.message.value
+
+        // Define email parameters
+        const templateParams = {
+          from_name: name,
+          from_email: email,
+          company: company,
+          message: message,
+          to_email: 'ivanjtrejoc@gmail.com'
+        }
+
+        // Send email using EmailJS
+        emailjs
+          .send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+          .then(
+            function (response) {
+              console.log('SUCCESS!', response.status, response.text)
+              alert('Email enviado exitosamente!')
+            },
+            function (error) {
+              console.log('FAILED...', error)
+              alert('Error al enviar el email. Por favor, inténtalo de nuevo.')
+            }
+          )
+      })
+  })()
 </script>
