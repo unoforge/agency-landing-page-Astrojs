@@ -1,191 +1,212 @@
 ---
-import Container from "../shared/Container.astro";
-import Title from "../shared/Title.astro";
+import Container from '../shared/Container.astro'
+import Title from '../shared/Title.astro'
+const javascriptIcon =
+  'https://res.cloudinary.com/dxsosgojl/image/upload/v1730983307/javascript_x6vn2v.svg'
+const typescriptIcon =
+  'https://res.cloudinary.com/dxsosgojl/image/upload/v1730983306/typescript-icon_u9ynwx.svg'
+const htmlIcon =
+  'https://res.cloudinary.com/dxsosgojl/image/upload/v1730983297/html_cuznh5.png'
+const wordpressIcon =
+  'https://res.cloudinary.com/dxsosgojl/image/upload/v1730983315/wordpress-icon_i2ykms.svg'
+const woocommerceIcon =
+  'https://res.cloudinary.com/dxsosgojl/image/upload/v1730983316/woocommerce-icon_cgb8tf.svg'
+const mongoIcon = "https://res.cloudinary.com/dxsosgojl/image/upload/v1730983314/mongodb_ro41ec.svg"
+const mysqlIcon = "https://res.cloudinary.com/dxsosgojl/image/upload/v1730983312/mysql_lf7tth.svg"
+const awsIcon = "https://res.cloudinary.com/dxsosgojl/image/upload/v1730983311/aws_mdhsie.svg"
+const nestIcon = "https://res.cloudinary.com/dxsosgojl/image/upload/v1730983308/nestjs_wnsrjz.svg"
+const astroIcon = "https://res.cloudinary.com/dxsosgojl/image/upload/v1730983302/astro1_r2mqnj.png"
+const cloudinaryIcon = "https://res.cloudinary.com/dxsosgojl/image/upload/v1730983301/cloudinary_gkc0zo.png"
+const firebaseIcon = "https://res.cloudinary.com/dxsosgojl/image/upload/v1730983298/firebase1_smcihq.png"
+const nodeIcon = "https://res.cloudinary.com/dxsosgojl/image/upload/v1730983296/node1_ukm71f.png"
+const postgresIcon = "https://res.cloudinary.com/dxsosgojl/image/upload/v1730983293/postgresql_oswqzb.png"
+const viteIcon = "https://res.cloudinary.com/dxsosgojl/image/upload/v1730983292/vite_s4ih6j.png"
+const reactIcon = "https://res.cloudinary.com/dxsosgojl/image/upload/v1730984020/React_gqk1zr.png"
 ---
 
-<section id="technologies">
-  <Container className="space-y-8">
-    <div class="text-center max-w-3xl mx-auto">
+<section id='technologies'>
+  <Container className='space-y-8'>
+    <div class='text-center max-w-3xl mx-auto'>
       <Title> Nuestras tecnologías </Title>
     </div>
-    <div class="flex justify-center flex-wrap gap-4">
+    <div class='flex justify-center flex-wrap gap-4'>
       <div
-        class="dark:bg-tech-box-bg p-4 sm:p-5 rounded-xl border border-box-border group"
+        class='dark:bg-tech-box-bg p-4 sm:p-5 rounded-xl border border-box-border group'
       >
         <img
-          src="/logos/javascript.svg"
-          width="100"
-          height="60"
-          alt="javascript"
-          class="h-7 sm:h-10 w-auto group-hover:scale-105"
+          src={javascriptIcon}
+          width='100'
+          height='60'
+          alt='javascript'
+          class='h-7 sm:h-10 w-auto group-hover:scale-105'
         />
       </div>
       <div
-        class="dark:bg-tech-box-bg p-4 sm:p-5 rounded-xl border border-box-border group"
+        class='dark:bg-tech-box-bg p-4 sm:p-5 rounded-xl border border-box-border group'
       >
         <img
-          src="/logos/typescript-icon.svg"
-          width="100"
-          height="60"
-          alt="typescript"
-          class="h-7 sm:h-10 w-auto group-hover:scale-105"
+          src={typescriptIcon}
+          width='100'
+          height='60'
+          alt='typescript'
+          class='h-7 sm:h-10 w-auto group-hover:scale-105'
         />
       </div>
       <div
-        class="dark:bg-tech-box-bg p-4 sm:p-5 rounded-xl border border-box-border group"
+        class='dark:bg-tech-box-bg p-4 sm:p-5 rounded-xl border border-box-border group'
       >
         <img
-          src="/logos/html.png"
-          width="100"
-          height="60"
-          alt="html-css"
-          class="h-7 sm:h-10 w-auto group-hover:scale-105"
+          src={htmlIcon}
+          width='100'
+          height='60'
+          alt='html-css'
+          class='h-7 sm:h-10 w-auto group-hover:scale-105'
         />
       </div>
       <div
-        class="dark:bg-tech-box-bg p-4 sm:p-5 rounded-xl border border-box-border group"
+        class='dark:bg-tech-box-bg p-4 sm:p-5 rounded-xl border border-box-border group'
       >
         <img
-          src="/logos/wordpress-icon.svg"
-          width="100"
-          height="60"
-          alt="wordpress"
-          class="h-7 sm:h-10 w-auto group-hover:scale-105"
+          src={wordpressIcon}
+          width='100'
+          height='60'
+          alt='wordpress'
+          class='h-7 sm:h-10 w-auto group-hover:scale-105'
         />
       </div>
       <div
-        class="dark:bg-tech-box-bg p-4 sm:p-5 rounded-xl border border-box-border group"
+        class='dark:bg-tech-box-bg p-4 sm:p-5 rounded-xl border border-box-border group'
       >
         <img
-          src="/logos/woocommerce-icon.svg"
-          width="100"
-          height="60"
-          alt="woocommerce"
-          class="h-7 sm:h-10 w-auto group-hover:scale-105"
+          src={woocommerceIcon}
+          width='100'
+          height='60'
+          alt='woocommerce'
+          class='h-7 sm:h-10 w-auto group-hover:scale-105'
         />
       </div>
       <div
-        class="dark:bg-tech-box-bg p-4 sm:p-5 rounded-xl border border-box-border group"
+        class='dark:bg-tech-box-bg p-4 sm:p-5 rounded-xl border border-box-border group'
       >
         <img
-          src="/logos/React.png"
-          width="100"
-          height="60"
-          alt="react"
-          class="h-7 sm:h-10 w-auto group-hover:scale-105"
+          src={reactIcon}
+          width='100'
+          height='60'
+          alt='react'
+          class='h-7 sm:h-10 w-auto group-hover:scale-105'
         />
       </div>
       <div
-        class="dark:bg-tech-box-bg p-4 sm:p-5 rounded-xl border border-box-border group"
+        class='dark:bg-tech-box-bg p-4 sm:p-5 rounded-xl border border-box-border group'
       >
         <img
-          src="/logos/vite.png"
-          width="100"
-          height="60"
-          alt="vitejs"
-          class="h-7 sm:h-10 w-auto group-hover:scale-105"
+          src={viteIcon}
+          width='100'
+          height='60'
+          alt='vitejs'
+          class='h-7 sm:h-10 w-auto group-hover:scale-105'
         />
       </div>
       <div
-        class="dark:bg-tech-box-bg p-4 sm:p-5 rounded-xl border border-box-border group"
+        class='dark:bg-tech-box-bg p-4 sm:p-5 rounded-xl border border-box-border group'
       >
         <img
-          src="/logos/astro1.png"
-          width="100"
-          height="60"
-          alt="astro"
-          class="h-7 sm:h-10 w-auto group-hover:scale-105"
+          src={astroIcon}
+          width='100'
+          height='60'
+          alt='astro'
+          class='h-7 sm:h-10 w-auto group-hover:scale-105'
         />
       </div>
       <div
-        class="dark:bg-tech-box-bg p-4 sm:p-5 rounded-xl border border-box-border group"
+        class='dark:bg-tech-box-bg p-4 sm:p-5 rounded-xl border border-box-border group'
       >
         <img
-          src="/logos/node1.png"
-          width="100"
-          height="60"
-          alt="nodejs"
-          class="h-7 sm:h-10 w-auto group-hover:scale-105"
-        />
-      </div>   
-      <div
-        class="dark:bg-tech-box-bg p-4 sm:p-5 rounded-xl border border-box-border group"
-      >
-        <img
-          src="/logos/nestjs.svg"
-          width="100"
-          height="60"
-          alt="nestjs"
-          class="h-7 sm:h-10 w-auto group-hover:scale-105"
+          src={nodeIcon}
+          width='100'
+          height='60'
+          alt='nodejs'
+          class='h-7 sm:h-10 w-auto group-hover:scale-105'
         />
       </div>
       <div
-        class="dark:bg-tech-box-bg p-4 sm:p-5 rounded-xl border border-box-border group"
+        class='dark:bg-tech-box-bg p-4 sm:p-5 rounded-xl border border-box-border group'
       >
         <img
-          src="/logos/mysql.svg"
-          width="100"
-          height="60"
-          alt="mysql"
-          class="h-7 sm:h-10 w-auto group-hover:scale-105"
+          src={nestIcon}
+          width='100'
+          height='60'
+          alt='nestjs'
+          class='h-7 sm:h-10 w-auto group-hover:scale-105'
         />
       </div>
       <div
-        class="dark:bg-tech-box-bg p-4 sm:p-5 rounded-xl border border-box-border group"
+        class='dark:bg-tech-box-bg p-4 sm:p-5 rounded-xl border border-box-border group'
       >
         <img
-          src="/logos/postgresql.png"
-          width="100"
-          height="60"
-          alt="postgreSQL"
-          class="h-7 sm:h-10 w-auto group-hover:scale-105"
+          src={mysqlIcon}
+          width='100'
+          height='60'
+          alt='mysql'
+          class='h-7 sm:h-10 w-auto group-hover:scale-105'
         />
       </div>
       <div
-        class="dark:bg-tech-box-bg p-4 sm:p-5 rounded-xl border border-box-border group"
+        class='dark:bg-tech-box-bg p-4 sm:p-5 rounded-xl border border-box-border group'
       >
         <img
-          src="/logos/mongodb.svg"
-          width="100"
-          height="60"
-          alt="mongodb"
-          class="h-7 sm:h-10 w-auto group-hover:scale-105"
+          src={postgresIcon}
+          width='100'
+          height='60'
+          alt='postgreSQL'
+          class='h-7 sm:h-10 w-auto group-hover:scale-105'
         />
       </div>
       <div
-      class="dark:bg-tech-box-bg p-4 sm:p-5 rounded-xl border border-box-border group"
-    >
-      <img
-        src="/logos/aws.svg"
-        width="100"
-        height="60"
-        alt="aws"
-        class="h-7 sm:h-10 w-auto group-hover:scale-105"
-      />
-    </div>
-    
-      <div
-        class="dark:bg-tech-box-bg p-4 sm:p-5 rounded-xl border border-box-border group"
+        class='dark:bg-tech-box-bg p-4 sm:p-5 rounded-xl border border-box-border group'
       >
         <img
-          src="/logos/firebase2.png"
-          width="100"
-          height="60"
-          alt="firebase"
-          class="h-7 sm:h-10 w-auto group-hover:scale-105"
+          src={mongoIcon}
+          width='100'
+          height='60'
+          alt='mongodb'
+          class='h-7 sm:h-10 w-auto group-hover:scale-105'
         />
       </div>
       <div
-      class="dark:bg-tech-box-bg p-4 sm:p-5 rounded-xl border border-box-border group"
-    >
-      <img
-        src="/logos/cloudinary.png"
-        width="100"
-        height="60"
-        alt="cloudinary"
-        class="h-7 sm:h-10 w-auto group-hover:scale-105"
-      />
-    </div>
+        class='dark:bg-tech-box-bg p-4 sm:p-5 rounded-xl border border-box-border group'
+      >
+        <img
+          src={awsIcon}
+          width='100'
+          height='60'
+          alt='aws'
+          class='h-7 sm:h-10 w-auto group-hover:scale-105'
+        />
+      </div>
+
+      <div
+        class='dark:bg-tech-box-bg p-4 sm:p-5 rounded-xl border border-box-border group'
+      >
+        <img
+          src={firebaseIcon}
+          width='100'
+          height='60'
+          alt='firebase'
+          class='h-7 sm:h-10 w-auto group-hover:scale-105'
+        />
+      </div>
+      <div
+        class='dark:bg-tech-box-bg p-4 sm:p-5 rounded-xl border border-box-border group'
+      >
+        <img
+          src={cloudinaryIcon}
+          width='100'
+          height='60'
+          alt='cloudinary'
+          class='h-7 sm:h-10 w-auto group-hover:scale-105'
+        />
+      </div>
     </div>
   </Container>
 </section>
