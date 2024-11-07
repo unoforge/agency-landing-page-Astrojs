@@ -1,8 +1,11 @@
 ---
 import Container from '../shared/Container.astro'
-const locationIcon = '/images/icons8-location-96.png'
-const emailIcon = '/images/icons8-email-96.png'
-const phoneIcon = '/images/icons8-phone-96.png'
+const locationIcon =
+  'https://res.cloudinary.com/dxsosgojl/image/upload/v1730984263/icons8-location-96_oojugd.png'
+const emailIcon =
+  'https://res.cloudinary.com/dxsosgojl/image/upload/v1730984261/icons8-email-96_wkzedg.png'
+const phoneIcon =
+  'https://res.cloudinary.com/dxsosgojl/image/upload/v1730984260/icons8-phone-96_zi8xr7.png'
 ---
 
 <section id='contact' class='relative pt-36 sm:pt-40 lg:pt-44'>
@@ -66,7 +69,7 @@ const phoneIcon = '/images/icons8-phone-96.png'
           <input
             type='hidden'
             name='_next'
-            value='https://webwizardlab.com/'
+            value='https://www.webwizardlab.com'
           />
           <input type='hidden' name='_captcha' value='true' />
           <input type='hidden' name='_template' value='table' />
@@ -149,4 +152,3 @@ const phoneIcon = '/images/icons8-phone-96.png'
     subjectField.value = `Tienes un nuevo mensaje de ${nombreInput.value} desde webwizardlab.com`
   })
 </script>
-
