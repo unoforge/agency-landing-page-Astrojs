@@ -1,11 +1,51 @@
 ---
 import Container from '../shared/Container.astro'
+import emailjs from 'emailjs-com'
 const locationIcon =
   'https://res.cloudinary.com/dxsosgojl/image/upload/v1730984263/icons8-location-96_oojugd.png'
 const emailIcon =
   'https://res.cloudinary.com/dxsosgojl/image/upload/v1730984261/icons8-email-96_wkzedg.png'
 const phoneIcon =
   'https://res.cloudinary.com/dxsosgojl/image/upload/v1730984260/icons8-phone-96_zi8xr7.png'
+const emailJsServiceId = import.meta.env.EMAILJS_SERVICE_ID
+const emailJsTemplateId = import.meta.env.EMAILJS_TEMPLATE_ID
+
+// Define la interfaz para el formulario
+interface ContactFormValues {
+  nombre: string
+  email: string
+  mensaje: string
+}
+
+// Función para enviar el formulario
+const sendEmail = async (formValues: ContactFormValues) => {
+  try {
+    const result = await emailjs.send(emailJsServiceId, emailJsTemplateId, {
+      from_name: formValues.nombre,
+      from_email: formValues.email,
+      message: formValues.mensaje
+    })
+    console.log('EL SERVICE ID: ', emailJsServiceId)
+    console.log('Email enviado:', result.text)
+    alert('¡Mensaje enviado correctamente!')
+  } catch (error) {
+    console.error('Error al enviar el correo:', error)
+    alert('Hubo un error al enviar el mensaje, intenta nuevamente.')
+  }
+}
+
+// Función de manejo de envío de formulario
+const handleSubmit = (event: Event) => {
+  event.preventDefault()
+  const form = event.target as HTMLFormElement
+  const formValues: ContactFormValues = {
+    nombre: (form.elements.namedItem('nombre') as HTMLInputElement).value,
+    email: (form.elements.namedItem('email') as HTMLInputElement).value,
+    mensaje: (form.elements.namedItem('mensaje') as HTMLInputElement).value
+  }
+
+  sendEmail(formValues)
+}
 ---
 
 <section id='contact' class='relative pt-36 sm:pt-40 lg:pt-44'>
@@ -13,7 +53,7 @@ const phoneIcon =
     <div
       class='flex flex-col lg:flex-row w-full relative justify-center items-start py-10 lg:px-6 px-8 rounded-2xl bg-gradient-to-tr from-gray-100 to-gray-200 gap-4 dark:from-gray-900'
     >
-      <div class='w-full lg:w-1/2 p-4'>
+      <!-- <div class='w-full lg:w-1/2 p-4'>
         <h2
           class='text-lg/tight sm:text-xl/tight md:text-2xl/tight
         font-bold text-heading-1 mb-4'
@@ -63,9 +103,7 @@ const phoneIcon =
             class='w-full bg-blue-600 hover:bg-blue-700 text-white py-3 font-semibold rounded-full mt-6'
           >
             Enviar
-          </button>
-
-          <!-- Campos ocultos para configuración adicional -->
+          </button>        
           <input
             type='hidden'
             name='_next'
@@ -84,6 +122,45 @@ const phoneIcon =
             name='_autoresponse'
             value='Hola! Recibimos tu consulta. Gracias por comunicarte con WebWizard Lab! En las próximas 48 horas hábiles nos estaremos comunicando con novedades. Te deseamos un bonito día :)'
           />
+        </form>
+      </div> -->
+      <div class='w-full lg:w-1/2 p-4'>
+        <h2
+          class='text-lg/tight sm:text-xl/tight md:text-2xl/tight font-bold text-heading-1 mb-4'
+        >
+          Envíanos un mensaje
+        </h2>
+        <form onsubmit={(event: Event) => handleSubmit(event)} class='space-y-4'>
+          <input
+            type='text'
+            id='nombre'
+            name='nombre'
+            placeholder='Tu Nombre'
+            required
+            class='w-full p-3 bg-transparent border-b border-gray-700 text-heading-1 focus:outline-none'
+          />
+          <input
+            type='email'
+            id='email'
+            name='email'
+            placeholder='Tu Email'
+            required
+            class='w-full p-3 bg-transparent border-b border-gray-700 text-heading-1 focus:outline-none'
+          />
+          <textarea
+            id='mensaje'
+            name='mensaje'
+            rows='4'
+            placeholder='Tu Mensaje'
+            required
+            class='w-full p-3 bg-transparent border-b border-gray-700 text-heading-1 focus:outline-none'
+          ></textarea>
+          <button
+            type='submit'
+            class='w-full bg-blue-600 hover:bg-blue-700 text-white py-3 font-semibold rounded-full mt-6'
+          >
+            Enviar
+          </button>
         </form>
       </div>
       <div class='w-full lg:w-1/2 p-4'>
@@ -140,7 +217,7 @@ const phoneIcon =
   </Container>
 </section>
 
-<script>
+<!-- <script>
   // Selecciona los campos de nombre y asunto
   const nombreInput = document.getElementById('nombre') as HTMLInputElement
   const subjectField = document.getElementById(
@@ -151,4 +228,4 @@ const phoneIcon =
   nombreInput?.addEventListener('input', () => {
     subjectField.value = `Tienes un nuevo mensaje de ${nombreInput.value} desde webwizardlab.com`
   })
-</script>
+</script> -->
