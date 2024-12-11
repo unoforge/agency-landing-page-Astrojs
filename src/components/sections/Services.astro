@@ -1,39 +1,48 @@
 ---
-import Service from "../cards/Service.astro";
-import Container from "../shared/Container.astro";
-import Paragraph from "../shared/Paragraph.astro";
-import Title from "../shared/Title.astro";
-import { services } from "../../utils/data.ts";
+import Service from '../cards/Service.astro';
+import Container from '../shared/Container.astro';
+import Paragraph from '../shared/Paragraph.astro';
+import Title from '../shared/Title.astro';
+import { vehicles } from '../../utils/data.ts';
+import VehicleCard from '../shared/VehicleCard.astro';
 
-
-type ServicesProps = {
-    title: string;
-    description: string;
-    icon: string
+type VehiclesProps = {
+  title: string;
+  thumbnail: string;
 };
-
-
 ---
 
-<section id="services">
-    <Container className="space-y-10 md:sapce-y-12">
-        <div class="text-center max-w-3xl mx-auto space-y-4">
-            <Title>
-                What we offer
-            </Title>
-            <Paragraph>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </Paragraph>
-        </div>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {
-                    services.map((service: ServicesProps) => {
-                    return (
-                            <Service title={service.title} description={service.description} icon={service.icon}>
-                            </Service>
-                            );
-                    })
-            }
-        </div>
-    </Container>
+<section id='services'>
+  <Container className='space-y-10 md:sapce-y-12'>
+    <div class='text-center max-w-3xl mx-auto space-y-4'>
+      <Title> What We Buy </Title>
+      <Paragraph>
+        We purchase all types of cars, regardless of their condition:
+      </Paragraph>
+    </div>
+    <div class='grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8'>
+      {
+        vehicles.map((vehicle: VehiclesProps) => {
+          return (
+            <VehicleCard
+            title={vehicle.title}
+            thumbnail={vehicle.thumbnail}
+            />
+          );
+        })
+      }
+      <!-- {
+        services.map((service: ServicesProps) => {
+          return (
+            <Service
+              title={service.title}
+              description={service.description}
+              icon={service.icon}
+            />
+          );
+        })
+      } -->
+    </div>
+    <div class='grid md:grid-cols-2 grid-cols-1 gap-4 my-16'></div>
+  </Container>
 </section>
