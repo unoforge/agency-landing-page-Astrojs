@@ -40,7 +40,7 @@ import Paragraph from '../shared/Paragraph.astro';
     <span
       class='absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 blur-2xl opacity-20 w-24 h-16 sm:w-48 sm:h-36 rounded-full rotate-12 skew-x-6 bg-primary'
     ></span>
-    <div class='flex justify-between sm:flex-row flex-col'>
+    <div class='flex justify-between sm:flex-row flex-col flex-col-reverse'>
       <div class='col-span-2 lg:col-span-1 h-auto flex flex-col'>
         <div class='h-full'>
           <a href='#' class='relative flex items-center gap-3'>
@@ -54,7 +54,7 @@ import Paragraph from '../shared/Paragraph.astro';
               Aqua Trading LLC
             </div>
           </a>
-          <Paragraph className={'mt-8'}>
+          <Paragraph className={'mt-8 mb-3'}>
             We offer quick and transparent deals, ensuring a hassle-free process
             from start to finish. <br> Scan the QR code to connect with us on line and get
             started today!
@@ -62,7 +62,7 @@ import Paragraph from '../shared/Paragraph.astro';
         </div>
 
         <!-- social links -->
-        <div class='min-h-max flex items-center gap-4 text-heading-3'>
+        <div class='min-h-max flex items-center gap-4 text-heading-3 pb-1'>
           <a href='#' class='transition hover:text-heading-1 hover:scale-105'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -127,7 +127,7 @@ import Paragraph from '../shared/Paragraph.astro';
             <span class='sr-only'>social link</span>
           </a>
         </div>
-        <div class='mt-4 text-white'>
+        <div class='mt-4 dark:text-white'>
           &copy; <span id='year'></span> Aqua Trading LLC. All right reserved
         </div>
       </div>
@@ -135,7 +135,7 @@ import Paragraph from '../shared/Paragraph.astro';
       <img
         src='/images/line.jpeg'
         alt='QR Code Line'
-        class='sm:h-56 p-7 sm:p-0 pb-0'
+        class='sm:h-56 p-7 sm:p-0 '
       />
       <!-- <GroupFooterNav>
                 <FooterNav title={"Company"} navItems={footerCompany}/>
