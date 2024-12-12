@@ -1,56 +1,179 @@
 ---
-import Button from "../shared/Button.astro";
-import Container from "../shared/Container.astro";
-import Paragraph from "../shared/Paragraph.astro";
+import Button from '../shared/Button.astro';
+import Container from '../shared/Container.astro';
+import Paragraph from '../shared/Paragraph.astro';
+import Title from '../shared/Title.astro';
+
+const testimonials = [
+  {
+    authorName: 'Sabo Masties',
+    authorRole: 'Founder @ Rolex',
+    image: '/assets/testimonials/author-01.jpg',
+    message: `“Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.”`,
+  },
+  {
+    authorName: 'Musharof Chowdhury',
+    authorRole: 'Founder @ Ayro UI',
+    image: '/assets/testimonials/author-02.jpg',
+    message: `“Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.”`,
+  },
+  {
+    authorName: 'William Smith',
+    authorRole: 'Founder @ Trorex',
+    image: '/assets/testimonials/author-03.jpg',
+    message: `“Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.”`,
+  },
+  {
+    authorName: 'Sabo Masties',
+    authorRole: 'Founder @ Rolex',
+    image: '/assets/testimonials/author-01.jpg',
+    message: `“Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.”`,
+  },
+  {
+    authorName: 'Musharof Chowdhury',
+    authorRole: 'Founder @ Ayro UI',
+    image: '/assets/testimonials/author-02.jpg',
+    message: `“Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.”`,
+  },
+  {
+    authorName: 'William Smith',
+    authorRole: 'Founder @ Trorex',
+    image: '/assets/testimonials/author-03.jpg',
+    message: `“Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.”`,
+  },
+];
 ---
 
-<section  id="cta" class="pb-20">
+<section
+  id='testimonials'
+  class='pb-20 bg-gray-1 dark:bg-dark-2 overflow-hidden'
+>
   <Container>
     <div
-      class="w-full relative py-8 md:py-10 px-6 md:px-8 rounded-2xl bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-900"
+      class='w-full relative py-8 md:py-10 px-6 md:px-8 rounded-2xl bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-900'
     >
-      <div class="absolute right-0 top-0 h-full w-full flex justify-end">
-        <div class="w-28 h-28 overflow-auto flex rounded-xl relative blur-2xl">
-            <span
-              class="absolute w-16 h-16 -top-1 -right-1 bg-green-500 rounded-md rotate-45"
-            ></span>
-            <span
-              class="absolute w-16 h-16 -bottom-1 -right-1 bg-[#FCDC58] rounded-md rotate-45"
-            ></span>
-            <span
-              class="absolute w-16 h-16 -bottom-1 -left-1 bg-primary rounded-md rotate-45"
-            ></span>
-          </div>
+      <div class='absolute right-0 top-0 h-full w-full flex justify-end'>
+        <div class='w-28 h-28 overflow-auto flex rounded-xl relative blur-2xl'>
+          <span
+            class='absolute w-16 h-16 -top-1 -right-1 bg-green-500 rounded-md rotate-45'
+          ></span>
+          <span
+            class='absolute w-16 h-16 -bottom-1 -right-1 bg-[#FCDC58] rounded-md rotate-45'
+          ></span>
+          <span
+            class='absolute w-16 h-16 -bottom-1 -left-1 bg-primary rounded-md rotate-45'
+          ></span>
+        </div>
       </div>
 
-      <div class="absolute left-0 bottom-0 h-full w-full flex items-end">
-        <div class="w-28 h-28 overflow-auto flex rounded-xl relative blur-2xl">
-            <span
-              class="absolute w-16 h-16 -top-1 -right-1 bg-green-500 rounded-md rotate-45"
-            ></span>
-            <span
-              class="absolute w-16 h-16 -bottom-1 -right-1 bg-[#FCDC58] rounded-md rotate-45"
-            ></span>
-            <span
-              class="absolute w-16 h-16 -bottom-1 -left-1 bg-primary rounded-md rotate-45"
-            ></span>
-          </div>
+      <div class='absolute left-0 bottom-0 h-full w-full flex items-end'>
+        <div class='w-28 h-28 overflow-auto flex rounded-xl relative blur-2xl'>
+          <span
+            class='absolute w-16 h-16 -top-1 -right-1 bg-green-500 rounded-md rotate-45'
+          ></span>
+          <span
+            class='absolute w-16 h-16 -bottom-1 -right-1 bg-[#FCDC58] rounded-md rotate-45'
+          ></span>
+          <span
+            class='absolute w-16 h-16 -bottom-1 -left-1 bg-primary rounded-md rotate-45'
+          ></span>
+        </div>
       </div>
-      <div class="mx-auto text-center max-w-xl md:max-w-2xl relative">
-        <h1
-          class="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight
-          font-bold text-heading-1"
-        >
-          Quick Start your <span class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600">Strategic Digital</span> Marketing Campaing
-        </h1>
-        <Paragraph className={"pt-10"}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente
-          delectus architecto ullam earum
-        </Paragraph>
-        <div class="mx-auto max-w-md sm:max-w-xl pt-10">
-          <Button variant={"primary"}>
-            <span class="text-white relative z-[5]">Get In Touch</span>
-          </Button>
+      <div class='flex flex-wrap justify-center -mx-4'>
+        <div class='w-full px-4'>
+          <div class='mx-auto mb-[60px] max-w-[485px] text-center'>
+            <Title> Our Recent Pruchases </Title>
+            <Paragraph className='mt-8'>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus,
+            </Paragraph>
+          </div>
+        </div>
+      </div>
+
+      <div class='-m-5'>
+        <div class='swiper testimonial-carousel common-carousel p-5'>
+          <div class='swiper-wrapper'>
+            {
+              testimonials.map((testimonial) => (
+                <div class='swiper-slide'>
+                  <div
+                    class='shadow-testimonial bg-white dark:bg-dark rounded-xl py-[30px] px-4 sm:px-[30px]'
+                    data-wow-delay='.1s'
+                  >
+                    <div class='flex items-center gap-[2px] mb-[18px]'>
+                      {[...Array(5)].map(() => (
+                        <span class='text-[#FBB040]'>
+                          <svg
+                            class='fill-current'
+                            width='18'
+                            height='16'
+                            viewBox='0 0 18 16'
+                            fill='none'
+                            xmlns='http://www.w3.org/2000/svg'
+                          >
+                            <path d='M8.94043 0.360474L10.9477 6.06481H17.4433L12.1882 9.59028L14.1955 15.2946L8.94043 11.7691L3.68538 15.2946L5.69263 9.59028L0.437576 6.06481H6.93318L8.94043 0.360474Z' />
+                          </svg>
+                        </span>
+                      ))}
+                    </div>
+                    <p class='text-body-color dark:text-dark-6 text-base mb-6'>
+                      {testimonial.message}
+                    </p>
+
+                    <div class='flex items-center gap-4'>
+                      <div class='w-[50px] h-[50px] rounded-full overflow-hidden'>
+                        <img
+                          src={testimonial.image}
+                          alt='author'
+                          class='w-[50px] h-[50px] rounded-full overflow-hidden'
+                        />
+                      </div>
+                      <div>
+                        <h3 class='font-semibold text-sm text-dark dark:text-white'>
+                          {testimonial.authorName}
+                        </h3>
+                        <p class='text-xs text-body-secondary'>
+                          {testimonial.authorRole}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+
+          <div class='flex items-center justify-center mt-[60px] gap-1'>
+            <div class='swiper-button-prev'>
+              <svg
+                class='fill-current'
+                width='22'
+                height='22'
+                viewBox='0 0 22 22'
+                fill='none'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <path
+                  d='M19.25 10.2437H4.57187L10.4156 4.29687C10.725 3.9875 10.725 3.50625 10.4156 3.19687C10.1062 2.8875 9.625 2.8875 9.31562 3.19687L2.2 10.4156C1.89062 10.725 1.89062 11.2063 2.2 11.5156L9.31562 18.7344C9.45312 18.8719 9.65937 18.975 9.86562 18.975C10.0719 18.975 10.2437 18.9062 10.4156 18.7687C10.725 18.4594 10.725 17.9781 10.4156 17.6688L4.60625 11.7906H19.25C19.6625 11.7906 20.0063 11.4469 20.0063 11.0344C20.0063 10.5875 19.6625 10.2437 19.25 10.2437Z'
+                ></path>
+              </svg>
+            </div>
+
+            <div class='swiper-button-next'>
+              <svg
+                class='fill-current'
+                width='22'
+                height='22'
+                viewBox='0 0 22 22'
+                fill='none'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <path
+                  d='M19.8 10.45L12.6844 3.2313C12.375 2.92192 11.8938 2.92192 11.5844 3.2313C11.275 3.54067 11.275 4.02192 11.5844 4.3313L17.3594 10.2094H2.75C2.3375 10.2094 1.99375 10.5532 1.99375 10.9657C1.99375 11.3782 2.3375 11.7563 2.75 11.7563H17.4281L11.5844 17.7032C11.275 18.0126 11.275 18.4938 11.5844 18.8032C11.7219 18.9407 11.9281 19.0094 12.1344 19.0094C12.3406 19.0094 12.5469 18.9407 12.6844 18.7688L19.8 11.55C20.1094 11.2407 20.1094 10.7594 19.8 10.45Z'
+                ></path>
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
     </div>
