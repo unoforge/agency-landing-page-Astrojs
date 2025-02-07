@@ -16,8 +16,12 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="description" content="AgenceX - SEO Agency website landing page made with ASTROJS and TAILWINDCSS">
-    <title>AgenceX - {title}</title>
+    <!-- Updated description for Teleios branding -->
+    <meta
+      name="description"
+      content="Teleios – Rapid Prototyping & High-Tech R&D. We tackle complex challenges with elite, on-demand expert teams."
+    />
+    <title>Teleios – {title}</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -29,10 +33,7 @@ const { title } = Astro.props;
     <Footer />
   </body>
   <script>
-    const switchTheme = document.querySelector(
-      "[data-switch-theme]"
-    ) as HTMLButtonElement;
-
+    const switchTheme = document.querySelector("[data-switch-theme]");
     if (
       localStorage.getItem("appTheme") === "dark" ||
       (!("appTheme" in localStorage) &&
@@ -52,7 +53,7 @@ const { title } = Astro.props;
               doc.classList.add("dark");
               localStorage.setItem("appTheme", "dark");
             } else {
-              document.documentElement.classList.remove("dark");
+              doc.classList.remove("dark");
               localStorage.setItem("appTheme", "light");
             }
           } else {
@@ -69,77 +70,87 @@ const { title } = Astro.props;
     }
   </script>
   <script>
-    const toggleMenu = document.querySelector(
-      "[data-toggle-nav]"
-    ) as HTMLButtonElement;
-    const navbar = document.querySelector("[data-navbar]") as HTMLDivElement;
-    const overlayNav = document.querySelector(
-      "[data-nav-overlay]"
-    ) as HTMLDivElement;
+    const toggleMenu = document.querySelector("[data-toggle-nav]");
+    const navbar = document.querySelector("[data-navbar]");
+    const overlayNav = document.querySelector("[data-nav-overlay]");
+
     if (toggleMenu) {
-      toggleMenu.addEventListener("click", e => {
+      toggleMenu.addEventListener("click", (e) => {
         e.preventDefault();
         if (toggleMenu.getAttribute("data-open-nav") === "false") {
           toggleMenu.setAttribute("data-open-nav", "true");
           overlayNav.setAttribute("data-is-visible", "true");
           document.body.classList.add("!overflow-y-hidden");
-		  navbar.style.height = `${navbar.scrollHeight}px`
-
-        }else{
-			toggleMenu.setAttribute("data-open-nav", "false");
-        	overlayNav.setAttribute("data-is-visible", "false");
-        	document.body.classList.remove("!overflow-y-hidden");
-		  	navbar.style.height = "0px"
-		}
-		
-        
+          navbar.style.height = `${navbar.scrollHeight}px`;
+        } else {
+          toggleMenu.setAttribute("data-open-nav", "false");
+          overlayNav.setAttribute("data-is-visible", "false");
+          document.body.classList.remove("!overflow-y-hidden");
+          navbar.style.height = "0px";
+        }
       });
 
       navbar.addEventListener("click", () => {
         toggleMenu.setAttribute("data-open-nav", "false");
         overlayNav.setAttribute("data-is-visible", "false");
         document.body.classList.remove("!overflow-y-hidden");
-		  	navbar.style.height = "0px"
+        navbar.style.height = "0px";
       });
 
       overlayNav.addEventListener("click", () => {
         toggleMenu.setAttribute("data-open-nav", "false");
-        	overlayNav.setAttribute("data-is-visible", "false");
-        	document.body.classList.remove("!overflow-y-hidden");
-		  	navbar.style.height = "0px"
+        overlayNav.setAttribute("data-is-visible", "false");
+        document.body.classList.remove("!overflow-y-hidden");
+        navbar.style.height = "0px";
       });
     }
   </script>
 </html>
+
+<!-- Updated color variables to reflect Teleios’s green-centric brand identity -->
 <style is:global>
   :root {
-    --color-bg: 255 255 255;
-    --color-border: 255 255 255;
+    /* Primary brand green & accent */
+    --brand-green: 38 120 58; /* Rich green */
+    --brand-accent: 255 125 0; /* Vibrant orange accent */
+
+    /* Base light mode background & box */
+    --color-bg: 248 252 248;   /* Subtle greenish-white */
     --color-box: 255 255 255;
-    --box-border: 229 231 235;
+    --color-border: 248 252 248;
+    --box-border: 220 235 220; /* Light green-tinted border */
     --box-sd: 226 232 240 / 0.5;
-	--heading-1:  23 37 84;
-	--heading-2: 31 41 55;
-	--heading-3: 55 65 81;
+
+    /* Headings in light mode */
+    --heading-1:  23 37 84;
+    --heading-2: 31 41 55;
+    --heading-3: 55 65 81;
   }
 
   .dark {
-    --color-bg: 3 7 18;
-    --color-box: 17 24 39;
-    --box-border: 243 244 246/0.1;
+    /* Dark mode colors with a deep green cast */
+    --color-bg: 12 25 20;
+    --color-box: 20 35 28;
+    --box-border: 243 244 246 / 0.1;
     --box-sd: transparent;
 
-	
-	--heading-1:  255 255 255;
-	--heading-2:  243 244 246;
-	--heading-3:  209 213 219;
+    /* Headings in dark mode */
+    --heading-1:  209 255 219;
+    --heading-2: 190 245 200;
+    --heading-3: 165 230 175;
   }
 
-  html{
+  html {
     scroll-behavior: smooth;
   }
+
   body {
     font-family: "Raleway", sans-serif;
+    color: rgb(31, 41, 55);
+  }
+
+  .dark body {
+    color: rgb(219, 234, 219);
   }
 
   [data-toggle-nav][data-open-nav="true"] #line1 {
@@ -153,7 +164,6 @@ const { title } = Astro.props;
     transform: translateY(-0.375rem) rotate(-40deg);
   }
 
-  
   [data-nav-overlay][data-is-visible="true"] {
     visibility: visible;
     display: flex;

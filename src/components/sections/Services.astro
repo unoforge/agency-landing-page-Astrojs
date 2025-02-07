@@ -5,34 +5,31 @@ import Paragraph from "../shared/Paragraph.astro";
 import Title from "../shared/Title.astro";
 import { services } from "../../utils/data.ts";
 
-
 type ServicesProps = {
     title: string;
     description: string;
     icon: string
 };
-
-
 ---
 
 <section id="services">
-    <Container className="space-y-10 md:sapce-y-12">
+    <Container className="space-y-10 md:space-y-12">
         <div class="text-center max-w-3xl mx-auto space-y-4">
             <Title>
-                What we offer
+                Rapid Prototyping & High-Tech R&D
             </Title>
             <Paragraph>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                At Teleios, we thrive on solving the hardest technical challenges in record time. Our interdisciplinary experts blend AI, data science, engineering, and domain-specific know-how to deliver tangible prototypes that drive real impact across mining, healthcare, defense, and gov-tech.
             </Paragraph>
         </div>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {
-                    services.map((service: ServicesProps) => {
+                services.map((service: ServicesProps) => {
                     return (
-                            <Service title={service.title} description={service.description} icon={service.icon}>
-                            </Service>
-                            );
-                    })
+                        <Service title={service.title} description={service.description} icon={service.icon}>
+                        </Service>
+                    );
+                })
             }
         </div>
     </Container>
