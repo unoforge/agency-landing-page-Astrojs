@@ -13,41 +13,47 @@ const { title } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <!-- Updated description for Teleios branding -->
+    <!-- Responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO / Brand meta -->
     <meta
       name="description"
-      content="Teleios – Rapid Prototyping & High-Tech R&D. We tackle complex challenges with elite, on-demand expert teams."
+      content="Teleios – Rapid Prototyping & High-Tech R&D. We solve the hardest problems fast with elite, on-demand expert teams."
     />
-    <title>Teleios – {title}</title>
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <title>Teleios – {title}</title>
   </head>
   <body class="overflow-hidden overflow-y-auto bg-body">
+    <!-- Navigation -->
     <Navbar />
+
+    <!-- Main content -->
     <slot />
+
+    <!-- Footer -->
     <Footer />
-  </body>
-  <script>
-    const switchTheme = document.querySelector("[data-switch-theme]");
-    if (
-      localStorage.getItem("appTheme") === "dark" ||
-      (!("appTheme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-    if (switchTheme) {
-      switchTheme.addEventListener("click", (e) => {
-        e.preventDefault();
-        const doc = document.documentElement;
-        if (doc) {
+
+    <!-- Theme Switcher Script -->
+    <script>
+      const switchTheme = document.querySelector("[data-switch-theme]");
+      if (
+        localStorage.getItem("appTheme") === "dark" ||
+        (!("appTheme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+      if (switchTheme) {
+        switchTheme.addEventListener("click", (e) => {
+          e.preventDefault();
+          const doc = document.documentElement;
           if (localStorage.getItem("appTheme")) {
             if (localStorage.getItem("appTheme") === "light") {
               doc.classList.add("dark");
@@ -65,107 +71,127 @@ const { title } = Astro.props;
               localStorage.setItem("appTheme", "dark");
             }
           }
-        }
-      });
-    }
-  </script>
-  <script>
-    const toggleMenu = document.querySelector("[data-toggle-nav]");
-    const navbar = document.querySelector("[data-navbar]");
-    const overlayNav = document.querySelector("[data-nav-overlay]");
+        });
+      }
+    </script>
 
-    if (toggleMenu) {
-      toggleMenu.addEventListener("click", (e) => {
-        e.preventDefault();
-        if (toggleMenu.getAttribute("data-open-nav") === "false") {
-          toggleMenu.setAttribute("data-open-nav", "true");
-          overlayNav.setAttribute("data-is-visible", "true");
-          document.body.classList.add("!overflow-y-hidden");
-          navbar.style.height = `${navbar.scrollHeight}px`;
-        } else {
+    <!-- Mobile Navigation Toggle Script -->
+    <script>
+      const toggleMenu = document.querySelector("[data-toggle-nav]");
+      const navbar = document.querySelector("[data-navbar]");
+      const overlayNav = document.querySelector("[data-nav-overlay]");
+      if (toggleMenu) {
+        toggleMenu.addEventListener("click", (e) => {
+          e.preventDefault();
+          if (toggleMenu.getAttribute("data-open-nav") === "false") {
+            toggleMenu.setAttribute("data-open-nav", "true");
+            overlayNav.setAttribute("data-is-visible", "true");
+            document.body.classList.add("!overflow-y-hidden");
+            navbar.style.height = `${navbar.scrollHeight}px`;
+          } else {
+            toggleMenu.setAttribute("data-open-nav", "false");
+            overlayNav.setAttribute("data-is-visible", "false");
+            document.body.classList.remove("!overflow-y-hidden");
+            navbar.style.height = "0px";
+          }
+        });
+        navbar.addEventListener("click", () => {
           toggleMenu.setAttribute("data-open-nav", "false");
           overlayNav.setAttribute("data-is-visible", "false");
           document.body.classList.remove("!overflow-y-hidden");
           navbar.style.height = "0px";
-        }
-      });
+        });
+        overlayNav.addEventListener("click", () => {
+          toggleMenu.setAttribute("data-open-nav", "false");
+          overlayNav.setAttribute("data-is-visible", "false");
+          document.body.classList.remove("!overflow-y-hidden");
+          navbar.style.height = "0px";
+        });
+      }
+    </script>
 
-      navbar.addEventListener("click", () => {
-        toggleMenu.setAttribute("data-open-nav", "false");
-        overlayNav.setAttribute("data-is-visible", "false");
-        document.body.classList.remove("!overflow-y-hidden");
-        navbar.style.height = "0px";
-      });
+    <!-- Global Styles -->
+    <style is:global>
+      :root {
+        /* Brand Colors */
+        --brand-green: 38 120 58;
+        --brand-green-dark: 32 100 48;
+        --brand-green-light: 180 230 180;
+        --brand-accent: 255 125 0;
 
-      overlayNav.addEventListener("click", () => {
-        toggleMenu.setAttribute("data-open-nav", "false");
-        overlayNav.setAttribute("data-is-visible", "false");
-        document.body.classList.remove("!overflow-y-hidden");
-        navbar.style.height = "0px";
-      });
-    }
-  </script>
+        /* Neutrals & Text */
+        --color-bg: 245 250 245;
+        --color-box: 255 255 255;
+        --color-border: 220 235 220;
+        --color-text-dark: 31 41 55;
+        --color-text-light: 219 234 219;
+
+        /* Texture overlay (if needed) */
+        --texture-overlay: 0, 0, 0, 0.05;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Raleway", sans-serif;
+        background-color: rgb(var(--color-bg));
+        background-image: url("/textures/subtle-noise.png");
+        background-size: cover;
+        color: rgb(var(--color-text-dark));
+        line-height: 1.6;
+      }
+
+      .dark body {
+        background-color: rgb(12, 25, 20);
+        background-image: url("/textures/subtle-noise-dark.png");
+        color: rgb(var(--color-text-light));
+      }
+
+      /* Helper Classes for Brand Colors */
+      .text-brand-green {
+        color: rgb(var(--brand-green));
+      }
+      .bg-brand-green {
+        background-color: rgb(var(--brand-green));
+      }
+      .text-brand-accent {
+        color: rgb(var(--brand-accent));
+      }
+      .bg-brand-accent {
+        background-color: rgb(var(--brand-accent));
+      }
+
+      /* CTA Button Styles */
+      .btn-cta {
+        background-color: rgb(var(--brand-accent));
+        color: #ffffff;
+        padding: 0.75rem 1.5rem;
+        border-radius: 9999px;
+        text-transform: uppercase;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+      }
+      .btn-cta:hover,
+      .btn-cta:focus {
+        background-color: rgb(240, 115, 0);
+      }
+
+      /* Accessible Focus States */
+      a,
+      button {
+        transition: color 0.2s ease, background-color 0.2s ease;
+      }
+      a:focus,
+      button:focus {
+        outline: 2px dotted rgb(var(--brand-accent));
+        outline-offset: 3px;
+      }
+      a:focus:not(:focus-visible),
+      button:focus:not(:focus-visible) {
+        outline: none;
+      }
+    </style>
+  </body>
 </html>
-
-<!-- Updated color variables to reflect Teleios’s green-centric brand identity -->
-<style is:global>
-  :root {
-    /* Primary brand green & accent */
-    --brand-green: 38 120 58; /* Rich green */
-    --brand-accent: 255 125 0; /* Vibrant orange accent */
-
-    /* Base light mode background & box */
-    --color-bg: 248 252 248;   /* Subtle greenish-white */
-    --color-box: 255 255 255;
-    --color-border: 248 252 248;
-    --box-border: 220 235 220; /* Light green-tinted border */
-    --box-sd: 226 232 240 / 0.5;
-
-    /* Headings in light mode */
-    --heading-1:  23 37 84;
-    --heading-2: 31 41 55;
-    --heading-3: 55 65 81;
-  }
-
-  .dark {
-    /* Dark mode colors with a deep green cast */
-    --color-bg: 12 25 20;
-    --color-box: 20 35 28;
-    --box-border: 243 244 246 / 0.1;
-    --box-sd: transparent;
-
-    /* Headings in dark mode */
-    --heading-1:  209 255 219;
-    --heading-2: 190 245 200;
-    --heading-3: 165 230 175;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    font-family: "Raleway", sans-serif;
-    color: rgb(31, 41, 55);
-  }
-
-  .dark body {
-    color: rgb(219, 234, 219);
-  }
-
-  [data-toggle-nav][data-open-nav="true"] #line1 {
-    transform: translateY(0.375rem) rotate(40deg);
-  }
-  [data-toggle-nav][data-open-nav="true"] #line2 {
-    transform: scaleX(0);
-    opacity: 0;
-  }
-  [data-toggle-nav][data-open-nav="true"] #line3 {
-    transform: translateY(-0.375rem) rotate(-40deg);
-  }
-
-  [data-nav-overlay][data-is-visible="true"] {
-    visibility: visible;
-    display: flex;
-  }
-</style>
