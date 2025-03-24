@@ -25,15 +25,16 @@ import ByNumber from "./ByNumber.astro";
             <div class="mt-10 w-full flex max-w-md mx-auto lg:mx-0">
                 <div class="flex sm:flex-row flex-col gap-5 w-full">
                     
-                    <form action="/api/contact" method="POST" class="py-1 pl-6 w-full pr-1 flex gap-3 items-center text-heading-3 shadow-lg shadow-box-shadow
+                    <!-- Added an id to the form so we can grab it in our script -->
+                    <form id="contactForm" class="py-1 pl-6 w-full pr-1 flex gap-3 items-center text-heading-3 shadow-lg shadow-box-shadow
                       border border-box-border bg-box-bg rounded-full ease-linear focus-within:bg-body  focus-within:border-primary">
                         <span class="min-w-max pr-2 border-r border-box-border">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 9v.906a2.25 2.25 0 01-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 001.183 1.981l6.478 3.488m8.839 2.51l-4.66-2.51m0 0l-1.023-.55a2.25 2.25 0 00-2.134 0l-1.022.55m0 0l-4.661 2.51m16.5 1.615a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V8.844a2.25 2.25 0 011.183-1.98l7.5-4.04a2.25 2.25 0 012.134 0l7.5 4.04a2.25 2.25 0 011.183 1.98V19.5z" />
                             </svg>                                                                  
                         </span>
-                        <input type="email" placeholder="hello@teleios.au" class="w-full py-3 outline-none bg-transparent">
-                        <Button variant={"primary"} className={"min-w-max text-white"}>
+                        <input type="email" name="email" placeholder="hello@teleios.au" class="w-full py-3 outline-none bg-transparent">
+                        <Button type="submit" variant={"primary"} className={"min-w-max text-white"}>
                             <span class="hidden sm:flex relative z-[5]">
                                 Kickstart Your Project
                             </span>
@@ -46,6 +47,10 @@ import ByNumber from "./ByNumber.astro";
                     </form>
                 </div>
             </div>
+
+            <!-- Place for success/error message -->
+            <p id="statusMessage" class="mt-5 text-green-600 font-semibold hidden"></p>
+
         </div>
 
         <div class="flex flex-1 lg:w-1/2 lg:h-auto relative lg:max-w-none lg:mx-0 mx-auto max-w-3xl">
@@ -60,3 +65,42 @@ import ByNumber from "./ByNumber.astro";
 
     <ByNumber/>
 </section>
+
+<!-- This script runs on the client, intercepts the form submission, and shows confirmation on success -->
+<script is:client>
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contactForm");
+    const statusMessage = document.getElementById("statusMessage");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      
+      // Clear any old message
+      statusMessage.textContent = "";
+      statusMessage.classList.add("hidden");
+
+      // Gather form data
+      const formData = new FormData(form);
+
+      try {
+        // Adjust URL or method as needed
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          body: formData,
+        });
+
+        if (response.ok) {
+          statusMessage.textContent = "Thanks for contacting us! We'll get back to you soon.";
+          statusMessage.classList.remove("hidden");
+        } else {
+          statusMessage.textContent = "Something went wrong; please try again.";
+          statusMessage.classList.remove("hidden");
+        }
+      } catch (error) {
+        console.error(error);
+        statusMessage.textContent = "Network error; please try again later.";
+        statusMessage.classList.remove("hidden");
+      }
+    });
+  });
+</script>
