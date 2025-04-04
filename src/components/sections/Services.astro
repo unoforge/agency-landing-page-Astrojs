@@ -12,13 +12,16 @@ type ServicesProps = {
 };
 ---
 
-<section id="services">
-    <Container className="space-y-10 md:space-y-12">
-        <div class="text-center max-w-3xl mx-auto space-y-4">
+<section id="services" class="relative pb-16">
+    <!-- Decorative background element for visual interest -->
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-box-bg/20 dark:to-gray-900/10 pointer-events-none"></div>
+    
+    <Container className="space-y-10 md:space-y-12 relative z-10">
+        <div class="text-center max-w-3xl mx-auto space-y-4" id="services">
             <Title>
-                Rapid Prototyping & High-Tech R&D
+                <span class="text-primary dark:text-primary/90">Rapid Prototyping</span> & High-Tech R&D
             </Title>
-            <Paragraph>
+            <Paragraph className="dark:text-gray-300">
                 At Teleios, we thrive on solving the hardest technical challenges in record time. Our interdisciplinary experts blend AI, data science, engineering, and domain-specific know-how to deliver tangible prototypes that drive real impact across healthcare, defense, and gov-tech.
             </Paragraph>
         </div>
@@ -34,3 +37,11 @@ type ServicesProps = {
         </div>
     </Container>
 </section>
+
+<style>
+    @media (prefers-reduced-motion: no-preference) {
+        #services {
+            scroll-margin-top: 80px;
+        }
+    }
+</style>

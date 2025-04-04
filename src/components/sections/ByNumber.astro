@@ -4,32 +4,44 @@ import Container from "../shared/Container.astro";
 <section class="relative mt-12 md:mt-16 w-full">
   <Container>
     <div
-      class="p-5 sm:p-6 py-6 sm:py-8 w-full rounded-3xl bg-box-bg border border-box-border shadow-lg shadow-box-shadow md:divide-x divide-box-border grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 md:gap-6 lg:gap-12"
+      class="p-5 sm:p-6 py-6 sm:py-8 w-full rounded-3xl bg-box-bg dark:bg-gray-800/50 border border-box-border dark:border-gray-700/30 shadow-lg shadow-box-shadow dark:shadow-gray-900/20 backdrop-blur-sm md:divide-x divide-box-border dark:divide-gray-700/30 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 md:gap-6 lg:gap-12 transition-all duration-300"
     >
-      <div class="text-center">
-        <h2 class="font-semibold text-xl sm:text-2xl md:text-4xl text-heading-1">
-          10+
+      <div class="text-center group">
+        <h2 class="font-semibold text-xl sm:text-2xl md:text-4xl text-heading-1 dark:text-white relative inline-block">
+          <span class="bg-gradient-to-r from-primary to-primary bg-[length:0%_2px] dark:bg-[length:0%_2px] bg-no-repeat bg-bottom transition-all duration-500 ease-out group-hover:bg-[length:100%_2px]">10+</span>
         </h2>
-        <p class="mt-2 text-heading-3">R&D Projects</p>
+        <p class="mt-2 text-heading-3 dark:text-gray-300">R&D Projects</p>
       </div>
-      <div class="text-center">
-        <h2 class="font-semibold text-xl sm:text-2xl md:text-4xl text-heading-1">
-          10+
+      <div class="text-center group">
+        <h2 class="font-semibold text-xl sm:text-2xl md:text-4xl text-heading-1 dark:text-white relative inline-block">
+          <span class="bg-gradient-to-r from-primary to-primary bg-[length:0%_2px] dark:bg-[length:0%_2px] bg-no-repeat bg-bottom transition-all duration-500 ease-out group-hover:bg-[length:100%_2px]">10+</span>
         </h2>
-        <p class="mt-2 text-heading-3">Industries Impacted</p>
+        <p class="mt-2 text-heading-3 dark:text-gray-300">Industries Impacted</p>
       </div>
-      <div class="text-center">
-        <h2 class="font-semibold text-xl sm:text-2xl md:text-4xl text-heading-1">
-          95%
+      <div class="text-center group">
+        <h2 class="font-semibold text-xl sm:text-2xl md:text-4xl text-heading-1 dark:text-white relative inline-block">
+          <span class="bg-gradient-to-r from-primary to-primary bg-[length:0%_2px] dark:bg-[length:0%_2px] bg-no-repeat bg-bottom transition-all duration-500 ease-out group-hover:bg-[length:100%_2px]">95%</span>
         </h2>
-        <p class="mt-2 text-heading-3">Prototypes Operational <br />Within 3 Months</p>
+        <p class="mt-2 text-heading-3 dark:text-gray-300">Prototypes Operational <br />Within 3 Months</p>
       </div>
-      <div class="text-center">
-        <h2 class="font-semibold text-xl sm:text-2xl md:text-4xl text-heading-1">
-          3+
+      <div class="text-center group">
+        <h2 class="font-semibold text-xl sm:text-2xl md:text-4xl text-heading-1 dark:text-white relative inline-block">
+          <span class="bg-gradient-to-r from-primary to-primary bg-[length:0%_2px] dark:bg-[length:0%_2px] bg-no-repeat bg-bottom transition-all duration-500 ease-out group-hover:bg-[length:100%_2px]">3+</span>
         </h2>
-        <p class="mt-2 text-heading-3">Years of Disruptive Innovation</p>
+        <p class="mt-2 text-heading-3 dark:text-gray-300">Years of Disruptive Innovation</p>
       </div>
     </div>
   </Container>
 </section>
+
+<style>
+  /* Optional: add subtle animations when the section comes into view */
+  @media (prefers-reduced-motion: no-preference) {
+    .group {
+      transition: transform 0.3s ease;
+    }
+    .group:hover {
+      transform: translateY(-3px);
+    }
+  }
+</style>

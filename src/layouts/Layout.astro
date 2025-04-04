@@ -78,34 +78,64 @@ const { title } = Astro.props;
     <!-- Mobile Navigation Toggle Script -->
     <script>
       const toggleMenu = document.querySelector("[data-toggle-nav]");
-      const navbar = document.querySelector("[data-navbar]");
-      const overlayNav = document.querySelector("[data-nav-overlay]");
-      if (toggleMenu) {
+      const navbar = document.querySelector("[data-navbar]") as HTMLElement;
+      const overlayNav = document.querySelector("[data-nav-overlay]") as HTMLElement;
+      const hamburgerIcon = document.getElementById("hamburger-icon");
+      const closeIcon = document.getElementById("close-icon");
+      
+      if (toggleMenu && navbar && overlayNav && hamburgerIcon && closeIcon) {
         toggleMenu.addEventListener("click", (e) => {
           e.preventDefault();
           if (toggleMenu.getAttribute("data-open-nav") === "false") {
+            // Open the menu
             toggleMenu.setAttribute("data-open-nav", "true");
-            overlayNav.setAttribute("data-is-visible", "true");
+            overlayNav.style.opacity = "1";
+            overlayNav.style.pointerEvents = "auto";
             document.body.classList.add("!overflow-y-hidden");
             navbar.style.height = `${navbar.scrollHeight}px`;
+            
+            // Show close icon, hide hamburger
+            hamburgerIcon.classList.add("hidden");
+            closeIcon.classList.remove("hidden");
           } else {
+            // Close the menu
             toggleMenu.setAttribute("data-open-nav", "false");
-            overlayNav.setAttribute("data-is-visible", "false");
+            overlayNav.style.opacity = "0";
+            overlayNav.style.pointerEvents = "none";
             document.body.classList.remove("!overflow-y-hidden");
             navbar.style.height = "0px";
+            
+            // Show hamburger, hide close icon
+            hamburgerIcon.classList.remove("hidden");
+            closeIcon.classList.add("hidden");
           }
         });
-        navbar.addEventListener("click", () => {
-          toggleMenu.setAttribute("data-open-nav", "false");
-          overlayNav.setAttribute("data-is-visible", "false");
-          document.body.classList.remove("!overflow-y-hidden");
-          navbar.style.height = "0px";
+        
+        // Close menu when clicking on menu items or overlay
+        navbar.addEventListener("click", (e) => {
+          if (e.target instanceof Element && (e.target.tagName === 'A' || (e.target.parentElement && e.target.parentElement.tagName === 'A'))) {
+            toggleMenu.setAttribute("data-open-nav", "false");
+            overlayNav.style.opacity = "0";
+            overlayNav.style.pointerEvents = "none";
+            document.body.classList.remove("!overflow-y-hidden");
+            navbar.style.height = "0px";
+            
+            // Show hamburger, hide close icon
+            hamburgerIcon.classList.remove("hidden");
+            closeIcon.classList.add("hidden");
+          }
         });
+        
         overlayNav.addEventListener("click", () => {
           toggleMenu.setAttribute("data-open-nav", "false");
-          overlayNav.setAttribute("data-is-visible", "false");
+          overlayNav.style.opacity = "0";
+          overlayNav.style.pointerEvents = "none";
           document.body.classList.remove("!overflow-y-hidden");
           navbar.style.height = "0px";
+          
+          // Show hamburger, hide close icon
+          hamburgerIcon.classList.remove("hidden");
+          closeIcon.classList.add("hidden");
         });
       }
     </script>

@@ -39,6 +39,10 @@ import Title from "../shared/Title.astro";
                 <div class="absolute p-1 -top-4 md:-top-10 right-0 w-20 h-20 bg-gradient-to-br from-primary to-orange-400 rounded-full blur-3xl opacity-60"></div>
                 
                 <span class="absolute w-full aspect-[16/5] -skew-x-12 rounded-full bg-gradient-to-tr from-primary to-green-400 opacity-40 blur-2xl left-0 bottom-0"></span>
+                
+                <!-- Add glow effect only visible in dark mode -->
+                <div class="absolute w-[80%] h-[80%] left-1/2 -translate-x-1/2 bottom-1/2 translate-y-1/2 bg-yellow-300/30 blur-3xl rounded-full opacity-0 dark:opacity-60 transition-opacity duration-300"></div>
+                
                 <img 
                     src={"/images/light.png"} 
                     alt="banner image"

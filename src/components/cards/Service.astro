@@ -9,17 +9,17 @@ export interface Props{
 
 const {title, description, icon} = Astro.props
 ---
-<div class="p-5 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden">
-    <div class="rounded-xl bg-gray-300 dark:bg-gray-950 p-3 text-heading-1 w-max relative">
+<div class="p-5 sm:p-6 lg:p-8 rounded-3xl border border-box-border dark:border-gray-700/30 bg-box-bg dark:bg-gray-800/50 shadow-lg shadow-box-shadow dark:shadow-gray-900/20 relative overflow-hidden backdrop-blur-sm group transition-all duration-300 hover:translate-y-[-5px]">
+    <div class="rounded-xl bg-gray-200/80 dark:bg-gray-900/80 p-3 text-heading-1 dark:text-white w-max relative transition-all duration-300 group-hover:bg-primary/10 dark:group-hover:bg-primary/20">
             <slot set:html={icon} />
     </div>
     <div class="mt-6 space-y-4 relative">
-        <h2 class="text-lg md:text-xl font-semibold text-heading-2">
+        <h2 class="text-lg md:text-xl font-semibold text-heading-2 dark:text-white">
             {title}
         </h2>
-        <Paragraph>
+        <Paragraph className="dark:text-gray-300">
             {description}
         </Paragraph>
     </div>
-    <span class="absolute w-32 aspect-square -bottom-16 -right-16 bg-primary/10 rounded-full"></span>
+    <span class="absolute w-32 aspect-square -bottom-16 -right-16 bg-primary/10 dark:bg-primary/20 rounded-full transition-all duration-500 ease-in-out group-hover:scale-110 group-hover:translate-x-[-8px] group-hover:translate-y-[-8px]"></span>
 </div>

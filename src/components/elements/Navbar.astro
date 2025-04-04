@@ -3,8 +3,14 @@
 import BtnLink from "../shared/BtnLink.astro";
 import Container from "../shared/Container.astro";
 import Navitem from "../shared/Navitem.astro";
+import LogoIcon from "../shared/LogoIcon.astro";
 
-const navItems = [
+interface NavItem {
+  href: string;
+  text: string;
+}
+
+const navItems: NavItem[] = [
   // {
   //   href: "#",
   //   text: "Home"
@@ -30,7 +36,7 @@ const navItems = [
       <div class="min-w-max inline-flex relative">
         <a href="/" class="relative flex items-center gap-3">
             <span class="inline-block transform scale-150 origin-center">
-                <img src="/favicon.svg" alt="Teleios Logo" class="w-8 h-8" />
+                <LogoIcon />
             </span>
         
           <div class="inline-flex text-lg font-semibold text-heading-1">
@@ -39,8 +45,11 @@ const navItems = [
         </a>
       </div>
 
-      <div data-nav-overlay aria-hidden="true" class="fixed hidden inset-0 lg:!hidden bg-box-bg bg-opacity-50 backdrop-filter backdrop-blur-xl"></div>
-      <div data-navbar class="flex h-0 overflow-hidden lg:!h-auto lg:scale-y-100 duration-300 ease-linear flex-col gap-y-6 gap-x-4 lg:flex-row w-full lg:justify-between lg:items-center absolute lg:relative top-full lg:top-0 bg-body lg:bg-transparent border-x border-x-box-border lg:border-x-0">
+      <!-- Mobile menu overlay - Already initialized as visible but with opacity 0 -->
+      <div data-nav-overlay aria-hidden="true" class="fixed inset-0 opacity-0 pointer-events-none lg:!hidden bg-box-bg/80 dark:bg-[#0c1914]/80 backdrop-filter backdrop-blur-sm transition-opacity duration-300"></div>
+      
+      <!-- Navbar dropdown -->
+      <div data-navbar class="flex h-0 overflow-hidden lg:!h-auto lg:scale-y-100 duration-300 ease-linear flex-col gap-y-6 gap-x-4 lg:flex-row w-full lg:justify-between lg:items-center absolute lg:relative top-full mt-2 lg:mt-0 lg:top-0 bg-body dark:bg-[#0c1914] lg:bg-transparent lg:dark:bg-transparent border-x border-x-box-border lg:border-x-0 rounded-lg lg:rounded-none shadow-lg lg:shadow-none z-50">
         <ul class="border-t border-box-border lg:border-t-0 px-6 lg:px-0 pt-6 lg:pt-0 flex flex-col lg:flex-row gap-y-4 gap-x-3 text-lg text-heading-2 w-full lg:justify-center lg:items-center">
           {navItems.map(item => {
             return <Navitem {...item} />;
@@ -63,11 +72,19 @@ const navItems = [
           <span class="sr-only">switch theme</span>
         </button>
         
-        <button data-toggle-nav data-open-nav="false" class="lg:hidden lg:invisible outline-none w-7 h-auto flex flex-col relative">
-          <span id="line1" class="w-6 h-0.5 rounded-full bg-heading-2 transition-all duration-300 ease-linear"></span> 
-          <span id="line2" class="w-6 origin-center mt-1 h-0.5 rounded-full bg-heading-2 transition-all duration-300 ease-linear"></span> 
-          <span id="line3" class="w-6 mt-1 h-0.5 rounded-full bg-heading-2 transition-all duration-300 ease-linear"></span>                         
-          <span class="sr-only">toggle nav</span>
+        <!-- Mobile menu button using Heroicons -->
+        <button data-toggle-nav data-open-nav="false" class="lg:hidden outline-none p-2 text-heading-1 dark:text-heading-2">
+          <!-- Heroicon: Bars 3 (hamburger menu) -->
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7" id="hamburger-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+          
+          <!-- Heroicon: X Mark (close icon) - hidden by default -->
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 hidden" id="close-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+          
+          <span class="sr-only">toggle navigation</span>
         </button>
       </div>
     </nav>
