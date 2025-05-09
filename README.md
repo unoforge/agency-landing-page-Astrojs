@@ -7,7 +7,7 @@ A simple landing page for a digital agency
 
 
 ## Tools
-- TailwindCSS v3
+- TailwindCSS v4
 - AstroJs v5
 
 
@@ -32,8 +32,9 @@ Inside of your Astro project, you'll see the following folders and files:
 │   │   └── Layout.astro
 │   └── pages/
 │       └── index.astro
-├── package.json
-└── tailwind.config.cjs
+│   └── styles/
+│       └── global.css
+└── package.json
 ```
 
 
