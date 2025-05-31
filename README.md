@@ -1,9 +1,9 @@
-<h1>AgenceX Landing page</h1>
+<h1>Prep42 Landing page</h1>
 
 A simple landing page for a digital agency
 
-![AgenceX light Theme](./screens/demoLight.webp)
-![AgenceX Dark Theme](./screens/demoDark.webp)
+![prep42 light Theme](./screens/demoLight.webp)
+![prep42 Dark Theme](./screens/demoDark.webp)
 
 
 ## Tools

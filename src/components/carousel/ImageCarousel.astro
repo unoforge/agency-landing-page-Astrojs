@@ -1,0 +1,30 @@
+<!-- ---
+import { Carousel } from 'astro-bootstrap';
+import type { CarouselSlideType } from 'astro-bootstrap';
+const slides: CarouselSlideType[] = [
+  { img: 'https://ikozmik.com/Content/Images/uploaded/its-free-featured.jpg', alt: 'First placeholder', active: true },
+  { img: 'https://static.desygner.com/wp-content/uploads/sites/13/2022/05/12132538/Stock-Photo-07.png', alt: 'Second placeholder' },
+  { img: 'https://media.istockphoto.com/id/1322104312/photo/freedom-chains-that-transform-into-birds-charge-concept.jpg?s=1024x1024&w=is&k=20&c=CoqB4hDuRFuxxEZ4Fu84uhLDftgeyAtl8TXEQq-JdtM=', alt: 'Third placeholder' },
+];
+
+const id = 'carouselExampleBasic';
+---
+
+<Carousel {id} fade>
+  <Carousel.Indicators {id} {slides} />
+  <Carousel.Inner>
+    {
+      slides.map((slide) => (
+        <Carousel.Item active={slide.active}>
+          <img
+            src={slide.img}
+            class="d-block w-100 img-fluid"
+            alt={slide.alt}
+          />
+        </Carousel.Item>
+      ))
+    }
+  </Carousel.Inner>
+  <Carousel.Controls id={id} />
+</Carousel> -->
+
