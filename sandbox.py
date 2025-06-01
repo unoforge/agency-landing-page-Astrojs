@@ -1,0 +1,1 @@
+gcloud services enable \ artifactregistry.googleapis.com \ cloudbuild.googleapis.com \ compute.googleapis.com \ run.googleapis.com
